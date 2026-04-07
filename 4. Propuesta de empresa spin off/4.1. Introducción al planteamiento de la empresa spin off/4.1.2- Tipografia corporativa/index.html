@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Investigación fuentes tipográficas estándar</title>
+
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .white-bg {
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        .title {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .type {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .white {
+            color: white;
+        }
+
+        .red {
+            color: #d6001c;
+        }
+
+        .black-text {
+            color: black;
+        }
+
+        .highlight {
+            border: 2px solid #d6001c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Investigación fuentes tipográficas estándar</h1>
+
+    <div class="grid">
+
+        <!-- ⭐ MEJOR OPCIÓN -->
+        <div class="card highlight" style="font-family: 'Segoe UI', sans-serif;">
+            <div class="title"><span class="white">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="white">Herramientas para </span><span class="red">Hostelería</span></div>
+            <div class="type white">⭐ Recomendado (Segoe UI - moderno, limpio)</div>
+        </div>
+
+        <!-- Arial -->
+        <div class="card" style="font-family: Arial, sans-serif;">
+            <div class="title"><span class="white">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="white">Herramientas para </span><span class="red">Hostelería</span></div>
+            <div class="type white">Sans-serif (Arial)</div>
+        </div>
+
+        <!-- Verdana -->
+        <div class="card" style="font-family: Verdana, sans-serif;">
+            <div class="title"><span class="white">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="white">Herramientas para </span><span class="red">Hostelería</span></div>
+            <div class="type white">Sans-serif (Verdana)</div>
+        </div>
+
+        <!-- Tahoma -->
+        <div class="card" style="font-family: Tahoma, sans-serif;">
+            <div class="title"><span class="white">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="white">Herramientas para </span><span class="red">Hostelería</span></div>
+            <div class="type white">Sans-serif (Tahoma)</div>
+        </div>
+
+        <!-- Trebuchet -->
+        <div class="card" style="font-family: 'Trebuchet MS', sans-serif;">
+            <div class="title"><span class="white">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="white">Herramientas para </span><span class="red">Hostelería</span></div>
+            <div class="type white">Sans-serif (Trebuchet MS)</div>
+        </div>
+
+        <!-- Helvetica -->
+        <div class="card" style="font-family: Helvetica, Arial, sans-serif;">
+            <div class="title"><span class="white">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="white">Herramientas para </span><span class="red">Hostelería</span></div>
+            <div class="type white">Sans-serif (Helvetica fallback)</div>
+        </div>
+
+        <!-- Times -->
+        <div class="card" style="font-family: 'Times New Roman', serif;">
+            <div class="title"><span class="white">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="white">Herramientas para </span><span class="red">Hostelería</span></div>
+            <div class="type white">Serif (Times New Roman)</div>
+        </div>
+
+        <!-- ⭐ SEGUNDA MEJOR -->
+        <div class="card highlight" style="font-family: Georgia, serif;">
+            <div class="title"><span class="white">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="white">Herramientas para </span><span class="red">Hostelería</span></div>
+            <div class="type white">⭐ Alternativa (Georgia - elegante)</div>
+        </div>
+
+        <!-- Courier -->
+        <div class="card" style="font-family: 'Courier New', monospace;">
+            <div class="title"><span class="white">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="white">Herramientas para </span><span class="red">Hostelería</span></div>
+            <div class="type white">Monospace (Courier New)</div>
+        </div>
+
+        <!-- Impact -->
+        <div class="card" style="font-family: Impact, sans-serif;">
+            <div class="title"><span class="white">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="white">Herramientas para </span><span class="red">Hostelería</span></div>
+            <div class="type white">Display (Impact)</div>
+        </div>
+
+        <!-- ===== FONDO BLANCO ===== -->
+
+        <div class="card white-bg highlight" style="font-family: 'Segoe UI';">
+            <div class="title"><span class="black-text">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="black-text">Herramientas para </span><span class="red">Hostelería</span>
+            </div>
+            <div class="type black-text">⭐ Recomendado (light)</div>
+        </div>
+
+        <div class="card white-bg" style="font-family: Arial;">
+            <div class="title"><span class="black-text">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="black-text">Herramientas para </span><span class="red">Hostelería</span>
+            </div>
+            <div class="type black-text">Arial</div>
+        </div>
+
+        <div class="card white-bg" style="font-family: Georgia;">
+            <div class="title"><span class="black-text">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="black-text">Herramientas para </span><span class="red">Hostelería</span>
+            </div>
+            <div class="type black-text">Georgia</div>
+        </div>
+
+        <div class="card white-bg" style="font-family: 'Courier New';">
+            <div class="title"><span class="black-text">Kit</span><span class="red">cherry</span></div>
+            <div class="subtitle"><span class="black-text">Herramientas para </span><span class="red">Hostelería</span>
+            </div>
+            <div class="type black-text">Courier</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
