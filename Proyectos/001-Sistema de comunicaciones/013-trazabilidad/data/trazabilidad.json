@@ -1,0 +1,180 @@
+{
+  "22": {
+    "estado": "archivado",
+    "creado_en": "2026-04-23 23:08:05",
+    "borrador_generado_en": "2026-04-25 03:00:49",
+    "respondido_en": null,
+    "archivado_en": "2026-04-25 03:01:21",
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "",
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-04-23 23:08:05"
+      },
+      {
+        "accion": "correo_archivado",
+        "fecha": "2026-04-23 23:37:11"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 01:59:05"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 03:00:30"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 03:00:49"
+      },
+      {
+        "accion": "correo_archivado",
+        "fecha": "2026-04-25 03:01:21"
+      }
+    ]
+  },
+  "21": {
+    "estado": "respondido",
+    "creado_en": "2026-04-23 23:08:25",
+    "borrador_generado_en": "2026-04-25 02:10:10",
+    "respondido_en": "2026-04-25 02:10:40",
+    "archivado_en": null,
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "Estimado Piero Olivares Velasquez,\n\nAgradezco su interés en saber sobre los alergenos presentes en nuestros platos de wok. En Kitcherry nos esforzamos por ofrecer opciones seguras y deliciosas para todos nuestros clientes, incluyendo aquellos con necesidades especiales.\n\nEn cuanto a su solicitud de un informe detallado sobre los alergenos que tienen mayor impacto en nuestros platos de wok, estamos trabajando para proporcionarle la información más precisa posible. Sin embargo, debemos advertirle que algunos de nuestros platillos pueden contener alérgenos no confirmados. Por lo tanto, si necesita una respuesta específica sobre un alergeno en particular, por favor, nos haga saber.\n\nEstamos comprometidos con la seguridad y el bienestar de nuestros clientes, y estamos dispuestos a trabajar con usted para encontrar soluciones que se adapten a sus necesidades. Si necesita más información o tiene alguna pregunta adicional, no dude en hacérmelo saber.\n\nAgradezco su comprensión y esperamos poder proporcionarle la respuesta detallada que busca pronto.\n\nAtentamente,\nKitcherry",
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-04-23 23:08:25"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 01:55:58"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 01:56:14"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 01:57:21"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 02:01:45"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 02:09:43"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 02:10:10"
+      },
+      {
+        "accion": "correo_enviado",
+        "fecha": "2026-04-25 02:10:40"
+      }
+    ]
+  },
+  "19": {
+    "estado": "respondido",
+    "creado_en": "2026-04-23 23:08:55",
+    "borrador_generado_en": "2026-04-25 02:12:05",
+    "respondido_en": "2026-04-25 02:12:40",
+    "archivado_en": null,
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "Buenas noches,\n\nGracias por consultar sobre nuestros horarios de apertura y cierre. Nuestro local está abierto desde 13:00 hasta 23:30. Si necesita más información o tiene alguna pregunta adicional, no dude en hacérmelo saber.\n\nAtentamente,\nKitcherry",
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-04-23 23:08:55"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 01:57:42"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 02:11:20"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 02:12:05"
+      },
+      {
+        "accion": "correo_enviado",
+        "fecha": "2026-04-25 02:12:40"
+      }
+    ]
+  },
+  "23": {
+    "estado": "respondido",
+    "creado_en": "2026-04-25 02:30:39",
+    "borrador_generado_en": "2026-04-25 02:40:58",
+    "respondido_en": "2026-04-25 02:41:15",
+    "archivado_en": null,
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "Buenas noches,\n\nGracias por consultar sobre el horario de cierre de los domingos por la noche en Kitcherry. Nuestro horario de cierre varía según la temporada, pero generalmente nos cerramos a las [HORARIO_CIERRE] del domingo.\n\nAgradezco su interés en planificar adecuadamente su programación y recursos. Si necesita más información o tiene alguna pregunta adicional, por favor no duden en hacérmelo saber.\n\nAtentamente,\n[Kitcherry]",
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-04-25 02:30:39"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 02:40:58"
+      },
+      {
+        "accion": "correo_enviado",
+        "fecha": "2026-04-25 02:41:15"
+      }
+    ]
+  },
+  "20": {
+    "estado": "respondido",
+    "creado_en": "2026-04-25 02:31:26",
+    "borrador_generado_en": "2026-04-25 02:40:15",
+    "respondido_en": "2026-04-25 02:40:32",
+    "archivado_en": null,
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "Hola Piero Olivares Velasquez,\n\nGracias por contactarnos para hacer una reserva en Kitcherry. Me alegra que estén interesados en celebrar el Día del Trabajador con nosotros.\n\nPara confirmar la reserva, necesito saber el nombre de las tres personas que asistirán. ¿Podrían proporcionarme este detalle? Además, les recordamos que nuestro [HORARIO_APERTURA] es [HORARIO_APERTURA] y nuestro [HORARIO_CIERRE] es [HORARIO_CIERRE].\n\nPor favor, también necesito confirmar su número de contacto: 654678654. Si todo está correcto, les enviaremos un correo electrónico con la confirmación de la reserva.\n\nAgradezco su comprensión y esperamos poderles atender el día 1 de mayo a las 13:00 horas.\n\nAtentamente,\nKitcherry",
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-04-25 02:31:26"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 02:40:15"
+      },
+      {
+        "accion": "correo_enviado",
+        "fecha": "2026-04-25 02:40:32"
+      }
+    ]
+  },
+  "24": {
+    "estado": "respondido",
+    "creado_en": "2026-04-25 02:57:45",
+    "borrador_generado_en": "2026-04-25 02:59:39",
+    "respondido_en": "2026-04-25 03:00:11",
+    "archivado_en": null,
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "Hola Carlos,\n\nGracias por contactarnos para hacer una reserva en Kitcherry. Me alegra que estés interesado en visitarnos el lunes 27. Para confirmar la reserva, necesito saber qué hora deseas llegar y si tienes algún alérgeno que debamos tener en cuenta.\n\nPor favor, proporciona tu número de teléfono para poder comunicarte contigo sobre los detalles de tu reserva.\n\nAgradezco tu comprensión y espero recibir tus respuestas pronto.\n\nAtentamente,\nKitcherry",
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-04-25 02:57:45"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-04-25 02:59:39"
+      },
+      {
+        "accion": "correo_enviado",
+        "fecha": "2026-04-25 03:00:11"
+      }
+    ]
+  }
+}
