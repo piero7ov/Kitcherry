@@ -1,0 +1,29 @@
+# ==========================================================
+# KITCHERRY - IA LOCAL
+# ==========================================================
+
+# Entornos virtuales
+venv/
+.venv/
+*/venv/
+**/venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Modelos y salidas de entrenamiento
+outputs/
+*/outputs/
+**/outputs/
+
+# Cachés de modelos
+.cache/
+.hf-cache/
+*/.cache/
+*/.hf-cache/
