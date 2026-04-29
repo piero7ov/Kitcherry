@@ -221,8 +221,8 @@ $servicios = [
     ],
     [
         "numero" => "02",
-        "titulo" => "Chatbot de atención al cliente para web y mensajería",
-        "texto" => "Asistente conversacional para web o mensajería que responde dudas frecuentes y mantiene una comunicación continua con el cliente."
+        "titulo" => "Chatbot web para negocios de hostelería",
+        "texto" => "Asistente digital adaptable para restaurantes, bares y cafeterías, capaz de resolver dudas frecuentes, orientar al cliente y mejorar la atención desde la web."
     ],
     [
         "numero" => "03",
