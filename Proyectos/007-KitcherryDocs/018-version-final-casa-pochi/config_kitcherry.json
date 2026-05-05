@@ -1,0 +1,8 @@
+{
+    "proyecto": "Kitcherry Docs",
+    "iteracion": "018-version-final-casa-pochi",
+    "negocio": "Casa Pochi",
+    "nombre_proceso": "KITCHERRY DOCS - PROCESO FINAL CASA POCHI",
+    "modelo_ollama": "llama3:latest",
+    "ejecutar_ollama": true
+}
