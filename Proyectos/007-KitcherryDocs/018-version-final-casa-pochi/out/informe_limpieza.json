@@ -1,0 +1,30 @@
+{
+    "proyecto": "Kitcherry Docs",
+    "iteracion": "018-version-final-casa-pochi",
+    "descripcion": "Informe de limpieza de textos extraídos desde PDF.",
+    "fecha_generacion": "2026-05-05 16:16:49",
+    "total_documentos": 3,
+    "resultados": [
+        {
+            "archivo": "carta_casa_pochi.txt",
+            "salida": "carta_casa_pochi_limpio.txt",
+            "estado": "ok",
+            "caracteres_originales": 1884,
+            "caracteres_limpios": 1756
+        },
+        {
+            "archivo": "fichas_tecnicas_casa_pochi.txt",
+            "salida": "fichas_tecnicas_casa_pochi_limpio.txt",
+            "estado": "ok",
+            "caracteres_originales": 2716,
+            "caracteres_limpios": 2588
+        },
+        {
+            "archivo": "tabla_alergenos_casa_pochi.txt",
+            "salida": "tabla_alergenos_casa_pochi_limpio.txt",
+            "estado": "ok",
+            "caracteres_originales": 1834,
+            "caracteres_limpios": 1706
+        }
+    ]
+}
