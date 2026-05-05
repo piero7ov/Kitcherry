@@ -1,0 +1,1929 @@
+/* ==========================================================
+KITCHERRY DOCS - ESTILOS
+Archivo: styles.css
+========================================================== */
+
+/* ==========================================================
+FUENTE CORPORATIVA
+========================================================== */
+
+@font-face {
+    font-family: "Coolvetica";
+    src:
+        url("fuente/Coolvetica Rg.otf") format("opentype"),
+        url("fuente/coolverticarg.otf") format("opentype"),
+        url("fuente/CoolveticaRg.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==========================================================
+VARIABLES
+========================================================== */
+
+:root {
+    --rojo: #C2182B;
+    --rojo-oscuro: #991726;
+    --rojo-vivo: #ff2b3f;
+    --rojo-suave: #fbeaec;
+
+    --negro: #151515;
+    --gris-texto: #555555;
+    --gris-suave: #777777;
+    --gris-claro: #f7f7f7;
+    --gris-medio: #e7e7e7;
+
+    --blanco: #ffffff;
+
+    --verde: #16803c;
+    --verde-suave: #e8f7ee;
+
+    --amarillo: #9a6b00;
+    --amarillo-suave: #fff7dc;
+
+    --azul: #1d4ed8;
+    --azul-suave: #eaf1ff;
+
+    --cabecera: #efe0e0;
+
+    --sombra-suave: 0 18px 45px rgba(0, 0, 0, 0.08);
+    --sombra-card: 0 10px 25px rgba(0, 0, 0, 0.06);
+
+    --radio-xl: 28px;
+    --radio-lg: 20px;
+    --radio-md: 14px;
+}
+
+/* ==========================================================
+BASE
+========================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(194, 24, 43, 0.10), transparent 32%),
+        linear-gradient(180deg, #ffffff 0%, #f7f7f7 44%, #ffffff 100%);
+    color: var(--negro);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.page {
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 28px 24px 70px;
+}
+
+.card {
+    background: var(--blanco);
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--radio-lg);
+    box-shadow: var(--sombra-card);
+}
+
+.empty {
+    padding: 28px;
+    text-align: center;
+    color: var(--gris-texto);
+}
+
+/* ==========================================================
+CABECERA
+========================================================== */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: var(--cabecera);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.topbar-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-logo {
+    width: 72px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.brand-fallback {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--rojo);
+    color: var(--blanco);
+    display: grid;
+    place-items: center;
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+}
+
+.brand-text strong {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 2.05rem;
+    letter-spacing: 0;
+    line-height: 0.95;
+}
+
+.brand-text .kit {
+    color: #111111;
+    letter-spacing: 0.02em;
+}
+
+.brand-text .cherry {
+    color: var(--rojo);
+    letter-spacing: 0.02em;
+}
+
+.brand-subtitle {
+    margin-top: 5px;
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nav a {
+    font-size: 0.88rem;
+    padding: 8px 12px;
+    border-radius: 999px;
+    color: var(--gris-texto);
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav a:hover {
+    color: var(--rojo);
+    background: var(--blanco);
+    border-color: rgba(194, 24, 43, 0.18);
+}
+
+/* ==========================================================
+BOTONES Y ELEMENTOS COMUNES
+========================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 12px 17px;
+    font-size: 0.92rem;
+    font-weight: 800;
+    border: 1px solid transparent;
+}
+
+.btn-white {
+    background: var(--blanco);
+    color: var(--rojo);
+}
+
+.btn-soft {
+    color: var(--blanco);
+    background: rgba(255, 255, 255, 0.13);
+    border-color: rgba(255, 255, 255, 0.22);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    font-weight: 900;
+    border: 1px solid transparent;
+}
+
+.badge-categoria {
+    background: var(--negro);
+    color: var(--blanco);
+}
+
+.chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 9px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    background: var(--gris-claro);
+    border: 1px solid var(--gris-medio);
+    color: var(--gris-texto);
+}
+
+.chip-alergeno {
+    background: var(--rojo-suave);
+    color: var(--rojo);
+    border-color: rgba(194, 24, 43, 0.20);
+    font-weight: 900;
+}
+
+.chip-ok {
+    background: var(--verde-suave);
+    color: var(--verde);
+    border-color: rgba(22, 128, 60, 0.18);
+    font-weight: 900;
+}
+
+.mini-title {
+    margin-bottom: 8px;
+    font-size: 0.77rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gris-texto);
+    font-weight: 900;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.eyebrow-dark {
+    display: inline-flex;
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--rojo-suave);
+    color: var(--rojo);
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* ==========================================================
+HERO
+========================================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 24px;
+    align-items: stretch;
+    margin-bottom: 24px;
+}
+
+.hero-main {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(194, 24, 43, 0.96), rgba(153, 23, 38, 0.98)),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.22), transparent 35%);
+    color: var(--blanco);
+    border-radius: var(--radio-xl);
+    padding: 36px;
+    box-shadow: var(--sombra-suave);
+}
+
+.hero-main::after {
+    content: "";
+    position: absolute;
+    right: -70px;
+    top: -70px;
+    width: 220px;
+    height: 220px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.hero-main h1 {
+    max-width: 780px;
+    margin-bottom: 18px;
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: clamp(2.1rem, 4.5vw, 4.7rem);
+    line-height: 0.96;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.hero-main p {
+    max-width: 760px;
+    color: rgba(255, 255, 255, 0.91);
+    font-size: 1.05rem;
+}
+
+.hero-actions {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-side {
+    display: grid;
+    gap: 14px;
+}
+
+.quick-status {
+    background: var(--blanco);
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--radio-xl);
+    padding: 24px;
+    box-shadow: var(--sombra-suave);
+}
+
+.quick-status h2 {
+    margin-bottom: 8px;
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 1.65rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.quick-status p {
+    color: var(--gris-texto);
+    font-size: 0.95rem;
+}
+
+.status-pill {
+    display: inline-flex;
+    margin-top: 16px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--amarillo-suave);
+    color: var(--amarillo);
+    font-weight: 800;
+    font-size: 0.86rem;
+}
+
+.alert-box {
+    background: var(--rojo-suave);
+    color: var(--rojo-oscuro);
+    border: 1px solid rgba(194, 24, 43, 0.18);
+    border-radius: var(--radio-lg);
+    padding: 18px;
+    font-size: 0.92rem;
+}
+
+.alert-box strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* ==========================================================
+ESTADÍSTICAS
+========================================================== */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.secondary-stats {
+    margin-top: -14px;
+}
+
+.stat-card {
+    background: var(--blanco);
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--radio-lg);
+    padding: 20px;
+    box-shadow: var(--sombra-card);
+    margin-bottom: 10px;
+}
+
+.stat-card span {
+    color: var(--gris-texto);
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+.stat-card strong {
+    display: block;
+    margin-top: 8px;
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    color: var(--rojo);
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
+/* ==========================================================
+SECCIONES
+========================================================== */
+
+.section {
+    margin-top: 34px;
+    margin-bottom: 25px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.section-title h2 {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 1.9rem;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.section-title p {
+    max-width: 760px;
+    margin-top: 7px;
+    color: var(--gris-texto);
+    font-size: 0.95rem;
+}
+
+.visible-counter {
+    color: var(--gris-texto);
+    font-size: 0.9rem;
+}
+
+.visible-counter strong {
+    color: var(--rojo);
+}
+
+/* ==========================================================
+MODO VISTA CLIENTE / INTERNA
+========================================================== */
+
+.client-only {
+    display: none !important;
+}
+
+body.view-mode-client .client-only {
+    display: block !important;
+}
+
+body.view-mode-client .internal-only {
+    display: none !important;
+}
+
+body.view-mode-internal .client-only {
+    display: none !important;
+}
+
+body.view-mode-client .stats-client {
+    display: grid !important;
+}
+
+body.view-mode-client .filters {
+    grid-template-columns: 1.45fr 1fr 1fr;
+}
+
+body.view-mode-client .plato-card {
+    border-color: rgba(194, 24, 43, 0.14);
+}
+
+body.view-mode-client .plato-card::before {
+    width: 4px;
+}
+
+body.view-mode-client .plato-header h3 {
+    font-size: 1.5rem;
+}
+
+body.view-mode-client .descripcion {
+    font-size: 1rem;
+}
+
+body.view-mode-client .alert-box,
+body.view-mode-client .matrix-note {
+    background: var(--amarillo-suave);
+    color: var(--amarillo);
+    border-color: rgba(154, 107, 0, 0.20);
+}
+
+body.view-mode-client .print-actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.view-mode-card {
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+    border-left: 6px solid var(--rojo);
+}
+
+.view-mode-text {
+    max-width: 760px;
+}
+
+.view-mode-text h2 {
+    margin-bottom: 8px;
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 1.65rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.view-mode-text p {
+    color: var(--gris-texto);
+    font-size: 0.95rem;
+}
+
+.view-mode-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.view-mode-btn {
+    border: 1px solid var(--gris-medio);
+    background: var(--blanco);
+    color: var(--negro);
+    border-radius: 999px;
+    padding: 11px 16px;
+    font-weight: 900;
+}
+
+.view-mode-btn:hover {
+    border-color: rgba(194, 24, 43, 0.28);
+    color: var(--rojo);
+}
+
+.view-mode-btn.is-active {
+    background: var(--rojo);
+    color: var(--blanco);
+    border-color: var(--rojo);
+}
+
+.client-mode-banner {
+    margin-top: 14px;
+    padding: 18px;
+    background: var(--rojo-suave);
+    border-color: rgba(194, 24, 43, 0.18);
+    color: var(--rojo-oscuro);
+}
+
+.client-mode-banner strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.client-mode-banner p {
+    font-size: 0.92rem;
+}
+
+/* ==========================================================
+FORMULARIOS Y FILTROS
+========================================================== */
+
+.filters {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr 1fr 1fr;
+    gap: 14px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.field,
+.consult-mode {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.field label,
+.consult-mode label {
+    font-size: 0.82rem;
+    color: var(--gris-texto);
+    font-weight: 800;
+}
+
+.field input,
+.field select,
+.consult-mode select {
+    width: 100%;
+    border: 1px solid var(--gris-medio);
+    background: var(--blanco);
+    border-radius: var(--radio-md);
+    padding: 12px 13px;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.field input:focus,
+.field select:focus,
+.consult-mode select:focus {
+    border-color: var(--rojo);
+    box-shadow: 0 0 0 4px var(--rojo-suave);
+}
+
+/* ==========================================================
+CONSULTA POR ALÉRGENOS
+========================================================== */
+
+.allergy-consult {
+    padding: 22px;
+    display: grid;
+    gap: 20px;
+    border-left: 5px solid var(--rojo);
+}
+
+.consult-header {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.consult-header h3 {
+    margin-bottom: 6px;
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 1.55rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.consult-header p {
+    max-width: 760px;
+    color: var(--gris-texto);
+    font-size: 0.95rem;
+}
+
+.allergy-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.allergy-chip {
+    border: 1px solid rgba(194, 24, 43, 0.20);
+    background: var(--rojo-suave);
+    color: var(--rojo);
+    border-radius: 999px;
+    padding: 9px 13px;
+    font-weight: 900;
+    transition: 0.18s ease;
+}
+
+.allergy-chip:hover {
+    background: var(--blanco);
+    transform: translateY(-1px);
+}
+
+.allergy-chip.is-active {
+    background: var(--rojo);
+    color: var(--blanco);
+    border-color: var(--rojo);
+    box-shadow: 0 8px 18px rgba(194, 24, 43, 0.22);
+}
+
+.consult-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background: var(--gris-claro);
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--radio-md);
+    padding: 14px 16px;
+}
+
+.consult-footer p {
+    color: var(--gris-texto);
+    font-size: 0.92rem;
+}
+
+.btn-reset {
+    border: 1px solid var(--gris-medio);
+    background: var(--blanco);
+    color: var(--negro);
+    border-radius: 999px;
+    padding: 9px 13px;
+    font-size: 0.85rem;
+    font-weight: 900;
+}
+
+.btn-reset:hover {
+    border-color: var(--rojo);
+    color: var(--rojo);
+    background: var(--rojo-suave);
+}
+
+/* ==========================================================
+CARTA Y PLATOS
+========================================================== */
+
+.platos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.plato-card {
+    position: relative;
+    overflow: hidden;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.plato-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    background: var(--rojo);
+}
+
+.plato-card-warning {
+    border-color: rgba(194, 24, 43, 0.22);
+}
+
+.plato-card-warning::before {
+    background: var(--rojo-vivo);
+}
+
+.plato-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.plato-header h3 {
+    margin-bottom: 10px;
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 1.42rem;
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+}
+
+.plato-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.precio {
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 900;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.descripcion {
+    color: var(--gris-texto);
+    font-size: 0.96rem;
+}
+
+.source-list {
+    color: var(--gris-suave);
+    font-size: 0.8rem;
+}
+
+.estado-pendiente {
+    background: var(--amarillo-suave);
+    color: var(--amarillo);
+}
+
+.estado-revisado {
+    background: var(--verde-suave);
+    color: var(--verde);
+}
+
+.estado-corregido {
+    background: var(--azul-suave);
+    color: var(--azul);
+}
+
+/* ==========================================================
+FICHA TÉCNICA Y DETALLES
+========================================================== */
+
+details {
+    background: var(--gris-claro);
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--radio-md);
+    padding: 12px 14px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 900;
+    color: var(--negro);
+}
+
+.details-body {
+    margin-top: 12px;
+    display: grid;
+    gap: 10px;
+    color: var(--gris-texto);
+    font-size: 0.92rem;
+}
+
+/* ==========================================================
+REVISIONES
+========================================================== */
+
+.system-message {
+    margin-bottom: 22px;
+    padding: 14px 18px;
+    border-radius: var(--radio-md);
+    font-weight: 800;
+    border: 1px solid transparent;
+}
+
+.system-ok {
+    background: var(--verde-suave);
+    color: var(--verde);
+    border-color: rgba(22, 128, 60, 0.20);
+}
+
+.system-error {
+    background: var(--rojo-suave);
+    color: var(--rojo);
+    border-color: rgba(194, 24, 43, 0.20);
+}
+
+.revision-form {
+    background: var(--gris-claro);
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--radio-md);
+    padding: 14px;
+}
+
+.revision-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.revision-btn {
+    border: 1px solid var(--gris-medio);
+    background: var(--blanco);
+    color: var(--gris-texto);
+    border-radius: 999px;
+    padding: 8px 11px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    transition: 0.18s ease;
+}
+
+.revision-btn:hover {
+    border-color: var(--rojo);
+    color: var(--rojo);
+    background: var(--rojo-suave);
+}
+
+.revision-btn.is-selected {
+    background: var(--rojo);
+    color: var(--blanco);
+    border-color: var(--rojo);
+    box-shadow: 0 8px 18px rgba(194, 24, 43, 0.18);
+}
+
+.revision-date {
+    margin-top: 9px;
+    color: var(--gris-suave);
+    font-size: 0.78rem;
+}
+
+/* ==========================================================
+TABLA DE ALÉRGENOS
+========================================================== */
+
+.matrix-tools {
+    padding: 18px;
+    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 18px;
+    align-items: end;
+}
+
+.matrix-check {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--gris-texto);
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 12px 14px;
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--radio-md);
+    background: var(--gris-claro);
+    cursor: pointer;
+}
+
+.matrix-check input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--rojo);
+}
+
+.allergen-matrix-card {
+    overflow: hidden;
+}
+
+.matrix-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.allergen-table {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+
+.allergen-table th,
+.allergen-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--gris-medio);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.allergen-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--negro);
+    color: var(--blanco);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.allergen-table thead th:first-child,
+.allergen-table tbody td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 3;
+}
+
+.allergen-table thead th:first-child {
+    background: var(--rojo);
+}
+
+.allergen-table tbody td:first-child {
+    background: var(--blanco);
+    box-shadow: 8px 0 16px rgba(0, 0, 0, 0.04);
+}
+
+.allergen-table tbody tr:hover {
+    background: var(--rojo-suave);
+}
+
+.matrix-plato {
+    text-align: left !important;
+    min-width: 260px;
+}
+
+.matrix-plato strong {
+    display: block;
+    color: var(--negro);
+}
+
+.matrix-category {
+    display: inline-flex;
+    padding: 5px 8px;
+    border-radius: 999px;
+    background: var(--gris-claro);
+    color: var(--gris-texto);
+    font-size: 0.78rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.cell-present {
+    background: var(--rojo-suave);
+    color: var(--rojo);
+    font-weight: 900;
+}
+
+.cell-warning {
+    background: var(--amarillo-suave);
+    color: var(--amarillo);
+    font-weight: 900;
+}
+
+.cell-empty {
+    color: #b3b3b3;
+}
+
+.matrix-note {
+    padding: 16px 18px;
+    background: var(--rojo-suave);
+    color: var(--rojo-oscuro);
+    border-top: 1px solid rgba(194, 24, 43, 0.16);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================
+ADVERTENCIAS ALIMENTARIAS
+========================================================== */
+
+.badge-food-warning {
+    background: var(--rojo-suave);
+    color: var(--rojo);
+    border-color: rgba(194, 24, 43, 0.22);
+}
+
+.food-warning-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    background: var(--amarillo-suave);
+    color: var(--amarillo);
+    border: 1px solid rgba(154, 107, 0, 0.20);
+    border-radius: var(--radio-md);
+    padding: 13px 14px;
+}
+
+.food-warning-summary strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.9rem;
+}
+
+.food-warning-summary p {
+    font-size: 0.86rem;
+    line-height: 1.4;
+    color: inherit;
+}
+
+.food-warning-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    padding: 8px 11px;
+    background: var(--blanco);
+    color: var(--amarillo);
+    border: 1px solid rgba(154, 107, 0, 0.24);
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.food-warning-link:hover {
+    background: var(--amarillo);
+    color: var(--blanco);
+}
+
+.food-warning-list {
+    display: grid;
+    gap: 10px;
+}
+
+.food-warning-item {
+    border-radius: var(--radio-md);
+    padding: 12px 13px;
+    border: 1px solid transparent;
+}
+
+.food-warning-item strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.88rem;
+}
+
+.food-warning-item p {
+    color: inherit;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+.food-warning-trazas {
+    background: var(--rojo-suave);
+    color: var(--rojo-oscuro);
+    border-color: rgba(194, 24, 43, 0.18);
+}
+
+.food-warning-sin-alergenos,
+.food-warning-apto {
+    background: var(--amarillo-suave);
+    color: var(--amarillo);
+    border-color: rgba(154, 107, 0, 0.20);
+}
+
+.food-warning-varios {
+    background: var(--rojo-suave);
+    color: var(--rojo);
+    border-color: rgba(194, 24, 43, 0.22);
+}
+
+.food-warning-revision {
+    background: var(--azul-suave);
+    color: var(--azul);
+    border-color: rgba(29, 78, 216, 0.18);
+}
+
+.food-warning-general {
+    background: var(--gris-claro);
+    color: var(--gris-texto);
+    border-color: var(--gris-medio);
+}
+
+.sensitive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.sensitive-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-left: 5px solid var(--rojo);
+}
+
+.sensitive-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.sensitive-header h3 {
+    margin-top: 8px;
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 1.38rem;
+    line-height: 1.05;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.sensitive-count {
+    background: var(--rojo-suave);
+    color: var(--rojo);
+    border-radius: 999px;
+    padding: 7px 10px;
+    font-size: 0.78rem;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+body.view-mode-client .badge-food-warning {
+    background: var(--amarillo-suave);
+    color: var(--amarillo);
+    border-color: rgba(154, 107, 0, 0.20);
+}
+
+body.view-mode-client .sensitive-card {
+    border-left-color: var(--amarillo);
+}
+
+body.view-mode-client .sensitive-count {
+    background: var(--amarillo-suave);
+    color: var(--amarillo);
+}
+
+/* ==========================================================
+DOCUMENTOS PROCESADOS
+========================================================== */
+
+.docs-friendly-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.doc-friendly-card {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.doc-friendly-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.doc-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 16px;
+    background: var(--rojo-suave);
+    display: grid;
+    place-items: center;
+    font-size: 1.55rem;
+    border: 1px solid rgba(194, 24, 43, 0.16);
+}
+
+.doc-type {
+    display: inline-flex;
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--rojo);
+}
+
+.doc-friendly-card h3 {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 1.35rem;
+    line-height: 1.05;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.doc-friendly-description {
+    color: var(--gris-texto);
+    font-size: 0.94rem;
+}
+
+.doc-friendly-status {
+    background: var(--gris-claro);
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--radio-md);
+    padding: 13px;
+    display: grid;
+    gap: 8px;
+}
+
+.doc-friendly-status p,
+.doc-friendly-block p {
+    color: var(--gris-texto);
+    font-size: 0.9rem;
+}
+
+.doc-friendly-block {
+    display: grid;
+    gap: 7px;
+}
+
+.doc-mini-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.doc-mini-stats div {
+    background: var(--gris-claro);
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--radio-md);
+    padding: 12px;
+    text-align: center;
+}
+
+.doc-mini-stats strong {
+    display: block;
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    color: var(--rojo);
+    line-height: 1;
+}
+
+.doc-mini-stats span {
+    display: block;
+    margin-top: 5px;
+    color: var(--gris-texto);
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.doc-friendly-warning {
+    background: var(--rojo-suave);
+    border-color: rgba(194, 24, 43, 0.18);
+}
+
+.doc-technical-name {
+    margin-top: auto;
+    background: var(--blanco);
+}
+
+.summary-friendly-card {
+    min-height: 260px;
+}
+
+.nivel-alto {
+    background: var(--rojo-suave);
+    color: var(--rojo);
+}
+
+.nivel-medio {
+    background: var(--amarillo-suave);
+    color: var(--amarillo);
+}
+
+.nivel-bajo {
+    background: var(--verde-suave);
+    color: var(--verde);
+}
+
+/* ==========================================================
+DETALLE TÉCNICO
+========================================================== */
+
+.technical-box {
+    padding: 20px;
+}
+
+.technical-box summary {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.process-list {
+    margin-top: 16px;
+    display: grid;
+    gap: 10px;
+}
+
+.process-item {
+    border: 1px solid var(--gris-medio);
+    background: var(--blanco);
+    border-radius: var(--radio-md);
+    padding: 14px;
+    display: grid;
+    grid-template-columns: 72px 1fr auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.step-number {
+    background: var(--rojo);
+    color: var(--blanco);
+    border-radius: 12px;
+    padding: 8px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.step-info strong {
+    display: block;
+    font-size: 0.94rem;
+}
+
+.step-info span {
+    display: block;
+    color: var(--gris-texto);
+    font-size: 0.82rem;
+}
+
+.step-status {
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.status-ok {
+    color: var(--verde);
+    background: var(--verde-suave);
+}
+
+.status-error {
+    color: var(--rojo);
+    background: var(--rojo-suave);
+}
+
+.status-omitido {
+    color: var(--amarillo);
+    background: var(--amarillo-suave);
+}
+
+/* ==========================================================
+IMPRESIÓN / EXPORTACIÓN
+========================================================== */
+
+.print-header,
+.print-only {
+    display: none;
+}
+
+.print-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.print-card {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.print-card h3 {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 1.35rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.print-card p {
+    color: var(--gris-texto);
+    font-size: 0.95rem;
+}
+
+.print-btn {
+    margin-top: auto;
+    border: none;
+    background: var(--rojo);
+    color: var(--blanco);
+    border-radius: 999px;
+    padding: 11px 15px;
+    font-weight: 900;
+}
+
+.print-btn:hover {
+    background: var(--rojo-oscuro);
+}
+
+/* ==========================================================
+RESPONSIVE
+========================================================== */
+
+@media (max-width: 1050px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filters {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .platos-grid,
+    .docs-friendly-grid,
+    .sensitive-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .print-actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .view-mode-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .view-mode-actions {
+        width: 100%;
+    }
+
+    .view-mode-btn {
+        flex: 1;
+    }
+
+    .consult-header,
+    .matrix-tools,
+    body.view-mode-client .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .consult-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .allergen-table {
+        min-width: 920px;
+    }
+
+    body.view-mode-client .print-actions-grid,
+    .print-actions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 680px) {
+    .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .brand {
+        gap: 10px;
+    }
+
+    .brand-logo {
+        width: 58px;
+    }
+
+    .brand-text strong {
+        font-size: 1.6rem;
+    }
+
+    .brand-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 22px 16px 54px;
+    }
+
+    .hero-main {
+        padding: 26px;
+        border-radius: 22px;
+    }
+
+    .stats,
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title,
+    .plato-header,
+    .sensitive-header,
+    .food-warning-summary {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .process-item {
+        grid-template-columns: 1fr;
+    }
+
+    .food-warning-link {
+        width: 100%;
+    }
+}
+
+/* ==========================================================
+MODO IMPRESIÓN
+========================================================== */
+
+@media print {
+    @page {
+        size: A4 landscape;
+        margin: 12mm;
+    }
+
+    body {
+        background: #ffffff !important;
+        color: #111111 !important;
+        font-size: 11px;
+    }
+
+    .topbar,
+    .hero,
+    .stats,
+    .secondary-stats,
+    #consulta-alergenos,
+    #impresion,
+    #tecnico,
+    .filters,
+    .matrix-tools,
+    .revision-form,
+    .system-message,
+    .no-print,
+    .visible-counter,
+    .hero-actions {
+        display: none !important;
+    }
+
+    .container {
+        max-width: none !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .print-header {
+        display: block !important;
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #111111;
+    }
+
+    .print-header strong {
+        display: block;
+        font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        letter-spacing: 0.04em;
+    }
+
+    .print-header span {
+        display: block;
+        margin-top: 3px;
+        font-weight: 700;
+    }
+
+    .print-header p {
+        margin-top: 4px;
+        color: #333333;
+    }
+
+    .section,
+    .print-only {
+        display: none !important;
+        margin: 0 !important;
+    }
+
+    body.print-mode-carta #consulta,
+    body.print-mode-interno #documentos,
+    body.print-mode-interno .print-interno-extra,
+    body.print-mode-advertencias #advertencias {
+        display: block !important;
+    }
+
+    body.print-mode-matriz .print-matriz-compacta {
+        display: block !important;
+        margin: 0 !important;
+    }
+
+    .section-title {
+        display: block !important;
+        margin-bottom: 12px !important;
+    }
+
+    .section-title h2 {
+        font-size: 22px !important;
+        margin-bottom: 5px;
+    }
+
+    .section-title p {
+        max-width: none !important;
+        font-size: 11px !important;
+        color: #333333 !important;
+    }
+
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #cccccc !important;
+    }
+
+    .chip,
+    .chip-alergeno,
+    .chip-ok,
+    .badge {
+        border: 1px solid #cccccc !important;
+        background: #ffffff !important;
+        color: #111111 !important;
+        padding: 4px 6px !important;
+        font-size: 10px !important;
+    }
+
+    body.view-mode-client .internal-only {
+        display: none !important;
+    }
+
+    body.view-mode-client .client-only {
+        display: block !important;
+    }
+
+    body.print-mode-carta .platos-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    body.print-mode-carta .plato-card {
+        padding: 12px !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    body.print-mode-carta .plato-card::before {
+        width: 3px !important;
+        background: #111111 !important;
+    }
+
+    body.print-mode-carta .plato-header h3 {
+        font-size: 16px !important;
+    }
+
+    body.print-mode-carta .precio {
+        background: #111111 !important;
+        color: #ffffff !important;
+        padding: 5px 8px !important;
+    }
+
+    body.print-mode-carta details,
+    body.print-mode-carta .source-list,
+    body.print-mode-carta .badge-revision {
+        display: none !important;
+    }
+
+    body.print-mode-carta .food-warning-summary {
+        background: #ffffff !important;
+        color: #111111 !important;
+        border: 1px solid #cccccc !important;
+        padding: 8px !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    body.print-mode-carta .food-warning-summary p {
+        font-size: 10px !important;
+    }
+
+    body.print-mode-carta .food-warning-link {
+        display: none !important;
+    }
+
+    .print-allergen-summary {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 10.5px;
+    }
+
+    .print-allergen-summary th,
+    .print-allergen-summary td {
+        border: 1px solid #bbbbbb;
+        padding: 7px 8px;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    .print-allergen-summary th {
+        background: #111111 !important;
+        color: #ffffff !important;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    .print-allergen-summary td:nth-child(1) {
+        width: 26%;
+    }
+
+    .print-allergen-summary td:nth-child(2) {
+        width: 16%;
+        font-weight: 700;
+    }
+
+    .print-allergen-summary td:nth-child(3) {
+        width: 43%;
+    }
+
+    .print-allergen-summary td:nth-child(4) {
+        width: 15%;
+        font-weight: 700;
+    }
+
+    .print-warning-box {
+        margin-top: 12px;
+        padding: 10px 12px;
+        border: 1px solid #bbbbbb;
+        font-size: 10.5px;
+        line-height: 1.45;
+    }
+
+    body.print-mode-advertencias .sensitive-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    body.print-mode-advertencias .sensitive-card {
+        padding: 12px !important;
+        border: 1px solid #cccccc !important;
+        border-left: 4px solid #111111 !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    body.print-mode-advertencias .sensitive-header h3 {
+        font-size: 16px !important;
+    }
+
+    body.print-mode-advertencias .food-warning-item,
+    body.print-mode-advertencias .sensitive-count {
+        background: #ffffff !important;
+        color: #111111 !important;
+        border: 1px solid #cccccc !important;
+    }
+
+    body.print-mode-advertencias .food-warning-item {
+        padding: 8px !important;
+    }
+
+    body.print-mode-interno .docs-friendly-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    body.print-mode-interno .doc-friendly-card {
+        padding: 12px !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    body.print-mode-interno .doc-icon {
+        width: 34px !important;
+        height: 34px !important;
+        flex-basis: 34px !important;
+        font-size: 1.1rem !important;
+    }
+
+    body.print-mode-interno .doc-friendly-card h3 {
+        font-size: 16px !important;
+    }
+
+    body.print-mode-interno .doc-mini-stats {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    body.print-mode-interno .doc-mini-stats div {
+        padding: 7px !important;
+    }
+
+    body.print-mode-interno .doc-mini-stats strong {
+        font-size: 16px !important;
+    }
+
+    body.print-mode-interno details {
+        display: block !important;
+    }
+}
