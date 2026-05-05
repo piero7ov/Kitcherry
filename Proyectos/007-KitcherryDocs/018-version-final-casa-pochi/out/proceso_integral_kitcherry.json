@@ -1,0 +1,152 @@
+{
+    "proyecto": "Kitcherry Docs",
+    "iteracion": "018-version-final-casa-pochi",
+    "descripcion": "Proceso final completo de Kitcherry Docs para Casa Pochi.",
+    "fecha_generacion": "2026-05-05 16:18:31",
+    "estado_general": "completado",
+    "base_dir": "C:\\xampp\\htdocs\\DAMPieroOlivares\\Primero\\Proyecto intermodular\\203-Proyectos de Kitcherry\\007-documentos a bases de datos\\018-version-final-casa-pochi",
+    "pdf_dir": "pdf",
+    "modelo_ollama": "llama3:latest",
+    "ollama_activado": true,
+    "pasos": [
+        {
+            "numero": "001",
+            "nombre": "Lectura de documentos PDF",
+            "archivo": "procesar_kitcherry_docs.py",
+            "estado": "ok",
+            "duracion_segundos": 1.34,
+            "resultados": [
+                {
+                    "archivo": "carta_casa_pochi.pdf",
+                    "salida": "carta_casa_pochi.txt",
+                    "estado": "ok"
+                },
+                {
+                    "archivo": "fichas_tecnicas_casa_pochi.pdf",
+                    "salida": "fichas_tecnicas_casa_pochi.txt",
+                    "estado": "ok"
+                },
+                {
+                    "archivo": "tabla_alergenos_casa_pochi.pdf",
+                    "salida": "tabla_alergenos_casa_pochi.txt",
+                    "estado": "ok"
+                }
+            ]
+        },
+        {
+            "numero": "002",
+            "nombre": "Limpieza de texto",
+            "archivo": "procesar_kitcherry_docs.py",
+            "estado": "ok",
+            "duracion_segundos": 0.03,
+            "resultados": [
+                {
+                    "archivo": "carta_casa_pochi.txt",
+                    "salida": "carta_casa_pochi_limpio.txt",
+                    "estado": "ok",
+                    "caracteres_originales": 1884,
+                    "caracteres_limpios": 1756
+                },
+                {
+                    "archivo": "fichas_tecnicas_casa_pochi.txt",
+                    "salida": "fichas_tecnicas_casa_pochi_limpio.txt",
+                    "estado": "ok",
+                    "caracteres_originales": 2716,
+                    "caracteres_limpios": 2588
+                },
+                {
+                    "archivo": "tabla_alergenos_casa_pochi.txt",
+                    "salida": "tabla_alergenos_casa_pochi_limpio.txt",
+                    "estado": "ok",
+                    "caracteres_originales": 1834,
+                    "caracteres_limpios": 1706
+                }
+            ]
+        },
+        {
+            "numero": "003",
+            "nombre": "Detección de platos y alérgenos",
+            "archivo": "procesar_kitcherry_docs.py",
+            "estado": "ok",
+            "duracion_segundos": 0.01,
+            "resultados": [
+                {
+                    "archivo": "carta_casa_pochi_limpio.txt",
+                    "estado": "omitido",
+                    "motivo": "No se usa para detectar la lista oficial de platos.",
+                    "platos_detectados": 0
+                },
+                {
+                    "archivo": "fichas_tecnicas_casa_pochi_limpio.txt",
+                    "estado": "omitido",
+                    "motivo": "No se usa para detectar la lista oficial de platos.",
+                    "platos_detectados": 0
+                },
+                {
+                    "archivo": "tabla_alergenos_casa_pochi_limpio.txt",
+                    "estado": "ok",
+                    "platos_detectados": 10
+                }
+            ],
+            "total_platos": 10
+        },
+        {
+            "numero": "004",
+            "nombre": "Generación de carta estructurada",
+            "archivo": "procesar_kitcherry_docs.py",
+            "estado": "ok",
+            "duracion_segundos": 0.04,
+            "total_platos": 10
+        },
+        {
+            "numero": "005",
+            "nombre": "Resumen de documentos con Ollama",
+            "archivo": "procesar_kitcherry_docs.py",
+            "estado": "ok",
+            "duracion_segundos": 41.74,
+            "documentos_ok": 3,
+            "documentos_error": 0,
+            "resultados": [
+                {
+                    "archivo": "carta_casa_pochi_limpio.txt",
+                    "estado": "ok",
+                    "salida": "carta_casa_pochi_limpio.summary.txt"
+                },
+                {
+                    "archivo": "fichas_tecnicas_casa_pochi_limpio.txt",
+                    "estado": "ok",
+                    "salida": "fichas_tecnicas_casa_pochi_limpio.summary.txt"
+                },
+                {
+                    "archivo": "tabla_alergenos_casa_pochi_limpio.txt",
+                    "estado": "ok",
+                    "salida": "tabla_alergenos_casa_pochi_limpio.summary.txt"
+                }
+            ]
+        },
+        {
+            "numero": "006",
+            "nombre": "Análisis documental con Ollama",
+            "archivo": "procesar_kitcherry_docs.py",
+            "estado": "ok",
+            "duracion_segundos": 60.65,
+            "documentos_ok": 3,
+            "documentos_error": 0
+        }
+    ],
+    "salidas": {
+        "txt_generados": 3,
+        "txt_limpios_generados": 3,
+        "platos_en_carta": 10,
+        "resumenes_generados": 3,
+        "documentos_analizados": 3,
+        "revisiones_guardadas": 0
+    },
+    "archivos_principales": {
+        "platos_detectados": "out\\platos_detectados.json",
+        "carta_kitcherry": "out\\carta_kitcherry.json",
+        "revisiones_platos": "out\\revisiones_platos.json",
+        "analisis_ollama_carta": "out\\analisis_ollama_carta.json",
+        "proceso_integral": "out\\proceso_integral_kitcherry.json"
+    }
+}
