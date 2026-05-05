@@ -1,0 +1,79 @@
+===== PÁGINA 1 =====
+
+KITCHERRY - DOCUMENTO DE PRUEBA
+Página 1
+ Carta Casa Pochi
+Carta ficticia para pruebas de extracción de platos, precios e ingredientes.
+Carta de prueba - Restaurante Casa Pochi
+Documento ficticio creado para probar la extracción de texto, la detección de platos, categorías,
+precios, ingredientes y posibles alérgenos dentro del módulo Kitcherry Docs.
+Entrantes
+Plato
+Precio
+Descripción / ingredientes principales
+Croquetas caseras de
+jamón
+8,50 €
+Bechamel, jamón serrano, harina de trigo, leche,
+huevo y pan rallado.
+Ensaladilla rusa de la casa
+7,90 €
+Patata, zanahoria, guisantes, atún, huevo cocido y
+mayonesa.
+Pan con tomate y aceite de
+oliva
+4,20 €
+Pan tostado, tomate rallado, ajo y aceite de oliva
+virgen extra.
+Platos principales
+Plato
+Precio
+Descripción / ingredientes principales
+Pasta al pesto
+11,50 €
+Pasta de trigo, albahaca, queso curado, piñones,
+aceite de oliva y ajo.
+Arroz meloso de marisco
+15,80 €
+Arroz, caldo de pescado, gambas, mejillones,
+calamar, tomate y azafrán.
+Hamburguesa de ternera
+con queso
+12,90 €
+Pan brioche, carne de ternera, queso, lechuga,
+tomate y salsa de la casa.
+Postres
+Plato
+Precio
+Descripción / ingredientes principales
+Tarta de queso
+5,90 €
+Queso crema, nata, huevo, azúcar y base de
+galleta.
+Brownie con nueces
+5,50 €
+Chocolate, harina de trigo, huevo, mantequilla y
+nueces.
+Fruta de temporada
+4,00 €
+Selección de fruta fresca según disponibilidad.
+Bebidas
+
+===== PÁGINA 2 =====
+
+KITCHERRY - DOCUMENTO DE PRUEBA
+Página 2
+Plato
+Precio
+Descripción / ingredientes principales
+Cerveza artesanal
+3,80 €
+Contiene cebada y puede contener trazas de gluten.
+Refresco de cola
+2,50 €
+Bebida refrescante sin alérgenos declarados.
+Café con leche
+2,20 €
+Café expreso con leche de vaca.
+Nota: documento de prueba. La información de alérgenos debe ser revisada por el responsable del establecimiento antes de
+publicarse al cliente.

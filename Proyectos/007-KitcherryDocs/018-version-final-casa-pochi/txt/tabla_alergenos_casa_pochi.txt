@@ -1,0 +1,103 @@
+===== PÁGINA 1 =====
+
+KITCHERRY - DOCUMENTO DE PRUEBA
+Página 1
+ Tabla de alérgenos Casa Pochi
+Tabla ficticia para pruebas de extracción de alérgenos y matriz por plato.
+Tabla de alérgenos - Casa Pochi
+Documento ficticio para probar la lectura de tablas y la extracción de alérgenos por plato. Los datos
+son de prueba y deben tratarse como material didáctico.
+Croquetas caseras de jamón
+Alérgenos declarados: Gluten, Huevos, Leche, Soja.
+Ensaladilla rusa de la casa
+Alérgenos declarados: Huevos, Pescado.
+Pan con tomate
+Alérgenos declarados: Gluten.
+Pasta al pesto
+Alérgenos declarados: Gluten, Leche, Frutos de cáscara, Huevos.
+Arroz meloso de marisco
+Alérgenos declarados: Crustáceos, Pescado, Moluscos, Apio.
+Hamburguesa de ternera con queso
+Alérgenos declarados: Gluten, Leche, Huevos, Mostaza, Sésamo.
+Tarta de queso
+Alérgenos declarados: Gluten, Huevos, Leche, Frutos de cáscara.
+Brownie con nueces
+Alérgenos declarados: Gluten, Huevos, Leche, Frutos de cáscara.
+Fruta de temporada
+Alérgenos declarados: sin alérgenos declarados en esta ficha de prueba.
+Cerveza artesanal
+Alérgenos declarados: Gluten, Sulfitos.
+
+===== PÁGINA 2 =====
+
+KITCHERRY - DOCUMENTO DE PRUEBA
+Página 2
+Matriz simplificada de alérgenos
+Plato
+Gluten
+Crustáceos
+Huevos
+Pescado
+Cacahuetes
+Soja
+Leche
+Croquetas caseras de jamón
+X
+X
+X
+X
+Ensaladilla rusa de la casa
+X
+X
+Pan con tomate
+X
+Pasta al pesto
+X
+X
+X
+Arroz meloso de marisco
+X
+X
+Hamburguesa de ternera con
+queso
+X
+X
+X
+Tarta de queso
+X
+X
+X
+Brownie con nueces
+X
+X
+X
+Fruta de temporada
+Cerveza artesanal
+X
+Plato
+Frutos de cáscara
+Apio
+Mostaza
+Sésamo
+Sulfitos
+Altramuces
+Moluscos
+Croquetas caseras de jamón
+Ensaladilla rusa de la casa
+Pan con tomate
+Pasta al pesto
+X
+Arroz meloso de marisco
+X
+X
+Hamburguesa de ternera con
+queso
+X
+X
+Tarta de queso
+X
+Brownie con nueces
+X
+Fruta de temporada
+Cerveza artesanal
+X
