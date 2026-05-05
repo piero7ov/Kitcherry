@@ -1,0 +1,3 @@
+A continuación se presenta un resumen en un solo párrafo del documento "Fichas técnicas Casa Pochi":
+
+Este documento contiene fichas técnicas ficticias para pruebas de extracción de ingredientes, procesos y alérgenos. Las cuatro fichas presentadas describen platos diferentes: croquetas caseras de jamón, pasta al pesto, arroz meloso de marisco y tarta de queso. Cada ficha proporciona información sobre la categoría del plato, el número de raciones, los ingredientes utilizados, el proceso de elaboración, la conservación y los posibles alérgenos declarados. Los temas principales son la descripción detallada de cada plato y la identificación de los alérgenos presentes en cada uno de ellos.
