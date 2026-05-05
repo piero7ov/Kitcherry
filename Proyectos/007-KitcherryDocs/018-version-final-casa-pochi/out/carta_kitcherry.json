@@ -1,0 +1,277 @@
+{
+    "proyecto": "Kitcherry Docs",
+    "iteracion": "018-version-final-casa-pochi",
+    "descripcion": "Carta estructurada con platos oficiales, precios, categorías, ingredientes, alérgenos y fichas técnicas.",
+    "fecha_generacion": "2026-05-05 16:16:49",
+    "negocio": "Casa Pochi",
+    "estado_general": "borrador_pendiente_revision",
+    "total_platos": 10,
+    "platos": [
+        {
+            "id": 1,
+            "nombre": "Croquetas caseras de jamón",
+            "categoria": "Entrantes",
+            "precio": "8,50 €",
+            "descripcion": "",
+            "ingredientes_detectados": [],
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevos",
+                "Soja",
+                "Leche"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "",
+                "ingredientes": "",
+                "elaboracion": "",
+                "conservacion": "",
+                "alergenos_texto": ""
+            },
+            "fuentes": [
+                "tabla_alergenos_casa_pochi_limpio.txt",
+                "carta_casa_pochi_limpio.txt"
+            ]
+        },
+        {
+            "id": 2,
+            "nombre": "Ensaladilla rusa de la casa",
+            "categoria": "Entrantes",
+            "precio": "7,90 €",
+            "descripcion": "",
+            "ingredientes_detectados": [],
+            "alergenos_declarados": [
+                "Huevos",
+                "Pescado"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "",
+                "ingredientes": "",
+                "elaboracion": "",
+                "conservacion": "",
+                "alergenos_texto": ""
+            },
+            "fuentes": [
+                "tabla_alergenos_casa_pochi_limpio.txt",
+                "carta_casa_pochi_limpio.txt"
+            ]
+        },
+        {
+            "id": 3,
+            "nombre": "Pan con tomate",
+            "categoria": "Entrantes",
+            "precio": "4,20 €",
+            "descripcion": "Pan tostado, tomate rallado, ajo y aceite de oliva virgen extra",
+            "ingredientes_detectados": [
+                "Pan tostado",
+                "tomate rallado",
+                "ajo",
+                "aceite de oliva virgen extra"
+            ],
+            "alergenos_declarados": [
+                "Gluten"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "",
+                "ingredientes": "",
+                "elaboracion": "",
+                "conservacion": "",
+                "alergenos_texto": ""
+            },
+            "fuentes": [
+                "tabla_alergenos_casa_pochi_limpio.txt",
+                "carta_casa_pochi_limpio.txt"
+            ]
+        },
+        {
+            "id": 4,
+            "nombre": "Pasta al pesto",
+            "categoria": "Platos principales",
+            "precio": "11,50 €",
+            "descripcion": "",
+            "ingredientes_detectados": [],
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevos",
+                "Leche",
+                "Frutos de cáscara"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "",
+                "ingredientes": "",
+                "elaboracion": "",
+                "conservacion": "",
+                "alergenos_texto": ""
+            },
+            "fuentes": [
+                "tabla_alergenos_casa_pochi_limpio.txt",
+                "carta_casa_pochi_limpio.txt"
+            ]
+        },
+        {
+            "id": 5,
+            "nombre": "Arroz meloso de marisco",
+            "categoria": "Platos principales",
+            "precio": "15,80 €",
+            "descripcion": "",
+            "ingredientes_detectados": [],
+            "alergenos_declarados": [
+                "Crustáceos",
+                "Pescado",
+                "Apio",
+                "Moluscos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "",
+                "ingredientes": "",
+                "elaboracion": "",
+                "conservacion": "",
+                "alergenos_texto": ""
+            },
+            "fuentes": [
+                "tabla_alergenos_casa_pochi_limpio.txt",
+                "carta_casa_pochi_limpio.txt"
+            ]
+        },
+        {
+            "id": 6,
+            "nombre": "Hamburguesa de ternera con queso",
+            "categoria": "Platos principales",
+            "precio": "12,90 €",
+            "descripcion": "Pan brioche, carne de ternera, queso, lechuga, tomate y salsa de la casa",
+            "ingredientes_detectados": [
+                "Pan brioche",
+                "carne de ternera",
+                "queso",
+                "lechuga",
+                "tomate",
+                "salsa de la casa"
+            ],
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevos",
+                "Leche",
+                "Mostaza",
+                "Sésamo"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "",
+                "ingredientes": "",
+                "elaboracion": "",
+                "conservacion": "",
+                "alergenos_texto": ""
+            },
+            "fuentes": [
+                "tabla_alergenos_casa_pochi_limpio.txt",
+                "carta_casa_pochi_limpio.txt"
+            ]
+        },
+        {
+            "id": 7,
+            "nombre": "Tarta de queso",
+            "categoria": "Postres",
+            "precio": "5,90 €",
+            "descripcion": "",
+            "ingredientes_detectados": [],
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevos",
+                "Leche",
+                "Frutos de cáscara"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "",
+                "ingredientes": "",
+                "elaboracion": "",
+                "conservacion": "",
+                "alergenos_texto": ""
+            },
+            "fuentes": [
+                "tabla_alergenos_casa_pochi_limpio.txt",
+                "carta_casa_pochi_limpio.txt"
+            ]
+        },
+        {
+            "id": 8,
+            "nombre": "Brownie con nueces",
+            "categoria": "Postres",
+            "precio": "5,50 €",
+            "descripcion": "",
+            "ingredientes_detectados": [],
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevos",
+                "Leche",
+                "Frutos de cáscara"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "",
+                "ingredientes": "",
+                "elaboracion": "",
+                "conservacion": "",
+                "alergenos_texto": ""
+            },
+            "fuentes": [
+                "tabla_alergenos_casa_pochi_limpio.txt",
+                "carta_casa_pochi_limpio.txt"
+            ]
+        },
+        {
+            "id": 9,
+            "nombre": "Fruta de temporada",
+            "categoria": "Postres",
+            "precio": "4,00 €",
+            "descripcion": "Selección de fruta fresca según disponibilidad",
+            "ingredientes_detectados": [
+                "Selección de fruta fresca según disponibilidad"
+            ],
+            "alergenos_declarados": [],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "",
+                "ingredientes": "",
+                "elaboracion": "",
+                "conservacion": "",
+                "alergenos_texto": ""
+            },
+            "fuentes": [
+                "tabla_alergenos_casa_pochi_limpio.txt",
+                "carta_casa_pochi_limpio.txt"
+            ]
+        },
+        {
+            "id": 10,
+            "nombre": "Cerveza artesanal",
+            "categoria": "Bebidas",
+            "precio": "3,80 €",
+            "descripcion": "Contiene cebada y puede contener trazas de gluten",
+            "ingredientes_detectados": [
+                "Contiene cebada",
+                "puede contener trazas de gluten"
+            ],
+            "alergenos_declarados": [
+                "Gluten",
+                "Sulfitos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "",
+                "ingredientes": "",
+                "elaboracion": "",
+                "conservacion": "",
+                "alergenos_texto": ""
+            },
+            "fuentes": [
+                "tabla_alergenos_casa_pochi_limpio.txt",
+                "carta_casa_pochi_limpio.txt"
+            ]
+        }
+    ]
+}
