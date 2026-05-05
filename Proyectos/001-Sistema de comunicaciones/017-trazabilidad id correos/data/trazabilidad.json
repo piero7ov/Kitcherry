@@ -1,0 +1,133 @@
+{
+  "_uid_aliases": {
+    "31": "msgid:69efecd3.df0a0220.1bb999.09cf@mx.google.com",
+    "30": "msgid:cadrkleylqc6yfu3ujzlvtrq7e97dqej0oxuwxvrqqnre7heyrg@mail.gmail.com",
+    "29": "msgid:cagz3zzvjjxnfcaex=-_dpxeqsuntgywj6df4=cmrqj8cxbctbg@mail.gmail.com",
+    "28": "msgid:camhspjexfxw9v2nieat0-6u4pm-gwnmr_=su0v-lkbbd-wu2ua@mail.gmail.com",
+    "27": "msgid:caeurcvaap+qo08yrovkw=u0zcm=rda8k=tajedsgq856h9w6tw@mail.gmail.com"
+  },
+  "msgid:69efecd3.df0a0220.1bb999.09cf@mx.google.com": {
+    "estado": "papelera",
+    "creado_en": "2026-05-04 23:59:48",
+    "borrador_generado_en": null,
+    "respondido_en": null,
+    "archivado_en": null,
+    "enviado_a_papelera_en": "2026-05-05 00:05:03",
+    "respuesta_enviada": "",
+    "tracking_id": "msgid:69efecd3.df0a0220.1bb999.09cf@mx.google.com",
+    "uid_actual": "31",
+    "uid_history": [
+      "31"
+    ],
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-05-04 23:59:48"
+      },
+      {
+        "accion": "enviado_a_papelera",
+        "fecha": "2026-05-05 00:05:03"
+      }
+    ]
+  },
+  "msgid:cadrkleylqc6yfu3ujzlvtrq7e97dqej0oxuwxvrqqnre7heyrg@mail.gmail.com": {
+    "estado": "respondido",
+    "creado_en": "2026-05-05 00:00:06",
+    "borrador_generado_en": "2026-05-05 00:03:28",
+    "respondido_en": "2026-05-05 00:04:11",
+    "archivado_en": null,
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "Buenas tardes,\n\nGracias por contactarnos para reservar una mesa para un grupo de [NÚMERO_PERSONAS] personas el domingo 3 de mayo a las [HORA_RESERVA]. Me alegra poder ayudarte con tu solicitud.\n\nEn cuanto a menús concertados, sí, ofrecemos opciones personalizadas para grupos. Nuestro [DETALLE_MENÚ] está diseñado para satisfacer diferentes gustos y necesidades. Por favor, consulta nuestro [EMAIL] o llama al [TELÉFONO] para obtener más información sobre nuestros menús.\n\nEn cuanto a la fianza, sí, aplicamos una tarifa por reservas grandes como la tuya. La cantidad de la fianza es de [CONDICIONES_RESERVA]. Por favor, consulta nuestro sitio web en [DIRECCIÓN] o llama al [TELÉFONO] para obtener más información sobre nuestras condiciones de reserva.\n\nAgradezco tu interés en Kitcherry y espero poder atender a tus necesidades. Si tienes alguna pregunta adicional, no dudes en preguntar.\n\nAtentamente,\n[KITCHERRY]\n\nNota: Se omiten los datos del cliente que no están claros (nombre y teléfono) y se utilizan placeholders para reemplazar información que falta.",
+    "tracking_id": "msgid:cadrkleylqc6yfu3ujzlvtrq7e97dqej0oxuwxvrqqnre7heyrg@mail.gmail.com",
+    "uid_actual": "30",
+    "uid_history": [
+      "30"
+    ],
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-05-05 00:00:06"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-05-05 00:03:28"
+      },
+      {
+        "accion": "correo_enviado",
+        "fecha": "2026-05-05 00:04:11"
+      }
+    ]
+  },
+  "msgid:cagz3zzvjjxnfcaex=-_dpxeqsuntgywj6df4=cmrqj8cxbctbg@mail.gmail.com": {
+    "estado": "pendiente",
+    "creado_en": "2026-05-05 00:00:25",
+    "borrador_generado_en": null,
+    "respondido_en": null,
+    "archivado_en": null,
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "",
+    "tracking_id": "msgid:cagz3zzvjjxnfcaex=-_dpxeqsuntgywj6df4=cmrqj8cxbctbg@mail.gmail.com",
+    "uid_actual": "29",
+    "uid_history": [
+      "29"
+    ],
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-05-05 00:00:25"
+      }
+    ]
+  },
+  "msgid:camhspjexfxw9v2nieat0-6u4pm-gwnmr_=su0v-lkbbd-wu2ua@mail.gmail.com": {
+    "estado": "archivado",
+    "creado_en": "2026-05-05 00:00:43",
+    "borrador_generado_en": "2026-05-05 00:04:31",
+    "respondido_en": "2026-05-05 00:04:54",
+    "archivado_en": "2026-05-05 00:04:56",
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "Borrador de respuesta:\n\nHola Marta,\n\nGracias por consultar nuestro horario de apertura para este domingo. Nuestro horario de apertura es [HORARIO_APERTURA] y nuestro horario de cierre es [HORARIO_CIERRE].\n\nEn cuanto a la ubicación, nuestra dirección es [DIRECCIÓN]. No hay parada de metro cerca del local, pero hay parking disponible en las inmediaciones.\n\nEsperamos verte este domingo. ¡Muchas gracias!\n\nAtentamente,\nKitcherry",
+    "tracking_id": "msgid:camhspjexfxw9v2nieat0-6u4pm-gwnmr_=su0v-lkbbd-wu2ua@mail.gmail.com",
+    "uid_actual": "28",
+    "uid_history": [
+      "28"
+    ],
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-05-05 00:00:43"
+      },
+      {
+        "accion": "borrador_generado",
+        "fecha": "2026-05-05 00:04:31"
+      },
+      {
+        "accion": "correo_enviado",
+        "fecha": "2026-05-05 00:04:54"
+      },
+      {
+        "accion": "correo_archivado",
+        "fecha": "2026-05-05 00:04:56"
+      }
+    ]
+  },
+  "msgid:caeurcvaap+qo08yrovkw=u0zcm=rda8k=tajedsgq856h9w6tw@mail.gmail.com": {
+    "estado": "pendiente",
+    "creado_en": "2026-05-05 00:00:51",
+    "borrador_generado_en": null,
+    "respondido_en": null,
+    "archivado_en": null,
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "",
+    "tracking_id": "msgid:caeurcvaap+qo08yrovkw=u0zcm=rda8k=tajedsgq856h9w6tw@mail.gmail.com",
+    "uid_actual": "27",
+    "uid_history": [
+      "27"
+    ],
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-05-05 00:00:51"
+      }
+    ]
+  }
+}
