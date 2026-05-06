@@ -1,0 +1,108 @@
+{
+    "proyecto": "Kitcherry Docs",
+    "iteracion": "003-detectar-platos-alergenos",
+    "descripcion": "Detección inicial de platos y alérgenos declarados desde documentos TXT limpios.",
+    "fecha_generacion": "2026-05-05 04:05:34",
+    "total_platos": 10,
+    "platos": [
+        {
+            "nombre": "Croquetas caseras de jamón",
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevos",
+                "Leche",
+                "Soja"
+            ],
+            "estado_revision": "pendiente",
+            "fuente": "tabla_alergenos_casa_pochi_limpio.txt"
+        },
+        {
+            "nombre": "Ensaladilla rusa de la casa",
+            "alergenos_declarados": [
+                "Huevos",
+                "Pescado"
+            ],
+            "estado_revision": "pendiente",
+            "fuente": "tabla_alergenos_casa_pochi_limpio.txt"
+        },
+        {
+            "nombre": "Pan con tomate",
+            "alergenos_declarados": [
+                "Gluten"
+            ],
+            "estado_revision": "pendiente",
+            "fuente": "tabla_alergenos_casa_pochi_limpio.txt"
+        },
+        {
+            "nombre": "Pasta al pesto",
+            "alergenos_declarados": [
+                "Gluten",
+                "Leche",
+                "Frutos de cáscara",
+                "Huevos"
+            ],
+            "estado_revision": "pendiente",
+            "fuente": "tabla_alergenos_casa_pochi_limpio.txt"
+        },
+        {
+            "nombre": "Arroz meloso de marisco",
+            "alergenos_declarados": [
+                "Crustáceos",
+                "Pescado",
+                "Moluscos",
+                "Apio"
+            ],
+            "estado_revision": "pendiente",
+            "fuente": "tabla_alergenos_casa_pochi_limpio.txt"
+        },
+        {
+            "nombre": "Hamburguesa de ternera con queso",
+            "alergenos_declarados": [
+                "Gluten",
+                "Leche",
+                "Huevos",
+                "Mostaza",
+                "Sésamo"
+            ],
+            "estado_revision": "pendiente",
+            "fuente": "tabla_alergenos_casa_pochi_limpio.txt"
+        },
+        {
+            "nombre": "Tarta de queso",
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevos",
+                "Leche",
+                "Frutos de cáscara"
+            ],
+            "estado_revision": "pendiente",
+            "fuente": "tabla_alergenos_casa_pochi_limpio.txt"
+        },
+        {
+            "nombre": "Brownie con nueces",
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevos",
+                "Leche",
+                "Frutos de cáscara"
+            ],
+            "estado_revision": "pendiente",
+            "fuente": "tabla_alergenos_casa_pochi_limpio.txt"
+        },
+        {
+            "nombre": "Fruta de temporada",
+            "alergenos_declarados": [],
+            "estado_revision": "pendiente",
+            "fuente": "tabla_alergenos_casa_pochi_limpio.txt"
+        },
+        {
+            "nombre": "Cerveza artesanal",
+            "alergenos_declarados": [
+                "Gluten",
+                "Sulfitos"
+            ],
+            "estado_revision": "pendiente",
+            "fuente": "tabla_alergenos_casa_pochi_limpio.txt"
+        }
+    ]
+}
