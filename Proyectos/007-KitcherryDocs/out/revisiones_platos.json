@@ -1,0 +1,51 @@
+{
+    "proyecto": "Kitcherry Docs",
+    "iteracion": "017-revisiones-separadas",
+    "descripcion": "Archivo independiente para guardar estados de revisión de platos sin modificar la carta generada automáticamente.",
+    "ultima_actualizacion": "2026-05-05 06:19:35",
+    "total_revisiones": 3,
+    "revisiones": {
+        "plato_1_croquetas-caseras-de-jamon": {
+            "plato_id": 1,
+            "nombre": "Croquetas caseras de jamón",
+            "estado_revision": "revisado",
+            "actualizado_en": "2026-05-05 05:09:56",
+            "origen": "migracion_desde_carta_016",
+            "historial": [
+                {
+                    "estado": "revisado",
+                    "fecha": "2026-05-05 05:09:56",
+                    "origen": "panel_012"
+                }
+            ]
+        },
+        "plato_2_ensaladilla-rusa-de-la-casa": {
+            "plato_id": 2,
+            "nombre": "Ensaladilla rusa de la casa",
+            "estado_revision": "corregido",
+            "actualizado_en": "2026-05-05 05:10:37",
+            "origen": "migracion_desde_carta_016",
+            "historial": [
+                {
+                    "estado": "corregido",
+                    "fecha": "2026-05-05 05:10:37",
+                    "origen": "panel_012"
+                }
+            ]
+        },
+        "plato_4_pasta-al-pesto": {
+            "plato_id": 4,
+            "nombre": "Pasta al pesto",
+            "estado_revision": "revisado",
+            "actualizado_en": "2026-05-05 06:19:35",
+            "origen": "panel_017",
+            "historial": [
+                {
+                    "estado": "revisado",
+                    "fecha": "2026-05-05 06:19:35",
+                    "origen": "panel_017"
+                }
+            ]
+        }
+    }
+}
