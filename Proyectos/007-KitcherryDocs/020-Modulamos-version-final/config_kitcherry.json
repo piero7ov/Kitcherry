@@ -1,0 +1,8 @@
+{
+    "proyecto": "Kitcherry Docs",
+    "iteracion": "019-version-final-nombre-restaurante",
+    "negocio": "La Huerta del Mar",
+    "nombre_proceso": "KITCHERRY DOCS - PROCESO FINAL LA HUERTA DEL MAR",
+    "modelo_ollama": "llama3:latest",
+    "ejecutar_ollama": true
+}
