@@ -1,0 +1,74 @@
+{
+    "proyecto": "Kitcherry Docs",
+    "iteracion": "019-version-final-nombre-restaurante",
+    "negocio": "La Huerta del Mar",
+    "fecha": "2026-05-05 20:49:19",
+    "estado_general": "completado",
+    "python": "C:\\Program Files\\Python313\\python.exe",
+    "base_dir": "C:\\xampp\\htdocs\\DAMPieroOlivares\\Primero\\Proyecto intermodular\\203-Proyectos de Kitcherry\\007-documentos a bases de datos\\020-Modulamos-version-final",
+    "pdf_dir": "pdf",
+    "modelo_ollama": "llama3:latest",
+    "ollama_activo": true,
+    "pasos": [
+        {
+            "numero": "001",
+            "nombre": "Lectura de documentos PDF",
+            "estado": "ok",
+            "duracion_segundos": 0.13,
+            "archivo": "pdf"
+        },
+        {
+            "numero": "002",
+            "nombre": "Limpieza de texto",
+            "estado": "ok",
+            "duracion_segundos": 0.02,
+            "archivo": "txt_limpio"
+        },
+        {
+            "numero": "003",
+            "nombre": "Detección oficial de platos desde carta",
+            "estado": "ok",
+            "duracion_segundos": 0.02,
+            "archivo": "out/platos_detectados.json"
+        },
+        {
+            "numero": "004",
+            "nombre": "Generación de carta estructurada",
+            "estado": "ok",
+            "duracion_segundos": 0.03,
+            "archivo": "out/carta_kitcherry.json"
+        },
+        {
+            "numero": "005",
+            "nombre": "Resumen de documentos",
+            "estado": "ok",
+            "duracion_segundos": 30.4,
+            "archivo": "summaries"
+        },
+        {
+            "numero": "006",
+            "nombre": "Análisis documental",
+            "estado": "ok",
+            "duracion_segundos": 88.73,
+            "archivo": "out/analisis_ollama_carta.json"
+        }
+    ],
+    "resumen": {
+        "txt_generados": 3,
+        "txt_limpios_generados": 3,
+        "platos_en_carta": 20,
+        "resumenes_generados": 3,
+        "documentos_analizados": 3,
+        "revisiones_guardadas": 0
+    },
+    "comprobacion_salidas": {
+        "pdf": true,
+        "txt": true,
+        "txt_limpio": true,
+        "out/platos_detectados.json": true,
+        "out/carta_kitcherry.json": true,
+        "out/revisiones_platos.json": true,
+        "summaries": true,
+        "out/analisis_ollama_carta.json": true
+    }
+}
