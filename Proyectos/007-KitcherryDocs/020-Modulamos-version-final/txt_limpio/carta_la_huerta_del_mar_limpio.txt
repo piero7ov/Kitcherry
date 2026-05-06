@@ -1,0 +1,86 @@
+Carta - Restaurante La Huerta del Mar
+Documento ficticio de aspecto realista para probar extracción de carta, categorías, precios,
+ingredientes y alérgenos dentro del módulo Kitcherry Docs.
+Nota: los datos son de prueba. La información de alérgenos debe ser revisada por el responsable del establecimiento
+antes de publicarse al cliente.
+Entrantes
+Plato
+Precio
+Descripción / ingredientes principales
+Ensalada templada de queso de cabra
+9,80 €
+Mezcla de hojas verdes, queso de cabra gratinado, nueces, tomate seco, manzana y vinagreta de
+mostaza y miel.
+Croquetas de setas y jamón ibérico
+8,90 €
+Bechamel cremosa con setas salteadas, jamón ibérico, harina de trigo, leche, huevo y pan rallado.
+Patatas bravas con alioli suave
+6,90 €
+Patata agria frita en dados, salsa brava casera, alioli suave, pimentón y cebollino fresco.
+Calamares a la andaluza
+10,50 €
+Anillas de calamar enharinadas, fritas en aceite caliente y servidas con limón y mayonesa cítrica.
+Hummus de garbanzo con pan de pita
+7,20 €
+Crema de garbanzo con tahini, limón, comino, aceite de oliva, pimentón y pan de pita tostado.
+Platos principales
+Plato
+Precio
+Descripción / ingredientes principales
+Arroz meloso de sepia y gambas
+16,90 €
+Arroz bomba, caldo de pescado, sepia, gambas, tomate, ajo, pimentón, azafrán y aceite de oliva.
+Lubina al horno con verduras
+17,80 €
+Filete de lubina al horno con patata panadera, calabacín, cebolla, tomate cherry y aceite de hierbas.
+Carrillera ibérica al vino tinto
+15,60 €
+Carrillera de cerdo estofada a baja temperatura con vino tinto, cebolla, zanahoria, apio y puré de
+patata.
+Pollo de corral al romero
+13,90 €
+Contramuslo de pollo deshuesado, patata asada, jugo de romero, ajo, limón y verduras salteadas.
+Burger La Huerta
+12,90 €
+Pan brioche, carne de ternera, queso curado, lechuga, tomate, cebolla caramelizada y salsa de
+mostaza.
+Pasta fresca con pesto de almendras
+12,40 €
+Pasta fresca de huevo con pesto de albahaca, almendras, queso curado, ajo y aceite de oliva.
+Risotto de boletus y parmesano
+13,60 €
+Arroz arborio cocinado con boletus, caldo vegetal, mantequilla, parmesano, vino blanco y cebollino.
+Postres
+Plato
+Precio
+Descripción / ingredientes principales
+Tarta de queso cremosa
+5,90 €
+Queso crema, nata, huevo, azúcar y base de galleta horneada con mantequilla.
+Brownie de chocolate y nueces
+5,50 €
+Chocolate negro, harina de trigo, huevo, mantequilla, azúcar moreno y nueces.
+Crema catalana con cítricos
+4,90 €
+Crema de leche, yema de huevo, azúcar caramelizado, canela, piel de naranja y limón.
+Sorbete de limón al cava
+4,70 €
+Sorbete de limón montado con cava, ralladura de lima y hierbabuena fresca.
+Bebidas
+Plato
+Precio
+Descripción / ingredientes principales
+Cerveza artesanal tostada
+3,80 €
+Cerveza tostada de cebada malteada, con notas de caramelo y final ligeramente amargo.
+Copa de vino blanco
+3,60 €
+Vino blanco joven servido por copa, fresco y aromático.
+Café con leche
+2,20 €
+Café expreso servido con leche de vaca caliente o templada.
+Agua con gas
+2,50 €
+Agua mineral con gas servida fría en botella individual.
+Nota: documento de prueba. La información de alérgenos debe ser revisada por el responsable del establecimiento
+antes de publicarse al cliente.
