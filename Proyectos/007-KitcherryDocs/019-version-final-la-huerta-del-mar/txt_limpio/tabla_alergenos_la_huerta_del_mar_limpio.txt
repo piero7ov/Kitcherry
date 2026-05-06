@@ -1,0 +1,169 @@
+Tabla de alérgenos - Restaurante La Huerta del Mar
+Documento ficticio de control alimentario para probar la lectura de alérgenos declarados por plato y bebida.
+La ausencia de un alérgeno declarado no garantiza ausencia de trazas o contaminación cruzada. Revisar siempre con el responsable del establecimiento.
+Tabla de alérgenos declarados
+Ensalada templada de queso de cabra
+Alérgenos declarados: Leche, Frutos de cáscara, Mostaza, Sulfitos.
+Croquetas de setas y jamón ibérico
+Alérgenos declarados: Gluten, Huevos, Leche.
+Patatas bravas con alioli suave
+Alérgenos declarados: Huevos, Mostaza, Sulfitos.
+Calamares a la andaluza
+Alérgenos declarados: Gluten, Huevos, Moluscos.
+Hummus de garbanzo con pan de pita
+Alérgenos declarados: Gluten, Sésamo.
+Arroz meloso de sepia y gambas
+Alérgenos declarados: Crustáceos, Pescado, Moluscos, Apio.
+Lubina al horno con verduras
+Alérgenos declarados: Pescado, Sulfitos.
+Carrillera ibérica al vino tinto
+Alérgenos declarados: Apio, Leche, Sulfitos.
+Pollo de corral al romero
+Alérgenos declarados: Sulfitos.
+Burger La Huerta
+Alérgenos declarados: Gluten, Huevos, Leche, Mostaza, Sésamo.
+Pasta fresca con pesto de almendras
+Alérgenos declarados: Gluten, Huevos, Leche, Frutos de cáscara.
+Risotto de boletus y parmesano
+Alérgenos declarados: Leche, Apio, Sulfitos.
+Tarta de queso cremosa
+Alérgenos declarados: Gluten, Huevos, Leche.
+Brownie de chocolate y nueces
+Alérgenos declarados: Gluten, Huevos, Leche, Frutos de cáscara, Soja.
+Crema catalana con cítricos
+Alérgenos declarados: Huevos, Leche.
+Sorbete de limón al cava
+Alérgenos declarados: Sulfitos.
+Cerveza artesanal tostada
+Alérgenos declarados: Gluten, Sulfitos.
+Copa de vino blanco
+Alérgenos declarados: Sulfitos.
+Café con leche
+Alérgenos declarados: Leche.
+Agua con gas
+Alérgenos declarados: sin alérgenos declarados en esta ficha de prueba.
+Matriz simplificada de alérgenos
+Plato
+Glu
+ten
+Cr
+ust
+ác
+eo
+s
+Hu
+ev
+os
+Pe
+sca
+do
+Ca
+ca
+hu
+ete
+s
+Soj
+a
+Le
+ch
+e
+Fru
+tos
+de
+cás
+car
+a
+Api
+o
+Mo
+sta
+za
+Sé
+sa
+mo
+Sul
+fito
+s
+Alt
+ra
+mu
+ces
+Mo
+lus
+cos
+Ensalada templada de queso de
+cabra
+X
+X
+X
+X
+Croquetas de setas y jamón ibérico
+X
+X
+X
+Patatas bravas con alioli suave
+X
+X
+X
+Calamares a la andaluza
+X
+X
+X
+Hummus de garbanzo con pan de
+pita
+X
+X
+Arroz meloso de sepia y gambas
+X
+X
+X
+X
+Lubina al horno con verduras
+X
+X
+Carrillera ibérica al vino tinto
+X
+X
+X
+Pollo de corral al romero
+X
+Burger La Huerta
+X
+X
+X
+X
+X
+Pasta fresca con pesto de
+almendras
+X
+X
+X
+X
+Risotto de boletus y parmesano
+X
+X
+X
+Tarta de queso cremosa
+X
+X
+X
+Brownie de chocolate y nueces
+X
+X
+X
+X
+X
+Crema catalana con cítricos
+X
+X
+Sorbete de limón al cava
+X
+Cerveza artesanal tostada
+X
+X
+Copa de vino blanco
+X
+Café con leche
+X
+Agua con gas
+Matriz orientativa incluida para revisión visual. La información debe validarse antes de comunicarse al cliente.
