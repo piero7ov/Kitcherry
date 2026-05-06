@@ -1,0 +1,24 @@
+{
+    "proyecto": "Kitcherry Docs",
+    "iteracion": "019-version-final-nombre-restaurante",
+    "descripcion": "Archivo independiente para guardar estados de revisión de platos sin modificar la carta generada automáticamente.",
+    "ultima_actualizacion": "2026-05-05 20:50:21",
+    "total_revisiones": 1,
+    "revisiones": {
+        "plato_3_patatas-bravas-con-alioli-suave": {
+            "plato_id": 3,
+            "nombre": "Patatas bravas con alioli suave",
+            "estado_revision": "revisado",
+            "actualizado_en": "2026-05-05 20:50:21",
+            "origen": "panel_final",
+            "historial": [
+                {
+                    "estado": "revisado",
+                    "fecha": "2026-05-05 20:50:21",
+                    "origen": "panel_final"
+                }
+            ]
+        }
+    },
+    "version": "018-version-final-casa-pochi"
+}
