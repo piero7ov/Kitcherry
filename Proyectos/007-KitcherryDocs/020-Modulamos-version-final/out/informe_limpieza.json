@@ -1,0 +1,23 @@
+{
+    "fecha": "2026-05-05 20:47:20",
+    "documentos": [
+        {
+            "archivo_origen": "carta_la_huerta_del_mar.txt",
+            "archivo_limpio": "carta_la_huerta_del_mar_limpio.txt",
+            "caracteres_originales": 3364,
+            "caracteres_limpios": 3191
+        },
+        {
+            "archivo_origen": "fichas_tecnicas_la_huerta_del_mar.txt",
+            "archivo_limpio": "fichas_tecnicas_la_huerta_del_mar_limpio.txt",
+            "caracteres_originales": 8645,
+            "caracteres_limpios": 8356
+        },
+        {
+            "archivo_origen": "tabla_alergenos_la_huerta_del_mar.txt",
+            "archivo_limpio": "tabla_alergenos_la_huerta_del_mar_limpio.txt",
+            "caracteres_originales": 2963,
+            "caracteres_limpios": 2790
+        }
+    ]
+}
