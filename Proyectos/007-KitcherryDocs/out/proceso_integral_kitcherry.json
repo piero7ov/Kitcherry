@@ -1,0 +1,123 @@
+{
+    "proyecto": "Kitcherry Docs",
+    "iteracion": "007-proceso-integral-kitcherry",
+    "descripcion": "Ejecución completa del flujo PDF, TXT, limpieza, detección, carta estructurada, resúmenes y análisis documental.",
+    "inicio": "2026-05-05 04:05:33",
+    "fin": "2026-05-05 04:08:30",
+    "ejecutar_ollama": true,
+    "detener_si_falla_ollama": false,
+    "estado_general": "completado",
+    "pasos": [
+        {
+            "numero": "001",
+            "nombre": "Lectura de documentos PDF",
+            "archivo": "001-leer-documentos.py",
+            "tipo": "obligatorio",
+            "estado": "ok",
+            "returncode": 0,
+            "duracion_segundos": 0.33,
+            "stdout": "OK -> carta_casa_pochi.pdf convertido a carta_casa_pochi.txt\nOK -> fichas_tecnicas_casa_pochi.pdf convertido a fichas_tecnicas_casa_pochi.txt\nOK -> tabla_alergenos_casa_pochi.pdf convertido a tabla_alergenos_casa_pochi.txt\n\nProceso finalizado.\n",
+            "stderr": ""
+        },
+        {
+            "numero": "002",
+            "nombre": "Limpieza de texto",
+            "archivo": "002-limpiar-texto.py",
+            "tipo": "obligatorio",
+            "estado": "ok",
+            "returncode": 0,
+            "duracion_segundos": 0.05,
+            "stdout": "OK -> carta_casa_pochi.txt limpiado como carta_casa_pochi_limpio.txt\nOK -> fichas_tecnicas_casa_pochi.txt limpiado como fichas_tecnicas_casa_pochi_limpio.txt\nOK -> tabla_alergenos_casa_pochi.txt limpiado como tabla_alergenos_casa_pochi_limpio.txt\n\nProceso finalizado.\nInforme generado en: out\\informe_limpieza.json\n",
+            "stderr": ""
+        },
+        {
+            "numero": "003",
+            "nombre": "Detección de platos y alérgenos",
+            "archivo": "003-detectar-platos-alergenos.py",
+            "tipo": "obligatorio",
+            "estado": "ok",
+            "returncode": 0,
+            "duracion_segundos": 0.05,
+            "stdout": "OK -> carta_casa_pochi_limpio.txt: 0 platos detectados\nOK -> fichas_tecnicas_casa_pochi_limpio.txt: 0 platos detectados\nOK -> tabla_alergenos_casa_pochi_limpio.txt: 10 platos detectados\n\nProceso finalizado.\nTotal de platos detectados: 10\nJSON generado en: out\\platos_detectados.json\n",
+            "stderr": ""
+        },
+        {
+            "numero": "004",
+            "nombre": "Generación de carta estructurada",
+            "archivo": "004-generar-carta-estructurada.py",
+            "tipo": "obligatorio",
+            "estado": "ok",
+            "returncode": 0,
+            "duracion_segundos": 0.07,
+            "stdout": "\nProceso finalizado.\nJSON generado en: out\\carta_kitcherry.json\nTotal de platos estructurados: 10\n- Croquetas caseras de jam�n | Entrantes | 8,50 � | 4 al�rgenos\n- Ensaladilla rusa de la casa | Entrantes | 7,90 � | 2 al�rgenos\n- Pan con tomate | Entrantes | 4,20 � | 1 al�rgenos\n- Pasta al pesto | Platos principales | 11,50 � | 4 al�rgenos\n- Arroz meloso de marisco | Platos principales | 15,80 � | 4 al�rgenos\n- Hamburguesa de ternera con queso | Platos principales | 12,90 � | 5 al�rgenos\n- Tarta de queso | Postres | 5,90 � | 4 al�rgenos\n- Brownie con nueces | Postres | 5,50 � | 4 al�rgenos\n- Fruta de temporada | Postres | 4,00 � | 0 al�rgenos\n- Cerveza artesanal | Bebidas | 3,80 � | 2 al�rgenos\n",
+            "stderr": ""
+        },
+        {
+            "numero": "005",
+            "nombre": "Resumen de documentos con Ollama",
+            "archivo": "005-resumir-documentos-ollama.py",
+            "tipo": "ollama",
+            "estado": "ok",
+            "returncode": 0,
+            "duracion_segundos": 45.5,
+            "stdout": "Iniciando resumen de documentos con Ollama...\nModelo: llama3:latest\nCarpeta de entrada: txt_limpio\nCarpeta de salida: summaries\n\n[1/3] OK -> carta_casa_pochi_limpio.txt\nResumen guardado en: summaries\\carta_casa_pochi_limpio.summary.txt\n[2/3] OK -> fichas_tecnicas_casa_pochi_limpio.txt\nResumen guardado en: summaries\\fichas_tecnicas_casa_pochi_limpio.summary.txt\n[3/3] OK -> tabla_alergenos_casa_pochi_limpio.txt\nResumen guardado en: summaries\\tabla_alergenos_casa_pochi_limpio.summary.txt\n\nProceso finalizado.\nDocumentos procesados correctamente: 3\nDocumentos con error: 0\nJSONL generado en: summaries\\summaries.jsonl\n",
+            "stderr": ""
+        },
+        {
+            "numero": "006",
+            "nombre": "Análisis documental con Ollama",
+            "archivo": "006-analisis-ollama-carta.py",
+            "tipo": "ollama",
+            "estado": "ok",
+            "returncode": 0,
+            "duracion_segundos": 130.8,
+            "stdout": "Iniciando an�lisis documental con Ollama...\nModelo: llama3:latest\nCarpeta de entrada: txt_limpio\nSalida JSON: out\\analisis_ollama_carta.json\n\n[1/3] OK -> carta_casa_pochi_limpio.txt\nTipo IA: carta\nRevisi�n: alto\n\n[2/3] OK -> fichas_tecnicas_casa_pochi_limpio.txt\nTipo IA: fichas_tecnicas\nRevisi�n: alto\n\n[3/3] OK -> tabla_alergenos_casa_pochi_limpio.txt\nTipo IA: tabla_alergenos\nRevisi�n: alto\n\nProceso finalizado.\nDocumentos procesados correctamente: 3\nDocumentos con error: 0\nJSON generado en: out\\analisis_ollama_carta.json\nJSONL generado en: out\\analisis_ollama_carta.jsonl\n",
+            "stderr": ""
+        }
+    ],
+    "salidas": [
+        {
+            "paso": "001",
+            "ruta": "txt",
+            "tipo": "carpeta",
+            "existe": true
+        },
+        {
+            "paso": "002",
+            "ruta": "txt_limpio",
+            "tipo": "carpeta",
+            "existe": true
+        },
+        {
+            "paso": "003",
+            "ruta": "out\\platos_detectados.json",
+            "tipo": "archivo",
+            "existe": true
+        },
+        {
+            "paso": "004",
+            "ruta": "out\\carta_kitcherry.json",
+            "tipo": "archivo",
+            "existe": true
+        },
+        {
+            "paso": "005",
+            "ruta": "summaries",
+            "tipo": "carpeta",
+            "existe": true
+        },
+        {
+            "paso": "006",
+            "ruta": "out\\analisis_ollama_carta.json",
+            "tipo": "archivo",
+            "existe": true
+        }
+    ],
+    "resumen_salidas": {
+        "txt_generados": 3,
+        "txt_limpios_generados": 3,
+        "resumenes_generados": 3,
+        "total_platos_carta": 10,
+        "documentos_analizados_ollama": 3
+    }
+}
