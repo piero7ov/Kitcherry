@@ -1,0 +1,637 @@
+{
+    "proyecto": "Kitcherry Docs",
+    "iteracion": "019-version-final-nombre-restaurante",
+    "negocio": "La Huerta del Mar",
+    "fecha_generacion": "2026-05-05 20:47:20",
+    "fuente_oficial_platos": "carta",
+    "fuente_apoyo_alergenos": "tabla_alergenos + inferencia por ingredientes",
+    "total_platos": 20,
+    "platos": [
+        {
+            "id": 1,
+            "nombre": "Ensalada templada de queso de cabra",
+            "categoria": "Entrantes",
+            "precio": "9,80 €",
+            "descripcion": "Mezcla de hojas verdes, queso de cabra gratinado, nueces, tomate seco, manzana y vinagreta de mostaza y miel.",
+            "ingredientes_detectados": [
+                "Mezcla de hojas verdes",
+                "queso de cabra gratinado",
+                "nueces",
+                "tomate seco",
+                "manzana",
+                "vinagreta de mostaza",
+                "miel"
+            ],
+            "alergenos_declarados": [
+                "Gluten",
+                "Leche",
+                "Frutos secos",
+                "Mostaza",
+                "Sulfitos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 plato",
+                "ingredientes": "hojas verdes, queso de cabra, nueces, tomate seco, manzana, miel, mostaza antigua, vinagre de jerez, aceite de oliva virgen extra y sal",
+                "elaboracion": "lavar y escurrir las hojas. gratinar el queso de cabra sobre pan fino y montar con frutos secos, fruta y vinagreta",
+                "conservacion": "conservar ingredientes vegetales refrigerados entre 0 y 4 grados. montar al momento del servicio",
+                "alergenos_texto": "leche, frutos de cascara, mostaza y sulfitos. puede contener"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 2,
+            "nombre": "Croquetas de setas y jamón ibérico",
+            "categoria": "Entrantes",
+            "precio": "8,90 €",
+            "descripcion": "Bechamel cremosa con setas salteadas, jamón ibérico, harina de trigo, leche, huevo y pan rallado.",
+            "ingredientes_detectados": [
+                "Bechamel cremosa con setas salteadas",
+                "jamón ibérico",
+                "harina de trigo",
+                "leche",
+                "huevo",
+                "pan rallado"
+            ],
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevo",
+                "Leche"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "8 unidades",
+                "ingredientes": "leche entera, harina de trigo, mantequilla, setas, jamon iberico, huevo, pan rallado, sal, pimienta y aceite para freir",
+                "elaboracion": "preparar una bechamel espesa, anadir setas y jamon, enfriar, formar piezas, empanar y freir hasta dorar",
+                "conservacion": "mantener refrigeradas entre 0 y 4 grados. consumir en 48 horas si no se congelan",
+                "alergenos_texto": "gluten, leche y huevo. puede contener"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 3,
+            "nombre": "Patatas bravas con alioli suave",
+            "categoria": "Entrantes",
+            "precio": "6,90 €",
+            "descripcion": "Patata agria frita en dados, salsa brava casera, alioli suave, pimentón y cebollino fresco.",
+            "ingredientes_detectados": [
+                "Patata agria frita en dados",
+                "salsa brava casera",
+                "alioli suave",
+                "pimentón",
+                "cebollino fresco"
+            ],
+            "alergenos_declarados": [
+                "Huevo",
+                "Mostaza",
+                "Sulfitos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 racion",
+                "ingredientes": "patata agria, aceite para freir, tomate, pimenton, ajo, huevo, mostaza, vinagre, sal y cebollino",
+                "elaboracion": "freir la patata hasta dorar. servir con salsa brava caliente y alioli frio",
+                "conservacion": "conservar las salsas refrigeradas. la patata se recomienda freir al momento del servicio",
+                "alergenos_texto": "huevo y mostaza en el alioli. sulfitos por vinagre o elaboraciones con vino"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 4,
+            "nombre": "Calamares a la andaluza",
+            "categoria": "Entrantes",
+            "precio": "10,50 €",
+            "descripcion": "Anillas de calamar enharinadas, fritas en aceite caliente y servidas con limón y mayonesa cítrica.",
+            "ingredientes_detectados": [
+                "Anillas de calamar enharinadas",
+                "fritas en aceite caliente",
+                "mayonesa cítrica"
+            ],
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevo",
+                "Moluscos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 racion",
+                "ingredientes": "calamar, harina de trigo, sal, limon, huevo, aceite de girasol, ajo y ralladura de lima",
+                "elaboracion": "limpiar el calamar, enharinar, retirar exceso de harina y freir en aceite caliente. servir con salsa fria",
+                "conservacion": "el calamar debe mantenerse refrigerado hasta su uso. consumir recien elaborado",
+                "alergenos_texto": "moluscos, gluten y huevo. riesgo de contaminacion cruzada en freidora compartida"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 5,
+            "nombre": "Hummus de garbanzo con pan de pita",
+            "categoria": "Entrantes",
+            "precio": "7,20 €",
+            "descripcion": "Crema de garbanzo con tahini, limón, comino, aceite de oliva, pimentón y pan de pita tostado.",
+            "ingredientes_detectados": [
+                "Crema de garbanzo con tahini",
+                "limón",
+                "comino",
+                "aceite de oliva",
+                "pimentón",
+                "pan de pita tostado"
+            ],
+            "alergenos_declarados": [
+                "Gluten",
+                "Sésamo"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 racion",
+                "ingredientes": "garbanzos cocidos, tahini, limon, comino, ajo, aceite de oliva, pimenton, sal y pan de pita",
+                "elaboracion": "triturar garbanzos con tahini y condimentos. servir frio con aceite y pan de pita tostado",
+                "conservacion": "conservar refrigerado entre 0 y 4 grados. consumir en 72 horas",
+                "alergenos_texto": "sesamo por el tahini y gluten por el pan de pita. platos principales"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 6,
+            "nombre": "Arroz meloso de sepia y gambas",
+            "categoria": "Platos principales",
+            "precio": "16,90 €",
+            "descripcion": "Arroz bomba, caldo de pescado, sepia, gambas, tomate, ajo, pimentón, azafrán y aceite de oliva.",
+            "ingredientes_detectados": [
+                "Arroz bomba",
+                "caldo de pescado",
+                "sepia",
+                "gambas",
+                "tomate",
+                "ajo",
+                "pimentón",
+                "azafrán",
+                "aceite de oliva"
+            ],
+            "alergenos_declarados": [
+                "Crustáceos",
+                "Pescado",
+                "Apio",
+                "Moluscos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "2 personas",
+                "ingredientes": "arroz bomba, caldo de pescado, sepia, gambas, tomate triturado, ajo, pimenton, azafran, apio, aceite de oliva y sal",
+                "elaboracion": "sofreir la base, anadir sepia y gambas, nacarar el arroz y mojar con caldo caliente hasta obtener textura melosa",
+                "conservacion": "elaboracion de consumo inmediato. marisco y caldo deben conservarse en frio hasta su uso",
+                "alergenos_texto": "crustaceos, pescado, moluscos y apio por el caldo base"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 7,
+            "nombre": "Lubina al horno con verduras",
+            "categoria": "Platos principales",
+            "precio": "17,80 €",
+            "descripcion": "Filete de lubina al horno con patata panadera, calabacín, cebolla, tomate cherry y aceite de hierbas.",
+            "ingredientes_detectados": [
+                "Filete de lubina al horno con patata panadera",
+                "calabacín",
+                "cebolla",
+                "tomate cherry",
+                "aceite de hierbas"
+            ],
+            "alergenos_declarados": [
+                "Gluten",
+                "Pescado",
+                "Sulfitos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 plato",
+                "ingredientes": "lubina, patata, calabacin, cebolla, tomate cherry, vino blanco, perejil, aceite de oliva, sal y pimienta",
+                "elaboracion": "hornear la guarnicion, anadir el pescado y terminar con aceite de hierbas",
+                "conservacion": "mantener pescado fresco refrigerado entre 0 y 4 grados. consumir tras el cocinado",
+                "alergenos_texto": "pescado y sulfitos por el vino blanco utilizado en la elaboracion"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 8,
+            "nombre": "Carrillera ibérica al vino tinto",
+            "categoria": "Platos principales",
+            "precio": "15,60 €",
+            "descripcion": "Carrillera de cerdo estofada a baja temperatura con vino tinto, cebolla, zanahoria, apio y puré de patata.",
+            "ingredientes_detectados": [
+                "cebolla",
+                "zanahoria",
+                "apio",
+                "puré de patata"
+            ],
+            "alergenos_declarados": [
+                "Leche",
+                "Apio",
+                "Sulfitos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 plato",
+                "ingredientes": "carrillera iberica, vino tinto, cebolla, zanahoria, apio, laurel, caldo, patata, mantequilla, leche, aceite y sal",
+                "elaboracion": "marcar la carne, estofar con verduras y vino hasta que quede tierna. triturar salsa y servir con pure",
+                "conservacion": "conservar la carne cocinada refrigerada entre 0 y 4 grados. recalentar hasta temperatura segura antes del servicio",
+                "alergenos_texto": "apio, leche y sulfitos por vino tinto y pure con lacteos"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 9,
+            "nombre": "Pollo de corral al romero",
+            "categoria": "Platos principales",
+            "precio": "13,90 €",
+            "descripcion": "Contramuslo de pollo deshuesado, patata asada, jugo de romero, ajo, limón y verduras salteadas.",
+            "ingredientes_detectados": [
+                "Contramuslo de pollo deshuesado",
+                "patata asada",
+                "jugo de romero",
+                "ajo",
+                "limón",
+                "verduras salteadas"
+            ],
+            "alergenos_declarados": [
+                "Sulfitos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 plato",
+                "ingredientes": "pollo de corral, patata, romero, ajo, limon, caldo, vino blanco, aceite de oliva, verduras y sal",
+                "elaboracion": "marinar el pollo, marcar en plancha y terminar al horno con jugo de romero",
+                "conservacion": "conservar pollo crudo separado de alimentos listos para consumo. servir recien cocinado",
+                "alergenos_texto": "puede contener sulfitos por el uso de vino blanco en el jugo"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 10,
+            "nombre": "Burger La Huerta",
+            "categoria": "Platos principales",
+            "precio": "12,90 €",
+            "descripcion": "Pan brioche, carne de ternera, queso curado, lechuga, tomate, cebolla caramelizada y salsa de mostaza.",
+            "ingredientes_detectados": [
+                "Pan brioche",
+                "carne de ternera",
+                "queso curado",
+                "lechuga",
+                "tomate",
+                "cebolla caramelizada",
+                "salsa de mostaza"
+            ],
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevo",
+                "Leche",
+                "Mostaza",
+                "Sésamo"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 unidad",
+                "ingredientes": "pan brioche, ternera, queso curado, lechuga, tomate, cebolla, azucar, mostaza, huevo, sesamo y salsa de la casa",
+                "elaboracion": "cocinar la carne a la plancha, tostar el pan y montar con verduras, queso y salsa",
+                "conservacion": "mantener carne refrigerada. cocinar completamente antes de servir",
+                "alergenos_texto": "gluten, huevo, leche, mostaza y sesamo. puede contener"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 11,
+            "nombre": "Pasta fresca con pesto de almendras",
+            "categoria": "Platos principales",
+            "precio": "12,40 €",
+            "descripcion": "Pasta fresca de huevo con pesto de albahaca, almendras, queso curado, ajo y aceite de oliva.",
+            "ingredientes_detectados": [
+                "Pasta fresca de huevo con pesto de albahaca",
+                "almendras",
+                "queso curado",
+                "ajo",
+                "aceite de oliva"
+            ],
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevo",
+                "Leche",
+                "Frutos secos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 plato",
+                "ingredientes": "pasta fresca, huevo, harina de trigo, albahaca, almendra, queso curado, ajo, aceite de oliva y sal",
+                "elaboracion": "cocer la pasta al dente y mezclar con pesto templado antes del servicio",
+                "conservacion": "conservar la pasta y la salsa refrigeradas. no recalentar en exceso el pesto",
+                "alergenos_texto": "gluten, huevo, leche y frutos de cascara"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 12,
+            "nombre": "Risotto de boletus y parmesano",
+            "categoria": "Platos principales",
+            "precio": "13,60 €",
+            "descripcion": "Arroz arborio cocinado con boletus, caldo vegetal, mantequilla, parmesano, vino blanco y cebollino.",
+            "ingredientes_detectados": [
+                "Arroz arborio cocinado con boletus",
+                "caldo vegetal",
+                "mantequilla",
+                "parmesano",
+                "vino blanco",
+                "cebollino"
+            ],
+            "alergenos_declarados": [
+                "Leche",
+                "Apio",
+                "Sulfitos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 plato",
+                "ingredientes": "arroz arborio, boletus, caldo vegetal, apio, cebolla, vino blanco, mantequilla, parmesano, aceite y cebollino",
+                "elaboracion": "sofreir base, anadir arroz y vino, incorporar caldo poco a poco y mantecar con queso y mantequilla",
+                "conservacion": "elaboracion de consumo inmediato. no conservar mas de 24 horas tras cocinado",
+                "alergenos_texto": "leche, apio y sulfitos por el vino blanco. postres"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 13,
+            "nombre": "Tarta de queso cremosa",
+            "categoria": "Postres",
+            "precio": "5,90 €",
+            "descripcion": "Queso crema, nata, huevo, azúcar y base de galleta horneada con mantequilla.",
+            "ingredientes_detectados": [
+                "Queso crema",
+                "nata",
+                "huevo",
+                "azúcar",
+                "base de galleta horneada con mantequilla"
+            ],
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevo",
+                "Leche"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "8 porciones",
+                "ingredientes": "queso crema, nata, huevo, azucar, galleta, mantequilla y harina en pequena cantidad",
+                "elaboracion": "preparar base de galleta, mezclar crema, hornear y enfriar antes del servicio",
+                "conservacion": "mantener refrigerada entre 0 y 4 grados. servir fria",
+                "alergenos_texto": "leche, huevo y gluten. puede contener"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 14,
+            "nombre": "Brownie de chocolate y nueces",
+            "categoria": "Postres",
+            "precio": "5,50 €",
+            "descripcion": "Chocolate negro, harina de trigo, huevo, mantequilla, azúcar moreno y nueces.",
+            "ingredientes_detectados": [
+                "Chocolate negro",
+                "harina de trigo",
+                "huevo",
+                "mantequilla",
+                "azúcar moreno",
+                "nueces"
+            ],
+            "alergenos_declarados": [
+                "Gluten",
+                "Huevo",
+                "Soja",
+                "Leche",
+                "Frutos secos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "12 porciones",
+                "ingredientes": "chocolate negro, harina de trigo, huevo, mantequilla, azucar, nueces, cacao y sal",
+                "elaboracion": "fundir chocolate y mantequilla, mezclar con huevos y harina, anadir nueces y hornear",
+                "conservacion": "conservar protegido a temperatura controlada. puede refrigerarse en verano",
+                "alergenos_texto": "gluten, huevo, leche, frutos de cascara y soja por"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 15,
+            "nombre": "Crema catalana con cítricos",
+            "categoria": "Postres",
+            "precio": "4,90 €",
+            "descripcion": "Crema de leche, yema de huevo, azúcar caramelizado, canela, piel de naranja y limón.",
+            "ingredientes_detectados": [
+                "Crema de leche",
+                "yema de huevo",
+                "azúcar caramelizado",
+                "canela",
+                "piel de naranja",
+                "limón"
+            ],
+            "alergenos_declarados": [
+                "Huevo",
+                "Leche"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 unidad",
+                "ingredientes": "leche, yema de huevo, azucar, canela, piel de naranja, piel de limon y maicena",
+                "elaboracion": "infusionar la leche, espesar con yemas, enfriar y caramelizar azucar antes de servir",
+                "conservacion": "mantener refrigerada entre 0 y 4 grados. consumir en 48 horas",
+                "alergenos_texto": "leche y huevo"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 16,
+            "nombre": "Sorbete de limón al cava",
+            "categoria": "Postres",
+            "precio": "4,70 €",
+            "descripcion": "Sorbete de limón montado con cava, ralladura de lima y hierbabuena fresca.",
+            "ingredientes_detectados": [
+                "Sorbete de limón montado con cava",
+                "ralladura de lima",
+                "hierbabuena fresca"
+            ],
+            "alergenos_declarados": [
+                "Sulfitos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 copa",
+                "ingredientes": "sorbete de limon, cava, lima y hierbabuena",
+                "elaboracion": "mezclar sorbete con cava frio y servir inmediatamente",
+                "conservacion": "mantener congelado hasta el servicio. no recongelar si se derrite",
+                "alergenos_texto": "sulfitos por el cava. bebidas"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 17,
+            "nombre": "Cerveza artesanal tostada",
+            "categoria": "Bebidas",
+            "precio": "3,80 €",
+            "descripcion": "Cerveza tostada de cebada malteada, con notas de caramelo y final ligeramente amargo.",
+            "ingredientes_detectados": [
+                "Cerveza tostada de cebada malteada",
+                "con notas de caramelo",
+                "final ligeramente amargo"
+            ],
+            "alergenos_declarados": [
+                "Gluten",
+                "Sulfitos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "33 cl",
+                "ingredientes": "agua, malta de cebada, lupulo y levadura",
+                "elaboracion": "producto envasado. servir frio",
+                "conservacion": "conservar en lugar fresco y seco, protegido de la luz",
+                "alergenos_texto": "gluten por cebada y posible presencia de sulfitos"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 18,
+            "nombre": "Copa de vino blanco",
+            "categoria": "Bebidas",
+            "precio": "3,60 €",
+            "descripcion": "Vino blanco joven servido por copa, fresco y aromático.",
+            "ingredientes_detectados": [
+                "Vino blanco joven servido por copa",
+                "fresco",
+                "aromático"
+            ],
+            "alergenos_declarados": [
+                "Sulfitos"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 copa",
+                "ingredientes": "vino blanco con sulfitos",
+                "elaboracion": "producto envasado. servir frio",
+                "conservacion": "conservar botella abierta refrigerada y consumir en plazo corto",
+                "alergenos_texto": "contiene sulfitos"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 19,
+            "nombre": "Café con leche",
+            "categoria": "Bebidas",
+            "precio": "2,20 €",
+            "descripcion": "Café expreso servido con leche de vaca caliente o templada.",
+            "ingredientes_detectados": [],
+            "alergenos_declarados": [
+                "Leche"
+            ],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "1 taza",
+                "ingredientes": "cafe molido y leche de vaca",
+                "elaboracion": "extraer cafe expreso y anadir leche vaporizada",
+                "conservacion": "consumir tras preparacion. mantener leche refrigerada hasta su uso",
+                "alergenos_texto": "leche"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        },
+        {
+            "id": 20,
+            "nombre": "Agua con gas",
+            "categoria": "Bebidas",
+            "precio": "2,50 €",
+            "descripcion": "Agua mineral con gas servida fría en botella individual.",
+            "ingredientes_detectados": [],
+            "alergenos_declarados": [],
+            "estado_revision": "pendiente",
+            "ficha_tecnica": {
+                "raciones": "50 cl",
+                "ingredientes": "agua mineral carbonica",
+                "elaboracion": "producto envasado. servir frio",
+                "conservacion": "conservar en lugar fresco y seco",
+                "alergenos_texto": "sin alergenos declarados en esta ficha. nota: documento ficticio. la informacion tecnica y alimentaria requiere revision antes de utilizarse con clientes"
+            },
+            "fuentes": [
+                "carta",
+                "tabla_alergenos",
+                "fichas_tecnicas"
+            ]
+        }
+    ]
+}
