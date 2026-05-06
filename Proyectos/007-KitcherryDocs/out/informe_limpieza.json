@@ -1,0 +1,26 @@
+[
+    {
+        "archivo": "carta_casa_pochi.txt",
+        "caracteres_originales": 1885,
+        "caracteres_limpios": 1882,
+        "lineas_originales": 81,
+        "lineas_limpias": 79,
+        "procesado_en": "2026-05-05 04:05:34"
+    },
+    {
+        "archivo": "fichas_tecnicas_casa_pochi.txt",
+        "caracteres_originales": 2717,
+        "caracteres_limpios": 2714,
+        "lineas_originales": 92,
+        "lineas_limpias": 90,
+        "procesado_en": "2026-05-05 04:05:34"
+    },
+    {
+        "archivo": "tabla_alergenos_casa_pochi.txt",
+        "caracteres_originales": 1835,
+        "caracteres_limpios": 1832,
+        "lineas_originales": 105,
+        "lineas_limpias": 103,
+        "procesado_en": "2026-05-05 04:05:34"
+    }
+]
