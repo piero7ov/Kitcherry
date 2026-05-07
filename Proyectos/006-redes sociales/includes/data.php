@@ -31,8 +31,10 @@ $servicios = [
     ],
     [
         "numero" => "05",
-        "titulo" => "Asistente digital de apoyo a cocina y producción interna",
-        "texto" => "Sistema de apoyo para consultar procedimientos, elaboraciones, pasos de preparación o información interna durante el servicio."
+        "titulo" => "Asistente digital de cocina con IA",
+        "texto" => "Un asistente inteligente para que el personal de cocina consulte recetas internas, gramajes, mise en place, emplatados e incidencias de forma rápida, por texto o voz. Integra avatar 3D, respuestas basadas en un manual interno y controles para evitar información inventada en consultas delicadas.",
+        "url" => "https://youtu.be/HMuVmJm6ejc",
+        "boton" => "Ver Kitcherry Kitchen Assistant"
     ],
     [
         "numero" => "06",
