@@ -1,0 +1,412 @@
+/* ==========================================================
+KITCHERRY STOCK
+Archivo: assets/css/style.css
+========================================================== */
+
+/* ==========================================================
+FUENTE CORPORATIVA
+Coolvetica para títulos, subtítulos y marca
+========================================================== */
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../fuente/Coolvetica Rg.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==========================================================
+VARIABLES PRINCIPALES
+========================================================== */
+
+:root {
+    --rojo: #C2182B;
+    --rojo-oscuro: #991726;
+    --rojo-suave: #fbeaec;
+
+    --negro: #161616;
+    --gris-texto: #555555;
+    --gris-claro: #f7f7f7;
+    --gris-medio: #e6e6e6;
+
+    --verde: #15803d;
+    --verde-suave: #dcfce7;
+
+    --amarillo: #b45309;
+    --amarillo-suave: #fef3c7;
+
+    --azul: #1d4ed8;
+    --azul-suave: #dbeafe;
+
+    --blanco: #ffffff;
+
+    --sombra: 0 18px 45px rgba(0, 0, 0, 0.08);
+    --radio: 22px;
+}
+
+/* ==========================================================
+RESET BÁSICO
+========================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+    color: var(--negro);
+    line-height: 1.5;
+}
+
+/* ==========================================================
+ESTRUCTURA GENERAL
+========================================================== */
+
+.contenedor {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+/* ==========================================================
+CABECERA
+========================================================== */
+
+.cabecera {
+    background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.22), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #fdf1f2 45%, #ffffff 100%);
+    border-bottom: 1px solid var(--gris-medio);
+    padding: 34px 0;
+}
+
+.cabecera-contenido {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 32px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo {
+    width: 92px;
+    height: 92px;
+    object-fit: contain;
+    display: block;
+}
+
+.marca-texto {
+    line-height: 1;
+}
+
+.nombre-kitcherry {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.nombre-kitcherry .kit {
+    color: var(--negro);
+}
+
+.nombre-kitcherry .cherry {
+    color: var(--rojo);
+}
+
+.nombre-stock {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    color: var(--negro);
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    margin-top: 4px;
+    letter-spacing: 0.02em;
+}
+
+.cabecera-info {
+    justify-self: end;
+    max-width: 520px;
+    text-align: right;
+}
+
+h1,
+h2 {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    line-height: 1;
+    margin-bottom: 12px;
+    color: var(--negro);
+}
+
+.cabecera-info p {
+    color: var(--gris-texto);
+    font-size: 1.05rem;
+}
+
+/* ==========================================================
+BLOQUES
+========================================================== */
+
+main {
+    padding: 34px 0 54px;
+}
+
+.bloque {
+    background: var(--blanco);
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--radio);
+    padding: 26px;
+    box-shadow: var(--sombra);
+    margin-bottom: 24px;
+}
+
+.bloque h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.bloque p {
+    color: var(--gris-texto);
+}
+
+/* ==========================================================
+RESUMEN
+========================================================== */
+
+.resumen-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.tarjeta-resumen {
+    background: var(--blanco);
+    border: 1px solid var(--gris-medio);
+    border-radius: var(--radio);
+    padding: 22px;
+    box-shadow: var(--sombra);
+}
+
+.tarjeta-resumen .numero {
+    display: block;
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--rojo);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.tarjeta-resumen .texto {
+    color: var(--gris-texto);
+    font-weight: bold;
+}
+
+.tarjeta-resumen.alerta {
+    background: var(--rojo-suave);
+    border-color: rgba(194, 24, 43, 0.2);
+}
+
+/* ==========================================================
+TÍTULO DE TABLA
+========================================================== */
+
+.bloque-titulo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.bloque-titulo h2 {
+    margin-bottom: 4px;
+}
+
+.contador {
+    background: var(--rojo-suave);
+    color: var(--rojo);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-weight: bold;
+}
+
+/* ==========================================================
+TABLA
+========================================================== */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--gris-medio);
+    border-radius: 18px;
+}
+
+table {
+    width: 100%;
+    min-width: 1100px;
+    border-collapse: collapse;
+    background: var(--blanco);
+}
+
+thead {
+    background: var(--negro);
+    color: var(--blanco);
+}
+
+th,
+td {
+    padding: 13px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--gris-medio);
+    font-size: 0.92rem;
+    vertical-align: middle;
+}
+
+th {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+tbody tr:hover {
+    background: var(--gris-claro);
+}
+
+td strong {
+    display: block;
+    margin-bottom: 3px;
+}
+
+td small {
+    display: block;
+    color: var(--gris-texto);
+    font-size: 0.8rem;
+}
+
+/* ==========================================================
+ETIQUETAS
+========================================================== */
+
+.categoria {
+    display: inline-block;
+    background: var(--gris-claro);
+    color: var(--negro);
+    border-radius: 999px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.estado {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.estado-correcto {
+    background: var(--verde-suave);
+    color: var(--verde);
+}
+
+.estado-bajo {
+    background: var(--rojo-suave);
+    color: var(--rojo);
+}
+
+.estado-sobrestock {
+    background: var(--azul-suave);
+    color: var(--azul);
+}
+
+.estado-desconocido {
+    background: var(--amarillo-suave);
+    color: var(--amarillo);
+}
+
+/* ==========================================================
+ERROR
+========================================================== */
+
+.error {
+    border-left: 8px solid var(--rojo);
+    background: var(--rojo-suave);
+}
+
+.error h2 {
+    color: var(--rojo);
+}
+
+.ayuda-error {
+    margin-top: 12px;
+}
+
+/* ==========================================================
+FOOTER
+========================================================== */
+
+.footer {
+    padding: 24px 0;
+    color: var(--gris-texto);
+    text-align: center;
+    border-top: 1px solid var(--gris-medio);
+    background: var(--blanco);
+}
+
+/* ==========================================================
+RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+    .cabecera-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecera-info {
+        justify-self: start;
+        text-align: left;
+    }
+
+    .resumen-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .cabecera {
+        padding: 28px 0;
+    }
+
+    .marca {
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 72px;
+        height: 72px;
+    }
+
+    .resumen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bloque {
+        padding: 20px;
+    }
+}
