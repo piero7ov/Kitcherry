@@ -17,13 +17,13 @@ $servicios = [
         "boton" => "Probar demo del chatbot",
         "url" => "chatbot.php"
     ],
-[
-    "numero" => "03",
-    "titulo" => "Kitcherry Reservas: reservas y mesas bajo control",
-    "texto" => "Solución para restaurantes, bares y cafeterías que permite gestionar reservas, visualizar la ocupación de mesas, evitar conflictos y mejorar la comunicación con los clientes mediante confirmaciones y recordatorios.",
-    "url" => "https://youtu.be/m8J8CziCXFw",
-    "boton" => "Ver Kitcherry Reservas"
-],
+    [
+        "numero" => "03",
+        "titulo" => "Kitcherry Reservas: reservas y mesas bajo control",
+        "texto" => "Solución para restaurantes, bares y cafeterías que permite gestionar reservas, visualizar la ocupación de mesas, evitar conflictos y mejorar la comunicación con los clientes mediante confirmaciones y recordatorios.",
+        "url" => "https://youtu.be/m8J8CziCXFw",
+        "boton" => "Ver Kitcherry Reservas"
+    ],
     [
         "numero" => "04",
         "titulo" => "Kitcherry Docs: plataforma de información de carta, platos y alérgenos",
@@ -50,8 +50,10 @@ $servicios = [
     ],
     [
         "numero" => "08",
-        "titulo" => "Sistema de apoyo a la gestión de pedidos o solicitudes internas",
-        "texto" => "Sistema sencillo para gestionar pedidos internos, solicitudes operativas o movimientos de información dentro del negocio."
+        "titulo" => "Sistema de gestión de stock y solicitudes internas con Google Drive",
+        "texto" => "Solución interna para restaurantes y negocios hosteleros que permite controlar el stock, detectar productos que necesitan reposición, organizar proveedores y gestionar solicitudes internas de forma más rápida, clara y profesional.",
+        "url" => "https://youtu.be/LDCuCiqKuEY",
+        "boton" => "Ver Kitcherry Stock"
     ],
     [
         "numero" => "09",
