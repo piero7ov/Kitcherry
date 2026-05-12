@@ -17,11 +17,13 @@ $servicios = [
         "boton" => "Probar demo del chatbot",
         "url" => "chatbot.php"
     ],
-    [
-        "numero" => "03",
-        "titulo" => "Herramienta de gestión y seguimiento de reservas",
-        "texto" => "Herramienta para ordenar solicitudes, confirmar reservas y reducir errores en la planificación diaria del servicio."
-    ],
+[
+    "numero" => "03",
+    "titulo" => "Kitcherry Reservas: reservas y mesas bajo control",
+    "texto" => "Solución para restaurantes, bares y cafeterías que permite gestionar reservas, visualizar la ocupación de mesas, evitar conflictos y mejorar la comunicación con los clientes mediante confirmaciones y recordatorios.",
+    "url" => "https://youtu.be/m8J8CziCXFw",
+    "boton" => "Ver Kitcherry Reservas"
+],
     [
         "numero" => "04",
         "titulo" => "Kitcherry Docs: plataforma de información de carta, platos y alérgenos",
