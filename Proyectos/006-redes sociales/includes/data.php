@@ -40,8 +40,10 @@ $servicios = [
     ],
     [
         "numero" => "06",
-        "titulo" => "Sistema de consulta rápida para personal de sala",
-        "texto" => "Herramienta para que el equipo de sala consulte platos, sugerencias, alérgenos o información útil de atención al cliente."
+        "titulo" => "Kitcherry Service Map: plano visual de sala",
+        "texto" => "Herramienta visual para organizar el servicio del restaurante, colocar reservas sobre un plano de mesas, identificar mesas libres, reservadas u ocupadas y gestionar situaciones como mesas dobladas de forma clara y práctica.",
+        "url" => "https://youtu.be/du_hKgylAB0",
+        "boton" => "Ver Kitcherry Service Map"
     ],
     [
         "numero" => "07",
