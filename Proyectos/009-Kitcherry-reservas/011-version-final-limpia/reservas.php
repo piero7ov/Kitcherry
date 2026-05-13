@@ -1207,6 +1207,29 @@ foreach ($reservas as $reserva) {
                             </form>
                         </div>
 
+                        <div class="export-card">
+                            <div>
+                                <strong>Exportación del día</strong>
+                            </div>
+
+                            <div class="export-actions">
+                                <a 
+                                    href="exportar_reservas.php?formato=pdf&fecha=<?php echo htmlspecialchars($filtroFecha); ?>&turno=todos" 
+                                    class="btn-mini btn-muted"
+                                    target="_blank"
+                                >
+                                    PDF / imprimir
+                                </a>
+
+                                <a 
+                                    href="exportar_reservas.php?formato=json&fecha=<?php echo htmlspecialchars($filtroFecha); ?>&turno=todos" 
+                                    class="btn-mini btn-save"
+                                >
+                                    JSON Service Map
+                                </a>
+                            </div>
+                        </div>
+
                         <form method="POST" class="alertas-generar-form">
                             <input type="hidden" name="accion" value="generar_alertas">
                             <input type="hidden" name="filtro_fecha" value="<?php echo htmlspecialchars($filtroFecha); ?>">
