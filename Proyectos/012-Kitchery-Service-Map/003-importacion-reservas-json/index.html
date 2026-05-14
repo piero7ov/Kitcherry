@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kitcherry Service Map | Plano visual de sala</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <img src="assets/img/logo.png" alt="Kitcherry" class="sidebar-logo">
+
+                <div class="marca-texto">
+                    <strong class="marca-nombre">
+                        <span class="kit">KIT</span><span class="cherry">CHERRY</span>
+                    </strong>
+                    <span class="marca-producto">Service Map</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="active">Plano</a>
+            </nav>
+
+            <div class="sidebar-help">
+                <strong>Plano visual de sala</strong>
+                <p>
+                    Herramienta para crear, mover, redimensionar, organizar mesas e importar reservas reales del
+                    servicio.
+                </p>
+            </div>
+
+            <div class="sidebar-legend">
+                <strong>Estados de mesa</strong>
+
+                <div class="legend-list sidebar-legend-list">
+                    <span class="legend-item legend-libre">Libre</span>
+                    <span class="legend-item legend-reservada">Reservada</span>
+                    <span class="legend-item legend-ocupada">Ocupada</span>
+                    <span class="legend-item legend-bloqueada">Bloqueada</span>
+                    <span class="legend-item legend-doblada">Doblada</span>
+                </div>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">Kitcherry Service Map</p>
+                    <h1>Plano visual de sala</h1>
+                    <p>
+                        Organiza manualmente el plano del restaurante e importa reservas reales exportadas desde
+                        Kitcherry Reservas.
+                    </p>
+                </div>
+            </header>
+
+            <section class="toolbar-panel">
+
+                <div class="toolbar-group">
+                    <button id="btn-mesa-rectangular" class="btn btn-primary">
+                        Añadir mesa rectangular
+                    </button>
+
+                    <button id="btn-mesa-redonda" class="btn btn-primary">
+                        Añadir mesa redonda
+                    </button>
+                </div>
+
+                <div class="toolbar-group">
+                    <button id="btn-importar-json" class="btn btn-primary">
+                        Importar reservas JSON
+                    </button>
+
+                    <input type="file" id="input-importar-json" accept=".json,application/json" hidden>
+
+                    <button id="btn-quitar-reservas" class="btn btn-muted">
+                        Quitar reservas
+                    </button>
+
+                    <button id="btn-guardar" class="btn btn-muted">
+                        Guardar plano
+                    </button>
+
+                    <button id="btn-eliminar" class="btn btn-muted">
+                        Eliminar seleccionada
+                    </button>
+
+                    <button id="btn-limpiar" class="btn btn-danger">
+                        Limpiar plano
+                    </button>
+                </div>
+
+            </section>
+
+            <section class="workspace-grid">
+
+                <div class="plano-area">
+
+                    <article class="canvas-panel">
+
+                        <div class="canvas-header">
+                            <div>
+                                <h2>Plano de sala</h2>
+                                <p>
+                                    Puedes colocar mesas manualmente y arrastrar reservas importadas sobre cualquier
+                                    mesa del plano.
+                                </p>
+                            </div>
+
+                            <span id="contador-mesas" class="counter-pill">
+                                0 mesas
+                            </span>
+                        </div>
+
+                        <div class="canvas-wrapper">
+                            <canvas id="service-map-canvas"></canvas>
+                        </div>
+
+                    </article>
+
+                    <section class="reservas-panel">
+
+                        <div class="reservas-columns">
+
+                            <article>
+                                <h3>Reservas colocadas en el plano</h3>
+                                <div id="reservas-lista" class="reservas-lista"></div>
+                            </article>
+
+                            <article>
+                                <h3>Reservas pendientes de colocar</h3>
+                                <div id="reservas-pendientes-lista" class="reservas-lista reservas-pendientes-lista">
+                                </div>
+                            </article>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+                <aside class="info-panel">
+
+                    <article class="panel-card import-panel">
+                        <h3>Reservas importadas</h3>
+
+                        <p>
+                            Arrastra una reserva sobre una mesa del plano para colocarla manualmente.
+                        </p>
+
+                        <div class="import-counters">
+                            <span id="contador-reservas">0 reservas importadas</span>
+                            <span id="contador-pendientes">0 pendientes de colocar</span>
+                        </div>
+
+                        <div id="servicio-info" class="empty-state">
+                            No hay reservas importadas. Usa el botón “Importar reservas JSON”.
+                        </div>
+                    </article>
+
+                    <article class="panel-card mesa-panel-compact">
+                        <h3>Mesa seleccionada</h3>
+
+                        <form id="form-mesa" class="mesa-form">
+
+                            <div class="form-grid-two">
+                                <div class="form-group">
+                                    <label for="mesa-id">ID</label>
+                                    <input type="text" id="mesa-id" disabled>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="mesa-tipo">Tipo</label>
+                                    <select id="mesa-tipo" disabled>
+                                        <option value="rectangular">Rectangular</option>
+                                        <option value="redonda">Redonda</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mesa-nombre">Nombre</label>
+                                <input type="text" id="mesa-nombre" placeholder="Ej: Mesa 1" disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mesa-zona">Zona</label>
+                                <select id="mesa-zona" disabled>
+                                    <option value="Interior">Interior</option>
+                                    <option value="Terraza">Terraza</option>
+                                    <option value="Salón principal">Salón principal</option>
+                                    <option value="Barra">Barra</option>
+                                    <option value="Reservado">Reservado</option>
+                                </select>
+                            </div>
+
+                            <div class="form-grid-two">
+                                <div class="form-group">
+                                    <label for="mesa-capacidad">Personas</label>
+                                    <input type="number" id="mesa-capacidad" min="1" disabled>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="mesa-estado">Estado</label>
+                                    <select id="mesa-estado" disabled>
+                                        <option value="libre">Libre</option>
+                                        <option value="reservada">Reservada</option>
+                                        <option value="ocupada">Ocupada</option>
+                                        <option value="bloqueada">Bloqueada</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <label class="check-row check-row-doblada">
+                                <input type="checkbox" id="mesa-doblada" disabled>
+                                <span>Marcar como mesa doblada</span>
+                            </label>
+
+                            <div class="form-grid-two">
+                                <div class="form-group">
+                                    <label for="mesa-ancho">Ancho</label>
+                                    <input type="number" id="mesa-ancho" min="40" disabled>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="mesa-alto">Alto</label>
+                                    <input type="number" id="mesa-alto" min="40" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-two">
+                                <div class="form-group">
+                                    <label for="mesa-x">X</label>
+                                    <input type="number" id="mesa-x" disabled>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="mesa-y">Y</label>
+                                    <input type="number" id="mesa-y" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" id="btn-aplicar-cambios" class="btn btn-primary" disabled>
+                                    Aplicar cambios
+                                </button>
+                            </div>
+
+                        </form>
+
+                        <div id="reservas-mesa-seleccionada" class="empty-state mesa-reservas-box">
+                            Selecciona una mesa para ver sus reservas vinculadas.
+                        </div>
+                    </article>
+
+                </aside>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="assets/js/adaptador-reservas.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
