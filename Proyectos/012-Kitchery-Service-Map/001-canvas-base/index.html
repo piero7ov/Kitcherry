@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kitcherry Service Map | Plano visual de sala</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <img src="assets/img/logo.png" alt="Kitcherry" class="sidebar-logo">
+
+                <div class="marca-texto">
+                    <strong class="marca-nombre">
+                        <span class="kit">KIT</span><span class="cherry">CHERRY</span>
+                    </strong>
+                    <span class="marca-producto">Service Map</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#">Mesas</a>
+                <a href="#">Plano</a>
+                <a href="#">Reservas</a>
+            </nav>
+
+            <div class="sidebar-help">
+                <strong>Plano visual de sala</strong>
+                <p>
+                    Herramienta para crear, mover, seleccionar y guardar mesas dentro de un lienzo interactivo.
+                </p>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">Kitcherry Service Map</p>
+                    <h1>Plano visual de sala</h1>
+                    <p>
+                        Crea mesas sobre el lienzo, muévelas manualmente y guarda el plano base del restaurante.
+                    </p>
+                </div>
+            </header>
+
+            <section class="toolbar-panel">
+
+                <div class="toolbar-group">
+                    <button id="btn-mesa-rectangular" class="btn btn-primary">
+                        Añadir mesa rectangular
+                    </button>
+
+                    <button id="btn-mesa-redonda" class="btn btn-primary">
+                        Añadir mesa redonda
+                    </button>
+                </div>
+
+                <div class="toolbar-group">
+                    <button id="btn-guardar" class="btn btn-muted">
+                        Guardar plano
+                    </button>
+
+                    <button id="btn-eliminar" class="btn btn-muted">
+                        Eliminar seleccionada
+                    </button>
+
+                    <button id="btn-limpiar" class="btn btn-danger">
+                        Limpiar plano
+                    </button>
+                </div>
+
+            </section>
+
+            <section class="workspace-grid">
+
+                <article class="canvas-panel">
+
+                    <div class="canvas-header">
+                        <div>
+                            <h2>Plano de sala</h2>
+                            <p>
+                                Haz clic sobre una mesa para seleccionarla. Arrástrala para moverla.
+                            </p>
+                        </div>
+
+                        <span id="contador-mesas" class="counter-pill">
+                            0 mesas
+                        </span>
+                    </div>
+
+                    <div class="canvas-wrapper">
+                        <canvas id="service-map-canvas"></canvas>
+                    </div>
+
+                </article>
+
+                <aside class="info-panel">
+
+                    <article class="panel-card">
+                        <h3>Mesa seleccionada</h3>
+
+                        <div id="detalle-mesa" class="empty-state">
+                            No hay ninguna mesa seleccionada.
+                        </div>
+                    </article>
+
+                    <article class="panel-card">
+                        <h3>Acciones disponibles</h3>
+
+                        <ul class="check-list">
+                            <li>Crear mesas rectangulares.</li>
+                            <li>Crear mesas redondas.</li>
+                            <li>Mover mesas libremente.</li>
+                            <li>Guardar el plano localmente.</li>
+                            <li>Eliminar elementos del lienzo.</li>
+                        </ul>
+                    </article>
+
+                </aside>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
