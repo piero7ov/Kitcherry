@@ -47,8 +47,10 @@ $servicios = [
     ],
     [
         "numero" => "07",
-        "titulo" => "Plataforma de organización interna de tareas e incidencias",
-        "texto" => "Plataforma para organizar tareas internas, registrar incidencias y mejorar la coordinación diaria del equipo."
+        "titulo" => "Kitcherry Voice Tasks: listas internas por voz para cocina y sala",
+        "texto" => "Herramienta interna para crear listas rápidas de reposición, elaboraciones, tareas, avisos e incidencias mediante voz o escritura, organizarlas de forma clara y enviarlas al personal correspondiente del turno.",
+        "url" => "https://youtu.be/ILZvytVZjEU",
+        "boton" => "Ver Kitcherry Voice Tasks"
     ],
     [
         "numero" => "08",
