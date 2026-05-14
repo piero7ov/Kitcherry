@@ -1,0 +1,3 @@
+# No hacen falta librerías externas.
+# El proyecto usa solo módulos incluidos en Python:
+# json, csv, sqlite3, time, pathlib, hashlib, statistics y datetime.

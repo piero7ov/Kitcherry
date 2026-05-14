@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "cliente": "Laura",
+    "mensaje": "Hola, quiero reservar una mesa para 4 personas esta noche a las 21:00."
+  },
+  {
+    "id": 2,
+    "cliente": "Mario",
+    "mensaje": "Quería saber si tenéis opciones sin gluten y platos sin frutos secos."
+  },
+  {
+    "id": 3,
+    "cliente": "Sofía",
+    "mensaje": "¿Cuál es vuestro horario de apertura los domingos?"
+  },
+  {
+    "id": 4,
+    "cliente": "Andrei",
+    "mensaje": "Me gustaría modificar mi reserva de mañana para añadir dos personas más."
+  },
+  {
+    "id": 5,
+    "cliente": "Carmen",
+    "mensaje": "Necesito información sobre la carta y los precios del menú del día."
+  },
+  {
+    "id": 6,
+    "cliente": "Pedro",
+    "mensaje": "Quisiera información y presupuesto para el sistema inteligente de comunicaciones de Kitcherry."
+  },
+  {
+    "id": 7,
+    "cliente": "Ana",
+    "mensaje": "Buenas, ¿tenéis terraza disponible para comer hoy?"
+  },
+  {
+    "id": 8,
+    "cliente": "Radu",
+    "mensaje": "Hay una persona alérgica al marisco. ¿Podéis indicarme platos seguros?"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "Tomate triturado",
+    "categoria": "Cocina",
+    "stock": 18,
+    "stock_minimo": 10,
+    "proveedor": "Proveedor Mediterráneo"
+  },
+  {
+    "id": 2,
+    "nombre": "Harina sin gluten",
+    "categoria": "Cocina",
+    "stock": 4,
+    "stock_minimo": 8,
+    "proveedor": "Alimentos Seguros SL"
+  },
+  {
+    "id": 3,
+    "nombre": "Servilletas",
+    "categoria": "Sala",
+    "stock": 120,
+    "stock_minimo": 80,
+    "proveedor": "HostelPack"
+  },
+  {
+    "id": 4,
+    "nombre": "Aceite de oliva",
+    "categoria": "Cocina",
+    "stock": 6,
+    "stock_minimo": 12,
+    "proveedor": "Proveedor Mediterráneo"
+  },
+  {
+    "id": 5,
+    "nombre": "Botellas de agua",
+    "categoria": "Bebidas",
+    "stock": 55,
+    "stock_minimo": 40,
+    "proveedor": "Bebidas Levante"
+  },
+  {
+    "id": 6,
+    "nombre": "Guantes nitrilo",
+    "categoria": "Limpieza",
+    "stock": 10,
+    "stock_minimo": 20,
+    "proveedor": "Higiene Pro"
+  }
+]

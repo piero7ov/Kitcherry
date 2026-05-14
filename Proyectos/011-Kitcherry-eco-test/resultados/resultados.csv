@@ -1,0 +1,5 @@
+proceso,tiempo_segundos,potencia_estimada_w,consumo_estimado_wh,consumo_clasificado,elementos_procesados,detalle,recomendacion
+Clasificación con reglas,0.00729,15,3.037e-05,Bajo,3200,Clasificación mediante palabras clave y reglas simples,Recomendado para tareas frecuentes por su bajo consumo estimado.
+Clasificación con IA local,35.61652,65,0.64307605,Alto,8,Clasificación real usando IA local con Ollama y el modelo llama3:latest,Usar solo cuando aporte valor real; para casos simples conviene una solución más ligera.
+Consulta de stock en JSON,0.080156,12,0.00026719,Bajo,3000,Consulta de productos con stock bajo desde JSON,Recomendado para tareas frecuentes por su bajo consumo estimado.
+Consulta de stock en SQLite,0.243873,14,0.00094839,Bajo,1500,Consulta de productos con stock bajo desde SQLite,Recomendado para tareas frecuentes por su bajo consumo estimado.
