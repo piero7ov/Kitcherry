@@ -1,0 +1,344 @@
+/* ==========================================================
+   KITCHERRY VOICE TASKS
+   Archivo: assets/css/style.css
+   ========================================================== */
+
+/* ==========================================================
+   FUENTE CORPORATIVA
+   Coolvetica para títulos, subtítulos y marca
+   ========================================================== */
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../fuente/Coolvetica Rg.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==========================================================
+   VARIABLES
+   ========================================================== */
+
+:root {
+    --cherry: #C2182B;
+    --cherry-oscuro: #8f1020;
+    --negro: #0f0f0f;
+    --negro-suave: #181818;
+    --gris-oscuro: #2a2a2a;
+    --gris-texto: #666666;
+    --gris-claro: #f4f4f4;
+    --blanco: #ffffff;
+    --borde: #dddddd;
+}
+
+/* ==========================================================
+   RESET BÁSICO
+   ========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--gris-claro);
+    color: var(--negro);
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   CONTENEDOR GENERAL
+   ========================================================== */
+
+.contenedor {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================
+   CABECERA
+   ========================================================== */
+
+.header {
+    background: var(--negro);
+    color: var(--blanco);
+    border-bottom: 6px solid var(--cherry);
+    padding: 28px 0;
+    margin-bottom: 28px;
+}
+
+.header-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+/* Marca principal */
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Texto de marca */
+.marca-texto h1 {
+    font-family: "Coolvetica", Arial, sans-serif;
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.marca-texto .kit {
+    color: var(--blanco);
+}
+
+.marca-texto .cherry {
+    color: var(--cherry);
+}
+
+.marca-texto p {
+    font-family: "Coolvetica", Arial, sans-serif;
+    color: var(--blanco);
+    font-size: 23px;
+    margin-top: 4px;
+    letter-spacing: 1.5px;
+}
+
+/* ==========================================================
+   INTRODUCCIÓN BREVE
+   ========================================================== */
+
+.intro {
+    background: var(--blanco);
+    border-left: 6px solid var(--cherry);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.intro h2 {
+    font-family: "Coolvetica", Arial, sans-serif;
+    font-size: 30px;
+    color: var(--negro);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    max-width: 920px;
+    color: var(--gris-texto);
+}
+
+/* ==========================================================
+   TARJETAS
+   ========================================================== */
+
+.card {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-top: 5px solid var(--negro);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.card-header {
+    border-bottom: 1px solid var(--borde);
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+}
+
+.card h2 {
+    font-family: "Coolvetica", Arial, sans-serif;
+    color: var(--negro);
+    font-size: 27px;
+    font-weight: 400;
+}
+
+/* ==========================================================
+   GRID
+   ========================================================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==========================================================
+   AVISOS
+   ========================================================== */
+
+.aviso {
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    border-left: 5px solid;
+}
+
+.aviso.ok {
+    background: #edf8f0;
+    color: #176b31;
+    border-color: #176b31;
+}
+
+.aviso.error {
+    background: #fdeaea;
+    color: #a51624;
+    border-color: var(--cherry);
+}
+
+/* ==========================================================
+   BOTONES
+   ========================================================== */
+
+.btn {
+    display: inline-block;
+    background: var(--cherry);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    border: 2px solid var(--cherry);
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--negro);
+    border-color: var(--negro);
+}
+
+/* ==========================================================
+   LISTA SIMPLE
+   ========================================================== */
+
+.lista-simple {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.lista-simple li {
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 12px;
+    border-left: 5px solid var(--cherry);
+    font-weight: bold;
+}
+
+/* ==========================================================
+   TABLAS
+   ========================================================== */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--blanco);
+}
+
+th {
+    background: var(--negro);
+    color: var(--blanco);
+    text-align: left;
+    padding: 12px;
+    font-family: "Coolvetica", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    border-bottom: 3px solid var(--cherry);
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--borde);
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background: #fafafa;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.footer {
+    background: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 24px 0;
+    margin-top: 30px;
+    border-top: 5px solid var(--cherry);
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer span {
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.footer strong {
+    color: var(--cherry);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 700px) {
+    .header-contenido {
+        align-items: flex-start;
+    }
+
+    .marca {
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 58px;
+        height: 58px;
+    }
+
+    .marca-texto h1 {
+        font-size: 34px;
+    }
+
+    .marca-texto p {
+        font-size: 20px;
+    }
+
+    .intro,
+    .card {
+        padding: 18px;
+    }
+}
