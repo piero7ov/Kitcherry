@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kitcherry Service Map | Exportación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <img src="assets/img/logo.png" alt="Kitcherry" class="sidebar-logo">
+
+                <div class="marca-texto">
+                    <strong class="marca-nombre">
+                        <span class="kit">KIT</span><span class="cherry">CHERRY</span>
+                    </strong>
+                    <span class="marca-producto">Service Map</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html">Plano</a>
+                <a href="exportacion.html" class="active">Exportación</a>
+            </nav>
+
+            <div class="sidebar-help">
+                <strong>Exportación del servicio</strong>
+                <p>
+                    Desde esta pantalla puedes descargar el plano trabajado, generar una imagen, recuperar un plano
+                    guardado o preparar una versión imprimible para el equipo.
+                </p>
+            </div>
+
+            <div class="sidebar-legend">
+                <strong>Formatos disponibles</strong>
+
+                <div class="legend-list sidebar-legend-list">
+                    <span class="legend-item legend-reservada">JSON</span>
+                    <span class="legend-item legend-libre">Imagen PNG</span>
+                    <span class="legend-item legend-doblada">PDF / imprimir</span>
+                </div>
+            </div>
+
+            <div class="sidebar-import-panel">
+                <strong>Estado del plano</strong>
+
+                <p>
+                    Esta pantalla lee el último plano guardado desde el navegador.
+                </p>
+
+                <div id="export-estado-sidebar" class="empty-state sidebar-service-info">
+                    Cargando información del plano...
+                </div>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">Kitcherry Service Map</p>
+                    <h1>Exportación</h1>
+                    <p>
+                        Revisa el resumen del plano guardado y genera archivos útiles para continuar el trabajo,
+                        compartirlo o imprimirlo antes del servicio.
+                    </p>
+                </div>
+            </header>
+
+            <section class="export-intro-panel">
+
+                <div>
+                    <h2>Plano guardado del servicio</h2>
+                    <p>
+                        Los datos se cargan desde el último guardado realizado en la pantalla de plano.
+                    </p>
+                </div>
+
+                <div class="export-top-actions">
+                    <a href="index.html" class="btn btn-muted">
+                        Volver al plano
+                    </a>
+                </div>
+
+            </section>
+
+            <section class="export-summary-grid">
+
+                <article class="stat-card export-stat-card">
+                    <span class="stat-label">Negocio</span>
+                    <strong id="resumen-negocio" class="stat-small">-</strong>
+                    <p id="resumen-fecha-turno">Sin datos de servicio.</p>
+                </article>
+
+                <article class="stat-card export-stat-card">
+                    <span class="stat-label">Mesas</span>
+                    <strong id="resumen-mesas">0</strong>
+                    <p>Mesas creadas en el plano visual.</p>
+                </article>
+
+                <article class="stat-card export-stat-card">
+                    <span class="stat-label">Reservas</span>
+                    <strong id="resumen-reservas">0</strong>
+                    <p>
+                        Colocadas:
+                        <span id="resumen-colocadas">0</span>
+                        · Pendientes:
+                        <span id="resumen-pendientes">0</span>
+                    </p>
+                </article>
+
+                <article class="stat-card export-stat-card">
+                    <span class="stat-label">Entorno</span>
+                    <strong id="resumen-objetos">0</strong>
+                    <p>Objetos añadidos: barra, columnas o parabanes.</p>
+                </article>
+
+            </section>
+
+            <section class="export-layout">
+
+                <article class="panel-card export-actions-panel">
+                    <div class="panel-header-line">
+                        <div>
+                            <h3>Acciones de exportación</h3>
+                            <p>
+                                Descarga el plano como archivo reutilizable, imagen o abre una versión preparada para
+                                impresión.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="export-alerta" class="empty-state export-alerta">
+                        Cargando plano guardado...
+                    </div>
+
+                    <div class="export-actions-grid">
+
+                        <button id="btn-exportar-json" class="btn btn-primary">
+                            Descargar plano JSON
+                        </button>
+
+                        <button id="btn-importar-plano" class="btn btn-muted">
+                            Importar plano JSON
+                        </button>
+
+                        <input type="file" id="input-importar-plano" accept=".json,application/json" hidden>
+
+                        <button id="btn-exportar-png" class="btn btn-muted">
+                            Descargar imagen PNG
+                        </button>
+
+                        <button id="btn-imprimir" class="btn btn-entorno">
+                            Imprimir / guardar PDF
+                        </button>
+
+                    </div>
+
+                    <div class="export-help-box">
+                        <strong>Uso recomendado</strong>
+                        <p>
+                            Usa JSON para guardar una copia editable del plano. Usa PNG para compartir rápido con el
+                            equipo. Usa imprimir/PDF para generar una hoja de servicio más formal.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="panel-card export-preview-panel">
+                    <div class="panel-header-line">
+                        <div>
+                            <h3>Vista previa del plano</h3>
+                            <p>
+                                Representación del plano guardado, preparada para imagen o impresión.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="export-preview-wrapper">
+                        <canvas id="export-canvas"></canvas>
+                    </div>
+                </article>
+
+            </section>
+
+            <section class="export-detail-grid">
+
+                <article class="panel-card">
+                    <div class="panel-header-line">
+                        <h3>Reservas colocadas</h3>
+                    </div>
+
+                    <div id="export-reservas-colocadas" class="export-list">
+                        <div class="empty-state">
+                            No hay reservas colocadas.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel-card">
+                    <div class="panel-header-line">
+                        <h3>Reservas pendientes</h3>
+                    </div>
+
+                    <div id="export-reservas-pendientes" class="export-list">
+                        <div class="empty-state">
+                            No hay reservas pendientes.
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="assets/js/exportacion.js"></script>
+</body>
+
+</html>
