@@ -1,6 +1,6 @@
 # Informe resumen - Kitcherry EcoTest
 
-Fecha de ejecución: 12/05/2026 22:52
+Fecha de ejecución: 15/05/2026 19:47
 
 ## Objetivo
 
@@ -10,10 +10,10 @@ El objetivo de esta prueba es comparar distintas formas de resolver procesos dig
 
 | Proceso | Tiempo (s) | Potencia estimada (W) | Consumo estimado (Wh) | Consumo | Recomendación |
 |---|---:|---:|---:|---|---|
-| Clasificación con reglas | 0.00729 | 15 | 3.037e-05 | Bajo | Recomendado para tareas frecuentes por su bajo consumo estimado. |
-| Clasificación con IA local | 35.61652 | 65 | 0.64307605 | Alto | Usar solo cuando aporte valor real; para casos simples conviene una solución más ligera. |
-| Consulta de stock en JSON | 0.080156 | 12 | 0.00026719 | Bajo | Recomendado para tareas frecuentes por su bajo consumo estimado. |
-| Consulta de stock en SQLite | 0.243873 | 14 | 0.00094839 | Bajo | Recomendado para tareas frecuentes por su bajo consumo estimado. |
+| Clasificación con reglas | 0.014641 | 15 | 6.1e-05 | Bajo | Recomendado para tareas frecuentes por su bajo consumo estimado. |
+| Clasificación con IA local | 34.5576 | 65 | 0.62395667 | Alto | Usar solo cuando aporte valor real; para casos simples conviene una solución más ligera. |
+| Consulta de stock en JSON | 0.070664 | 12 | 0.00023555 | Bajo | Recomendado para tareas frecuentes por su bajo consumo estimado. |
+| Consulta de stock en SQLite | 0.208431 | 14 | 0.00081057 | Bajo | Recomendado para tareas frecuentes por su bajo consumo estimado. |
 
 ## Conclusión
 
