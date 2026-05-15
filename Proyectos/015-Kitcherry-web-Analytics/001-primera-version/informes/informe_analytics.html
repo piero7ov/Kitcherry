@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitcherry Web Analytics</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="brand">
+                <img class="brand-logo" src="../assets/img/logo.png" alt="Logo de Kitcherry">
+                <div class="brand-text">
+                    <h1 class="brand-name">Kitcherry Web Analytics</h1>
+                    <p class="subtitle">Informe de seguimiento de actividad y revisión técnica de la web corporativa.</p>
+                </div>
+            </div>
+            <p class="subtitle">Web analizada: http://localhost/DAMPieroOlivares/Primero/Proyecto%20intermodular/203-Proyectos%20de%20Kitcherry/006-redes%20sociales/</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="grid">
+            <div class="card">
+                <p class="metric">196</p>
+                <p class="label">Visitas registradas</p>
+            </div>
+            <div class="card">
+                <p class="metric">16</p>
+                <p class="label">Formularios enviados</p>
+            </div>
+            <div class="card">
+                <p class="metric">9</p>
+                <p class="label">Errores detectados</p>
+            </div>
+            <div class="card">
+                <p class="metric">0</p>
+                <p class="label">Páginas revisadas por el minibot</p>
+            </div>
+            <div class="card">
+                <p class="metric">0</p>
+                <p class="label">Enlaces detectados</p>
+            </div>
+        </section>
+
+        <section class="note">
+            <strong>Interpretación:</strong> este informe combina dos tipos de seguimiento. Por una parte, analiza logs simulados para medir actividad de usuarios, como visitas, páginas más consultadas, formularios enviados y errores. Por otra parte, utiliza un minibot para revisar técnicamente la web, detectando páginas, títulos, correos y enlaces internos o externos.
+        </section>
+
+        <section>
+            <h2>Gráficas de actividad</h2>
+            <div class="chart-grid">
+                <img src='../graficas/paginas_mas_visitadas.png' alt='Páginas más visitadas'>
+                <img src='../graficas/visitas_por_dia.png' alt='Visitas por día'>
+                <img src='../graficas/formularios_por_dia.png' alt='Formularios por día'>
+                <img src='../graficas/errores_http.png' alt='Errores HTTP'>
+                <img src='../graficas/actividad_por_hora.png' alt='Actividad por hora'>
+                <p class='empty'>Gráfica no disponible: revision_minibot.png</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Páginas más visitadas</h2>
+            <table><thead><tr><th>Página</th><th>Visitas</th></tr></thead><tbody><tr><td>/index.php</td><td>67</td></tr><tr><td>/</td><td>52</td></tr><tr><td>/nosotros.php</td><td>31</td></tr><tr><td>/chatbot.php</td><td>27</td></tr><tr><td>/aviso-legal.php</td><td>8</td></tr><tr><td>/privacidad.php</td><td>6</td></tr><tr><td>/cookies.php</td><td>5</td></tr></tbody></table>
+        </section>
+
+        <section>
+            <h2>Errores detectados</h2>
+            <table><thead><tr><th>Página</th><th>Código HTTP</th><th>Cantidad</th></tr></thead><tbody><tr><td>/pagina-no-existe.php</td><td>404</td><td>6</td></tr><tr><td>/servicio-antiguo.php</td><td>404</td><td>3</td></tr></tbody></table>
+        </section>
+
+        <section>
+            <h2>Revisión técnica del minibot</h2>
+            <p class='empty'>No hay datos disponibles.</p>
+        </section>
+    </main>
+
+    <footer class="container">
+        Informe generado el 14/05/2026 02:46.
+    </footer>
+</body>
+</html>

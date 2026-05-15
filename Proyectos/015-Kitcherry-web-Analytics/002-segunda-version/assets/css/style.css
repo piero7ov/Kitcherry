@@ -1,0 +1,357 @@
+/* ==========================================================
+   KITCHERRY WEB ANALYTICS
+   Archivo: assets/css/style.css
+   Estilos del informe HTML
+   ========================================================== */
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../fuente/Coolvetica Rg.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --cherry: #C2182B;
+    --cherry-dark: #931020;
+    --black: #171717;
+    --soft: #f7f4f4;
+    --white: #ffffff;
+    --muted: #666666;
+    --border: #ececec;
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    --radius: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(194, 24, 43, 0.10), transparent 32%),
+        var(--soft);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--cherry), var(--cherry-dark));
+    color: white;
+    padding: 36px 24px;
+    box-shadow: 0 16px 30px rgba(194, 24, 43, 0.22);
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.brand-logo {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.brand-text {
+    min-width: 0;
+}
+
+.brand-name {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: clamp(30px, 5vw, 52px);
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    letter-spacing: 0.2px;
+}
+
+.subtitle {
+    margin: 8px 0 0;
+    opacity: 0.92;
+}
+
+.web-url {
+    overflow-wrap: anywhere;
+}
+
+main {
+    padding: 30px 0 48px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--cherry);
+}
+
+.metric {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--cherry);
+    margin: 0;
+}
+
+.label {
+    margin: 4px 0 0;
+    color: #555;
+}
+
+section {
+    margin-top: 26px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.section-heading h2 {
+    margin-bottom: 4px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 18px;
+}
+
+.chart-card {
+    background: white;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.chart-open {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    text-align: left;
+}
+
+.chart-open img {
+    display: block;
+    width: 100%;
+    background: white;
+}
+
+.chart-action {
+    display: block;
+    padding: 12px 14px;
+    font-weight: 700;
+    color: var(--cherry);
+    border-top: 1px solid var(--border);
+}
+
+.chart-open:hover .chart-action,
+.chart-open:focus .chart-action {
+    background: #fff2f4;
+}
+
+.chart-open:focus {
+    outline: 3px solid rgba(194, 24, 43, 0.28);
+    outline-offset: -3px;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    background: white;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+th {
+    background: var(--black);
+    color: white;
+}
+
+.empty {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    color: var(--muted);
+}
+
+.note {
+    background: #fff7f8;
+    border-left: 5px solid var(--cherry);
+    padding: 16px 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(194, 24, 43, 0.08);
+}
+
+footer {
+    color: var(--muted);
+    padding: 20px 0 40px;
+    font-size: 14px;
+}
+
+/* ==========================
+   MODAL DE GRÁFICAS
+   ========================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 1000;
+}
+
+.modal.is-open {
+    display: flex;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+}
+
+.modal-content {
+    position: relative;
+    width: min(1050px, 96vw);
+    max-height: 92vh;
+    background: white;
+    border-radius: 22px;
+    padding: 18px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    overflow: auto;
+}
+
+.modal-content h2 {
+    margin: 0 48px 14px 0;
+    color: var(--cherry);
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+}
+
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: var(--cherry);
+    color: white;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    background: var(--cherry-dark);
+}
+
+@media (max-width: 620px) {
+    header {
+        padding: 26px 18px;
+    }
+
+    .brand {
+        align-items: flex-start;
+    }
+
+    .brand-logo {
+        width: 58px;
+        height: 58px;
+        border-radius: 14px;
+    }
+
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-content {
+        border-radius: 16px;
+        padding: 14px;
+    }
+}
