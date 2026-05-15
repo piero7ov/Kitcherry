@@ -61,13 +61,17 @@ $servicios = [
     ],
     [
         "numero" => "09",
-        "titulo" => "Plataforma de comunicación comercial y presencia digital del negocio",
-        "texto" => "Herramientas para comunicar promociones, novedades e información relevante del establecimiento de forma profesional."
+        "titulo" => "Cliente de correo y gestión de comunicaciones digitales",
+        "texto" => "Cliente de correo web para gestionar mensajes, responder consultas, organizar comunicaciones por estados y realizar seguimiento visual mediante Kanban, de forma más clara, rápida y profesional.",
+        "url" => "https://youtu.be/MMl_-g1OMJY",
+        "boton" => "Ver Kitcherry Mail"
     ],
     [
         "numero" => "10",
-        "titulo" => "Plataforma modular de implantación, personalización y mejora continua",
-        "texto" => "Modelo modular que permite adaptar las herramientas a cada negocio, implantarlas progresivamente y mejorarlas con acompañamiento."
+        "titulo" => "Plataforma de formación y seguimiento para equipos de hostelería",
+        "texto" => "Solución para restaurantes y negocios hosteleros que ayuda a formar al personal, comprobar conocimientos clave del servicio y hacer seguimiento del progreso de cada trabajador de forma clara, sencilla y profesional.",
+        "url" => "https://youtu.be/UHQkvgvAB5E",
+        "boton" => "Ver Kitcherry Staff Training"
     ]
 ];
 
