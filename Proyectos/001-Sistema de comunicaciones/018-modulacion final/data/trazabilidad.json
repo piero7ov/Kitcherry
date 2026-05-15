@@ -4,7 +4,10 @@
     "30": "msgid:cadrkleylqc6yfu3ujzlvtrq7e97dqej0oxuwxvrqqnre7heyrg@mail.gmail.com",
     "29": "msgid:cagz3zzvjjxnfcaex=-_dpxeqsuntgywj6df4=cmrqj8cxbctbg@mail.gmail.com",
     "28": "msgid:camhspjexfxw9v2nieat0-6u4pm-gwnmr_=su0v-lkbbd-wu2ua@mail.gmail.com",
-    "27": "msgid:caeurcvaap+qo08yrovkw=u0zcm=rda8k=tajedsgq856h9w6tw@mail.gmail.com"
+    "27": "msgid:caeurcvaap+qo08yrovkw=u0zcm=rda8k=tajedsgq856h9w6tw@mail.gmail.com",
+    "72": "msgid:cagz3zzxn9+hu6g4pcgdehm8hhm=pjtvubwhfent1wrk54fnspq@mail.gmail.com",
+    "71": "msgid:cagz3zzv=hfhkspyt7ac=kdxtcxm1dv0w_11x9bkxev_ck3goqq@mail.gmail.com",
+    "70": "msgid:cagz3zzux_qvvg8unvrodzgxwxrzc4i21hxjzs-87_ud=9fzdcw@mail.gmail.com"
   },
   "msgid:69efecd3.df0a0220.1bb999.09cf@mx.google.com": {
     "estado": "papelera",
@@ -135,6 +138,66 @@
       {
         "accion": "correo_detectado",
         "fecha": "2026-05-05 00:00:51"
+      }
+    ]
+  },
+  "msgid:cagz3zzxn9+hu6g4pcgdehm8hhm=pjtvubwhfent1wrk54fnspq@mail.gmail.com": {
+    "estado": "pendiente",
+    "creado_en": "2026-05-15 13:34:07",
+    "borrador_generado_en": null,
+    "respondido_en": null,
+    "archivado_en": null,
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "",
+    "tracking_id": "msgid:cagz3zzxn9+hu6g4pcgdehm8hhm=pjtvubwhfent1wrk54fnspq@mail.gmail.com",
+    "uid_actual": "72",
+    "uid_history": [
+      "72"
+    ],
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-05-15 13:34:07"
+      }
+    ]
+  },
+  "msgid:cagz3zzv=hfhkspyt7ac=kdxtcxm1dv0w_11x9bkxev_ck3goqq@mail.gmail.com": {
+    "estado": "pendiente",
+    "creado_en": "2026-05-15 13:38:48",
+    "borrador_generado_en": null,
+    "respondido_en": null,
+    "archivado_en": null,
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "",
+    "tracking_id": "msgid:cagz3zzv=hfhkspyt7ac=kdxtcxm1dv0w_11x9bkxev_ck3goqq@mail.gmail.com",
+    "uid_actual": "71",
+    "uid_history": [
+      "71"
+    ],
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-05-15 13:38:48"
+      }
+    ]
+  },
+  "msgid:cagz3zzux_qvvg8unvrodzgxwxrzc4i21hxjzs-87_ud=9fzdcw@mail.gmail.com": {
+    "estado": "pendiente",
+    "creado_en": "2026-05-15 14:32:07",
+    "borrador_generado_en": null,
+    "respondido_en": null,
+    "archivado_en": null,
+    "enviado_a_papelera_en": null,
+    "respuesta_enviada": "",
+    "tracking_id": "msgid:cagz3zzux_qvvg8unvrodzgxwxrzc4i21hxjzs-87_ud=9fzdcw@mail.gmail.com",
+    "uid_actual": "70",
+    "uid_history": [
+      "70"
+    ],
+    "historial": [
+      {
+        "accion": "correo_detectado",
+        "fecha": "2026-05-15 14:32:07"
       }
     ]
   }
