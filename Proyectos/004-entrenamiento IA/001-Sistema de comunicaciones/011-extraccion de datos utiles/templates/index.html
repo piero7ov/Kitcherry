@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitcherry | Panel de correos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="brand-block">
+            <img src="{{ url_for('static', filename='logo/logo2.png') }}" alt="Logo Kitcherry" class="sidebar-logo">
+            <h1 class="marca">
+                <span class="kit">KIT</span><span class="cherry">CHERRY</span>
+            </h1>
+            <p class="subtitulo">Herramientas para hostelería</p>
+        </div>
+
+        <nav class="side-nav">
+            <a href="#importantes" class="nav-link">Importantes</a>
+            <a href="#automaticos" class="nav-link">Publicidad y automáticos</a>
+            <a href="#reservas" class="nav-link">Reservas</a>
+            <a href="#horario" class="nav-link">Horario y ubicación</a>
+            <a href="#carta" class="nav-link">Carta, alérgenos y servicios</a>
+            <a href="#otros" class="nav-link">Otros correos</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p><strong>Modelo:</strong> {{ modelo }}</p>
+            <p><strong>Por defecto:</strong> {{ total_por_defecto }} correos</p>
+        </div>
+    </aside>
+
+    <main class="content">
+        <header class="topbar">
+            <div class="topbar-text">
+                <h2>Panel inteligente de correos</h2>
+                <p>Clasificación, resumen, priorización, extracción de datos y borrador de respuesta.</p>
+            </div>
+
+            <form id="refresh-form" class="refresh-form">
+                <label for="cantidad">Últimos correos</label>
+                <input type="number" id="cantidad" min="1" max="50" value="{{ total_por_defecto }}">
+                <button type="submit" class="btn-primary">Actualizar</button>
+            </form>
+        </header>
+
+        <section id="loading-section" class="loading-section">
+            <div class="loading-box">
+                <div class="spinner"></div>
+                <h3>Analizando correos...</h3>
+                <p>La IA está leyendo, resumiendo, clasificando, priorizando y extrayendo datos útiles.</p>
+
+                <div class="skeleton-list">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="error-section" class="error-section hidden">
+            <div class="empty-box error-box">
+                <strong>Error al cargar los correos.</strong>
+                <p id="error-message">Ha ocurrido un problema inesperado.</p>
+            </div>
+        </section>
+
+        <div id="results" class="hidden">
+            <section id="importantes" class="panel-section">
+                <div class="section-head">
+                    <h3>Importantes</h3>
+                    <span id="count-importantes" class="badge-count">0</span>
+                </div>
+                <div id="list-importantes" class="mail-list"></div>
+            </section>
+
+            <section id="automaticos" class="panel-section">
+                <div class="section-head">
+                    <h3>Publicidad y automáticos</h3>
+                    <span id="count-automaticos" class="badge-count muted">0</span>
+                </div>
+                <div id="list-automaticos" class="mail-list"></div>
+            </section>
+
+            <section id="reservas" class="panel-section">
+                <div class="section-head">
+                    <h3>Reservas</h3>
+                    <span id="count-reservas" class="badge-count">0</span>
+                </div>
+                <div id="list-reservas" class="mail-list"></div>
+            </section>
+
+            <section id="horario" class="panel-section">
+                <div class="section-head">
+                    <h3>Horario y ubicación</h3>
+                    <span id="count-horario" class="badge-count">0</span>
+                </div>
+                <div id="list-horario" class="mail-list"></div>
+            </section>
+
+            <section id="carta" class="panel-section">
+                <div class="section-head">
+                    <h3>Carta, alérgenos y servicios</h3>
+                    <span id="count-carta" class="badge-count">0</span>
+                </div>
+                <div id="list-carta" class="mail-list"></div>
+            </section>
+
+            <section id="otros" class="panel-section">
+                <div class="section-head">
+                    <h3>Otros correos de clientes</h3>
+                    <span id="count-otros" class="badge-count">0</span>
+                </div>
+                <div id="list-otros" class="mail-list"></div>
+            </section>
+        </div>
+
+        <section id="detail-view" class="detail-view hidden">
+            <div class="detail-header">
+                <button type="button" id="btn-back" class="btn-secondary">← Volver al listado</button>
+            </div>
+
+            <article class="detail-card">
+                <div class="detail-top">
+                    <div id="detail-priority-wrap"></div>
+
+                    <div class="detail-meta">
+                        <h3 id="detail-subject"></h3>
+                        <p id="detail-from" class="detail-from"></p>
+                        <p id="detail-date" class="detail-date"></p>
+                    </div>
+                </div>
+
+                <div class="detail-content">
+                    <div class="detail-block">
+                        <h4>Resumen</h4>
+                        <p id="detail-summary"></p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Motivo general</h4>
+                        <p id="detail-general-reason"></p>
+                    </div>
+
+                    <div class="detail-block" id="detail-host-block">
+                        <h4>Motivo hostelería</h4>
+                        <p id="detail-host-reason"></p>
+                    </div>
+
+                    <div class="detail-block" id="detail-priority-block">
+                        <h4>Motivo prioridad</h4>
+                        <p id="detail-priority-reason"></p>
+                    </div>
+
+                    <div class="detail-block" id="detail-detected-block">
+                        <h4>Datos detectados</h4>
+                        <div id="detail-detected-data"></div>
+                    </div>
+
+                    <div class="detail-block" id="detail-missing-block">
+                        <h4>Datos faltantes</h4>
+                        <div id="detail-missing-data"></div>
+                    </div>
+
+                    <div class="detail-block" id="detail-extraction-block">
+                        <h4>Notas extraídas</h4>
+                        <p id="detail-extraction-notes"></p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Contenido original del correo</h4>
+                        <div id="detail-body" class="detail-original-body"></div>
+                    </div>
+
+                    <div class="reply-box detail-reply-box">
+                        <div class="reply-actions">
+                            <button type="button" id="btn-generate-reply" class="btn-primary">Generar respuesta
+                                automática</button>
+                            <button type="button" id="btn-send-reply" class="btn-secondary">Enviar</button>
+                        </div>
+
+                        <textarea id="detail-reply-textarea" class="reply-textarea"
+                            placeholder="Aquí aparecerá el borrador editable..."></textarea>
+                        <div id="detail-reply-status" class="reply-status"></div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

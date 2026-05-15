@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitcherry | Panel de correos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="brand-block">
+            <img src="{{ url_for('static', filename='logo/logo2.png') }}" alt="Logo Kitcherry" class="sidebar-logo">
+            <h1 class="marca">
+                <span class="kit">KIT</span><span class="cherry">CHERRY</span>
+            </h1>
+            <p class="subtitulo">Herramientas para hostelería</p>
+        </div>
+
+        <nav class="side-nav">
+            <a href="#importantes" class="nav-link active">Importantes</a>
+            <a href="#automaticos" class="nav-link">Publicidad y automáticos</a>
+            <a href="#reservas" class="nav-link">Reservas</a>
+            <a href="#horario" class="nav-link">Horario y ubicación</a>
+            <a href="#carta" class="nav-link">Carta, alérgenos y servicios</a>
+            <a href="#otros" class="nav-link">Otros correos</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p><strong>Modelo:</strong> {{ modelo }}</p>
+            <p><strong>Correos leídos:</strong> {{ total }}</p>
+        </div>
+    </aside>
+
+    <main class="content">
+        <header class="topbar">
+            <div>
+                <h2>Panel inteligente de correos</h2>
+                <p>Clasificación, resumen y priorización de consultas para hostelería.</p>
+            </div>
+        </header>
+
+        <section id="importantes" class="panel-section">
+            <div class="section-head">
+                <h3>Importantes</h3>
+                <span class="badge-count">{{ datos.importantes|length }}</span>
+            </div>
+
+            {% if datos.importantes %}
+            <div class="accordion-list">
+                {% for email in datos.importantes %}
+                <details class="mail-card important">
+                    <summary class="mail-summary">
+                        <div class="mail-top">
+                            <div class="mail-priority priority-{{ email.priority }}">
+                                {{ email.priority }}/10
+                            </div>
+                            <div class="mail-meta">
+                                <h4>{{ email.subject }}</h4>
+                                <p class="from">{{ email.from }}</p>
+                            </div>
+                        </div>
+                        <div class="mail-date">{{ email.date }}</div>
+                    </summary>
+
+                    <div class="mail-body">
+                        <p><strong>Resumen:</strong> {{ email.summary }}</p>
+                        <p><strong>Motivo general:</strong> {{ email.general_reason }}</p>
+                        {% if email.host_reason %}
+                        <p><strong>Motivo hostelería:</strong> {{ email.host_reason }}</p>
+                        {% endif %}
+                        {% if email.priority_reason %}
+                        <p><strong>Motivo prioridad:</strong> {{ email.priority_reason }}</p>
+                        {% endif %}
+                    </div>
+                </details>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="empty-box">No hay correos importantes.</div>
+            {% endif %}
+        </section>
+
+        <section id="automaticos" class="panel-section">
+            <div class="section-head">
+                <h3>Publicidad y automáticos</h3>
+                <span class="badge-count muted">{{ datos.automaticos|length }}</span>
+            </div>
+
+            {% if datos.automaticos %}
+            <div class="accordion-list">
+                {% for email in datos.automaticos %}
+                <details class="mail-card soft">
+                    <summary class="mail-summary">
+                        <div class="mail-meta">
+                            <h4>{{ email.subject }}</h4>
+                            <p class="from">{{ email.from }}</p>
+                        </div>
+                        <div class="mail-date">{{ email.date }}</div>
+                    </summary>
+
+                    <div class="mail-body">
+                        <p><strong>Resumen:</strong> {{ email.summary }}</p>
+                        <p><strong>Motivo general:</strong> {{ email.general_reason }}</p>
+                    </div>
+                </details>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="empty-box">No hay correos automáticos o publicitarios.</div>
+            {% endif %}
+        </section>
+
+        <section id="reservas" class="panel-section">
+            <div class="section-head">
+                <h3>Reservas</h3>
+                <span class="badge-count">{{ datos.reservas|length }}</span>
+            </div>
+
+            {% if datos.reservas %}
+            <div class="accordion-list">
+                {% for email in datos.reservas %}
+                <details class="mail-card">
+                    <summary class="mail-summary">
+                        <div class="mail-top">
+                            <div class="mail-priority priority-{{ email.priority }}">
+                                {{ email.priority }}/10
+                            </div>
+                            <div class="mail-meta">
+                                <h4>{{ email.subject }}</h4>
+                                <p class="from">{{ email.from }}</p>
+                            </div>
+                        </div>
+                        <div class="mail-date">{{ email.date }}</div>
+                    </summary>
+                    <div class="mail-body">
+                        <p><strong>Resumen:</strong> {{ email.summary }}</p>
+                        <p><strong>Motivo prioridad:</strong> {{ email.priority_reason }}</p>
+                    </div>
+                </details>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="empty-box">No hay correos en reservas.</div>
+            {% endif %}
+        </section>
+
+        <section id="horario" class="panel-section">
+            <div class="section-head">
+                <h3>Horario y ubicación</h3>
+                <span class="badge-count">{{ datos.horario_ubicacion|length }}</span>
+            </div>
+
+            {% if datos.horario_ubicacion %}
+            <div class="accordion-list">
+                {% for email in datos.horario_ubicacion %}
+                <details class="mail-card">
+                    <summary class="mail-summary">
+                        <div class="mail-top">
+                            <div class="mail-priority priority-{{ email.priority }}">
+                                {{ email.priority }}/10
+                            </div>
+                            <div class="mail-meta">
+                                <h4>{{ email.subject }}</h4>
+                                <p class="from">{{ email.from }}</p>
+                            </div>
+                        </div>
+                        <div class="mail-date">{{ email.date }}</div>
+                    </summary>
+                    <div class="mail-body">
+                        <p><strong>Resumen:</strong> {{ email.summary }}</p>
+                        <p><strong>Motivo prioridad:</strong> {{ email.priority_reason }}</p>
+                    </div>
+                </details>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="empty-box">No hay correos en horario y ubicación.</div>
+            {% endif %}
+        </section>
+
+        <section id="carta" class="panel-section">
+            <div class="section-head">
+                <h3>Carta, alérgenos y servicios</h3>
+                <span class="badge-count">{{ datos.carta_alergenos_servicios|length }}</span>
+            </div>
+
+            {% if datos.carta_alergenos_servicios %}
+            <div class="accordion-list">
+                {% for email in datos.carta_alergenos_servicios %}
+                <details class="mail-card">
+                    <summary class="mail-summary">
+                        <div class="mail-top">
+                            <div class="mail-priority priority-{{ email.priority }}">
+                                {{ email.priority }}/10
+                            </div>
+                            <div class="mail-meta">
+                                <h4>{{ email.subject }}</h4>
+                                <p class="from">{{ email.from }}</p>
+                            </div>
+                        </div>
+                        <div class="mail-date">{{ email.date }}</div>
+                    </summary>
+                    <div class="mail-body">
+                        <p><strong>Resumen:</strong> {{ email.summary }}</p>
+                        <p><strong>Motivo prioridad:</strong> {{ email.priority_reason }}</p>
+                    </div>
+                </details>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="empty-box">No hay correos en carta, alérgenos y servicios.</div>
+            {% endif %}
+        </section>
+
+        <section id="otros" class="panel-section">
+            <div class="section-head">
+                <h3>Otros correos de clientes</h3>
+                <span class="badge-count">{{ datos.otro_cliente|length }}</span>
+            </div>
+
+            {% if datos.otro_cliente %}
+            <div class="accordion-list">
+                {% for email in datos.otro_cliente %}
+                <details class="mail-card">
+                    <summary class="mail-summary">
+                        <div class="mail-top">
+                            <div class="mail-priority priority-{{ email.priority }}">
+                                {{ email.priority }}/10
+                            </div>
+                            <div class="mail-meta">
+                                <h4>{{ email.subject }}</h4>
+                                <p class="from">{{ email.from }}</p>
+                            </div>
+                        </div>
+                        <div class="mail-date">{{ email.date }}</div>
+                    </summary>
+                    <div class="mail-body">
+                        <p><strong>Resumen:</strong> {{ email.summary }}</p>
+                        <p><strong>Motivo prioridad:</strong> {{ email.priority_reason }}</p>
+                    </div>
+                </details>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="empty-box">No hay otros correos de clientes.</div>
+            {% endif %}
+        </section>
+    </main>
+
+</body>
+
+</html>
