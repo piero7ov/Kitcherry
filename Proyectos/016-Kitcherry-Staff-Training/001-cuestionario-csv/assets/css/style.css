@@ -1,0 +1,557 @@
+/* ==========================================================
+   KITCHERRY STAFF TRAINING
+   Archivo: assets/css/style.css
+   ========================================================== */
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../fuente/Coolvetica%20Rg.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --cherry: #C2182B;
+    --cherry-dark: #8f1020;
+    --cherry-soft: #fff0f2;
+
+    --black: #111111;
+    --text: #25252b;
+    --muted: #6f6f78;
+
+    --white: #ffffff;
+    --bg: #f7f4f2;
+    --line: #e8e0dd;
+
+    --success: #167a3f;
+    --success-soft: #eaf8ef;
+
+    --warning: #a76500;
+    --warning-soft: #fff6df;
+
+    --error: #b42318;
+    --error-soft: #fff1f0;
+
+    --shadow: 0 18px 45px rgba(17, 17, 17, 0.08);
+    --radius: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(194, 24, 43, 0.12), transparent 32%),
+        linear-gradient(135deg, #ffffff, var(--bg));
+}
+
+.topbar {
+    width: 100%;
+    padding: 18px 7%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.brand {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-text {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.brand-name {
+    font-family: "Coolvetica", Arial, sans-serif;
+    font-size: 2.25rem;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: var(--black);
+}
+
+.brand-product {
+    font-family: "Coolvetica", Arial, sans-serif;
+    font-size: 1.35rem;
+    line-height: 1;
+    color: var(--cherry);
+}
+
+.page {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    padding: 46px 0 70px;
+}
+
+.result-hero,
+.section,
+.notice {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.section {
+    padding: 34px;
+    margin-top: 26px;
+}
+
+.section:first-child {
+    margin-top: 0;
+}
+
+.section-header {
+    margin-bottom: 26px;
+}
+
+.section-header h1,
+.section-header h2,
+.result-hero h1,
+.notice h2 {
+    font-family: "Coolvetica", Arial, sans-serif;
+    color: var(--black);
+    line-height: 1.02;
+}
+
+.section-header h1 {
+    margin-bottom: 10px;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.section-header h2 {
+    margin-bottom: 10px;
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+.section-header p {
+    max-width: 760px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+    color: var(--cherry);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+}
+
+.blocks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.block-card {
+    min-height: 150px;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: linear-gradient(135deg, #ffffff, #fff8f8);
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.block-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(194, 24, 43, 0.35);
+    box-shadow: 0 18px 38px rgba(194, 24, 43, 0.10);
+}
+
+.block-card span {
+    font-family: "Coolvetica", Arial, sans-serif;
+    font-size: 1.6rem;
+    color: var(--black);
+}
+
+.block-card small {
+    color: var(--cherry);
+    font-weight: bold;
+}
+
+.worker-box {
+    margin-bottom: 24px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: var(--cherry-soft);
+}
+
+.worker-box label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.worker-box input {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.worker-box input:focus {
+    border-color: var(--cherry);
+    box-shadow: 0 0 0 4px rgba(194, 24, 43, 0.12);
+}
+
+.quiz-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question-card,
+.review-card {
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: var(--white);
+}
+
+.question-top {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.question-top span {
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: var(--cherry-soft);
+    color: var(--cherry);
+    font-size: 0.82rem;
+    font-weight: bold;
+}
+
+.question-top small {
+    color: var(--muted);
+    font-weight: bold;
+}
+
+.question-card h3,
+.review-card h3 {
+    margin-bottom: 18px;
+    font-size: 1.25rem;
+    line-height: 1.45;
+}
+
+.options {
+    display: grid;
+    gap: 12px;
+}
+
+.options label {
+    padding: 15px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fcfbfa;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.options label:hover {
+    border-color: rgba(194, 24, 43, 0.35);
+    background: #ffffff;
+}
+
+.options input {
+    margin-top: 3px;
+    accent-color: var(--cherry);
+}
+
+.options span {
+    line-height: 1.5;
+}
+
+.form-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    border-radius: 999px;
+    padding: 14px 22px;
+    background: var(--cherry);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: var(--cherry-dark);
+}
+
+.btn.secondary {
+    background: var(--white);
+    color: var(--black);
+    border: 1px solid var(--line);
+}
+
+.btn.secondary:hover {
+    background: #f7f4f2;
+}
+
+.notice {
+    padding: 28px;
+    margin-top: 26px;
+}
+
+.notice h2 {
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+}
+
+.notice p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-top: 8px;
+}
+
+.notice.error {
+    background: var(--error-soft);
+    border-color: rgba(180, 35, 24, 0.25);
+}
+
+.notice.success {
+    background: var(--success-soft);
+    border-color: rgba(22, 122, 63, 0.25);
+}
+
+.notice.warning {
+    background: var(--warning-soft);
+    border-color: rgba(167, 101, 0, 0.25);
+}
+
+.result-hero {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 28px;
+    align-items: stretch;
+    padding: 38px;
+    margin-bottom: 34px;
+}
+
+.result-hero h1 {
+    margin-bottom: 10px;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.result-hero p {
+    color: var(--muted);
+}
+
+.score-card {
+    border-radius: 22px;
+    padding: 24px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.score-card span {
+    font-family: "Coolvetica", Arial, sans-serif;
+    font-size: 3.6rem;
+    line-height: 1;
+}
+
+.score-card strong {
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+.score-card.success {
+    background: var(--success-soft);
+    color: var(--success);
+}
+
+.score-card.warning {
+    background: var(--warning-soft);
+    color: var(--warning);
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 26px;
+}
+
+.summary-grid article {
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.summary-grid span {
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Coolvetica", Arial, sans-serif;
+    font-size: 2.4rem;
+    color: var(--cherry);
+}
+
+.summary-grid p {
+    color: var(--muted);
+    font-weight: bold;
+}
+
+.review-list {
+    display: grid;
+    gap: 18px;
+}
+
+.review-card.correct {
+    border-color: rgba(22, 122, 63, 0.28);
+    background: var(--success-soft);
+}
+
+.review-card.incorrect {
+    border-color: rgba(180, 35, 24, 0.28);
+    background: var(--error-soft);
+}
+
+.answer-detail {
+    display: grid;
+    gap: 10px;
+}
+
+.answer-detail p {
+    line-height: 1.6;
+}
+
+.explanation {
+    padding: 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.footer {
+    padding: 28px 7%;
+    text-align: center;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.68);
+}
+
+@media (max-width: 900px) {
+    .result-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .blocks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    .topbar {
+        padding: 16px 5%;
+    }
+
+    .brand {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .brand-logo {
+        width: 46px;
+        height: 46px;
+    }
+
+    .brand-text {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .brand-name {
+        font-size: 1.75rem;
+    }
+
+    .brand-product {
+        font-size: 1.05rem;
+    }
+
+    .page {
+        width: 94%;
+        padding-top: 28px;
+    }
+
+    .section,
+    .result-hero {
+        padding: 24px;
+    }
+
+    .blocks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        justify-content: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .question-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
