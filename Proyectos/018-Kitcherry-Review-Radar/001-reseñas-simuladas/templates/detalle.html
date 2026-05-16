@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="detail-layout">
+
+    <article class="review-card">
+        <p class="eyebrow">Reseña original</p>
+
+        <h2>{{ resena.autor }}</h2>
+
+        <div class="review-meta">
+            <span>{{ resena.puntuacion }}/5</span>
+            <span>{{ resena.origen }}</span>
+            <span>{{ resena.fecha }}</span>
+        </div>
+
+        <p class="review-text">
+            {{ resena.texto }}
+        </p>
+
+        <form action="{{ url_for('analizar', review_id=resena.id) }}" method="POST">
+            <button class="btn btn-primary" type="submit">
+                {% if resultado %}Reanalizar con IA 1 e IA 2{% else %}Analizar con IA 1 e IA 2{% endif %}
+            </button>
+        </form>
+    </article>
+
+    {% if resultado %}
+
+    <article class="analysis-card">
+        <p class="eyebrow">IA 1</p>
+        <h3>Análisis de la reseña</h3>
+
+        <div class="info-grid">
+            <div>
+                <span>Sentimiento</span>
+                <strong>{{ resultado.ia_analista.sentimiento }}</strong>
+            </div>
+
+            <div>
+                <span>Puntuación estimada</span>
+                <strong>{{ resultado.ia_analista.puntuacion_estimada }}/5</strong>
+            </div>
+
+            <div>
+                <span>Gravedad</span>
+                <strong>{{ resultado.ia_analista.gravedad }}</strong>
+            </div>
+
+            <div>
+                <span>Modo</span>
+                <strong>{{ resultado.ia_analista.modo }}</strong>
+            </div>
+        </div>
+
+        <h4>Área afectada</h4>
+
+        <div class="tags">
+            {% for area in resultado.ia_analista.area_afectada %}
+            <span>{{ area }}</span>
+            {% endfor %}
+        </div>
+
+        <h4>Problema principal</h4>
+        <p>{{ resultado.ia_analista.problema_principal }}</p>
+
+        <h4>Resumen</h4>
+        <p>{{ resultado.ia_analista.resumen }}</p>
+
+        <p class="model-note">
+            Modelo usado: {{ resultado.ia_analista.modelo_usado }}
+        </p>
+    </article>
+
+    <article class="analysis-card">
+        <p class="eyebrow">IA 2</p>
+        <h3>Respuesta sugerida y mejoras</h3>
+
+        <h4>Respuesta profesional</h4>
+
+        <div class="suggested-response">
+            {{ resultado.ia_redactora.respuesta_sugerida }}
+        </div>
+
+        <h4>Acciones internas recomendadas</h4>
+
+        <ul class="actions-list">
+            {% for accion in resultado.ia_redactora.acciones_internas %}
+            <li>{{ accion }}</li>
+            {% endfor %}
+        </ul>
+
+        <div class="info-grid">
+            <div>
+                <span>Tono</span>
+                <strong>{{ resultado.ia_redactora.tono }}</strong>
+            </div>
+
+            <div>
+                <span>Modo</span>
+                <strong>{{ resultado.ia_redactora.modo }}</strong>
+            </div>
+        </div>
+
+        <p class="model-note">
+            Modelo usado: {{ resultado.ia_redactora.modelo_usado }}
+        </p>
+    </article>
+
+    {% else %}
+
+    <article class="empty-state">
+        <h3>Reseña pendiente de analizar</h3>
+        <p>
+            Pulsa el botón de análisis para ejecutar el flujo completo:
+            primero la IA 1 analizará la reseña y después la IA 2 generará una respuesta profesional.
+        </p>
+    </article>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}

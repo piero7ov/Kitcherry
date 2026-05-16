@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+    <div>
+        <p class="eyebrow">Panel principal</p>
+        <h2>Análisis inteligente de reseñas</h2>
+        <p>
+            Esta versión utiliza reseñas simuladas desde JSON y ejecuta un flujo con dos IAs:
+            una IA analiza la opinión y otra IA genera una respuesta profesional con acciones de mejora.
+        </p>
+    </div>
+</section>
+
+<section class="stats-grid">
+    <article class="stat-card">
+        <span>Total reseñas</span>
+        <strong>{{ estadisticas.total }}</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Valoración media</span>
+        <strong>{{ estadisticas.media }}/5</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Analizadas</span>
+        <strong>{{ estadisticas.analizadas }}</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Pendientes</span>
+        <strong>{{ estadisticas.pendientes }}</strong>
+    </article>
+</section>
+
+<section class="panel-grid">
+    <article class="panel-card">
+        <h3>Sentimiento detectado</h3>
+
+        <div class="mini-stats">
+            <div>
+                <span>Positivas</span>
+                <strong>{{ estadisticas.positivas }}</strong>
+            </div>
+            <div>
+                <span>Mixtas</span>
+                <strong>{{ estadisticas.mixtas }}</strong>
+            </div>
+            <div>
+                <span>Negativas</span>
+                <strong>{{ estadisticas.negativas }}</strong>
+            </div>
+        </div>
+    </article>
+
+    <article class="panel-card">
+        <h3>Problemas más repetidos</h3>
+
+        {% if estadisticas.problemas %}
+        <ul class="problem-list">
+            {% for problema, total in estadisticas.problemas %}
+            <li>
+                <span>{{ problema }}</span>
+                <strong>{{ total }}</strong>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="muted">Todavía no hay problemas detectados. Analiza alguna reseña para ver resultados.</p>
+        {% endif %}
+    </article>
+</section>
+
+<section class="table-card">
+    <div class="section-header">
+        <div>
+            <p class="eyebrow">Reseñas</p>
+            <h3>Listado de reseñas simuladas</h3>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Autor</th>
+                    <th>Puntuación</th>
+                    <th>Origen</th>
+                    <th>Sentimiento</th>
+                    <th>Problema</th>
+                    <th>Gravedad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for resena in resenas %}
+                {% set item = analisis.get(resena.id|string) %}
+
+                <tr>
+                    <td>
+                        <strong>{{ resena.autor }}</strong>
+                        <small>{{ resena.fecha }}</small>
+                    </td>
+
+                    <td>
+                        <span class="rating">{{ resena.puntuacion }}/5</span>
+                    </td>
+
+                    <td>{{ resena.origen }}</td>
+
+                    <td>
+                        {% if item %}
+                        {% set sentimiento = item.ia_analista.sentimiento %}
+                        <span class="badge badge-{{ sentimiento }}">
+                            {{ sentimiento }}
+                        </span>
+                        {% else %}
+                        <span class="badge badge-pendiente">pendiente</span>
+                        {% endif %}
+                    </td>
+
+                    <td>
+                        {% if item %}
+                        {{ item.ia_analista.problema_principal }}
+                        {% else %}
+                        <span class="muted">Sin analizar</span>
+                        {% endif %}
+                    </td>
+
+                    <td>
+                        {% if item %}
+                        <span class="gravity gravity-{{ item.ia_analista.gravedad }}">
+                            {{ item.ia_analista.gravedad }}
+                        </span>
+                        {% else %}
+                        <span class="muted">-</span>
+                        {% endif %}
+                    </td>
+
+                    <td class="actions">
+                        <a class="btn btn-light" href="{{ url_for('detalle', review_id=resena.id) }}">
+                            Ver
+                        </a>
+
+                        <form action="{{ url_for('analizar', review_id=resena.id) }}" method="POST">
+                            <button class="btn btn-primary" type="submit">
+                                {% if item %}Reanalizar{% else %}Analizar{% endif %}
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+{% endblock %}

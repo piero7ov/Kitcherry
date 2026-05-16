@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="detail-header">
+    <div>
+        <p class="eyebrow">Detalle de la opinión</p>
+        <h1>{{ resena.autor }}</h1>
+        <p>
+            Revisa la opinión del cliente, genera un análisis y prepara una respuesta profesional.
+        </p>
+    </div>
+
+    <div class="detail-actions">
+        <a href="{{ url_for('index') }}" class="btn btn-light">Volver al panel</a>
+
+        <form action="{{ url_for('analizar', review_id=resena.id) }}" method="POST">
+            <button type="submit" class="btn btn-primary">
+                {% if analisis %}Volver a analizar{% else %}Analizar reseña{% endif %}
+            </button>
+        </form>
+    </div>
+</section>
+
+<section class="detail-grid">
+
+    <article class="detail-card">
+        <p class="eyebrow">Opinión del cliente</p>
+
+        <div class="review-meta">
+            <span>{{ resena.puntuacion }}/5</span>
+            <span>{{ resena.origen }}</span>
+            <span>{{ resena.fecha }}</span>
+        </div>
+
+        <p class="review-text">
+            {{ resena.texto }}
+        </p>
+    </article>
+
+    {% if analisis %}
+
+    <article class="detail-card">
+        <p class="eyebrow">Resumen de la opinión</p>
+
+        <div class="summary-grid">
+            <div>
+                <span>Sentimiento</span>
+                <strong>{{ analisis.sentimiento }}</strong>
+            </div>
+
+            <div>
+                <span>Valoración estimada</span>
+                <strong>{{ analisis.puntuacion_estimada }}/5</strong>
+            </div>
+
+            <div>
+                <span>Gravedad</span>
+                <strong>{{ analisis.gravedad }}</strong>
+            </div>
+
+            <div>
+                <span>Tema principal</span>
+                <strong>{{ analisis.problema_principal }}</strong>
+            </div>
+        </div>
+
+        <h3>Áreas relacionadas</h3>
+
+        <div class="tags">
+            {% for area in analisis.area_afectada %}
+            <span>{{ area }}</span>
+            {% endfor %}
+        </div>
+
+        <h3>Resumen</h3>
+        <p class="soft-text">{{ analisis.resumen }}</p>
+    </article>
+
+    <article class="detail-card wide-card">
+        <div class="card-title-row">
+            <div>
+                <p class="eyebrow">Respuesta sugerida</p>
+                <h2>Respuesta para el cliente</h2>
+            </div>
+
+            <button type="button" class="btn btn-light"
+                onclick="navigator.clipboard.writeText(document.getElementById('respuesta-sugerida').innerText)">
+                Copiar respuesta
+            </button>
+        </div>
+
+        <div class="suggested-response" id="respuesta-sugerida">
+            {{ analisis.respuesta_sugerida }}
+        </div>
+    </article>
+
+    <article class="detail-card wide-card">
+        <p class="eyebrow">Mejora interna</p>
+        <h2>Recomendaciones para el negocio</h2>
+
+        <ul class="actions-list">
+            {% for accion in analisis.acciones_internas %}
+            <li>{{ accion }}</li>
+            {% endfor %}
+        </ul>
+    </article>
+
+    {% else %}
+
+    <article class="detail-card empty-analysis">
+        <h2>Esta reseña aún no ha sido analizada</h2>
+        <p>
+            Pulsa en “Analizar reseña” para generar un resumen,
+            una respuesta sugerida y recomendaciones para el negocio.
+        </p>
+    </article>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}

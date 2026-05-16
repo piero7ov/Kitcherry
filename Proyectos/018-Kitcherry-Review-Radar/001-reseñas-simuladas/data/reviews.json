@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "autor": "Cliente 1",
+        "puntuacion": 5,
+        "texto": "La comida estaba excelente, el trato fue muy amable y el ambiente del restaurante era muy agradable. Volveremos seguro.",
+        "origen": "Google simulado",
+        "fecha": "2026-05-16"
+    },
+    {
+        "id": 2,
+        "autor": "Cliente 2",
+        "puntuacion": 3,
+        "texto": "La comida estaba buena, pero tardaron mucho en atendernos y nadie nos explicó bien qué platos eran sin gluten.",
+        "origen": "Google simulado",
+        "fecha": "2026-05-16"
+    },
+    {
+        "id": 3,
+        "autor": "Cliente 3",
+        "puntuacion": 2,
+        "texto": "La reserva no aparecía cuando llegamos y tuvimos que esperar bastante. El personal intentó solucionarlo, pero fue una mala experiencia.",
+        "origen": "TripAdvisor simulado",
+        "fecha": "2026-05-15"
+    },
+    {
+        "id": 4,
+        "autor": "Cliente 4",
+        "puntuacion": 4,
+        "texto": "Buen menú del día y precio correcto. El servicio fue rápido, aunque la mesa estaba un poco pegada a la entrada.",
+        "origen": "Formulario interno",
+        "fecha": "2026-05-14"
+    },
+    {
+        "id": 5,
+        "autor": "Cliente 5",
+        "puntuacion": 1,
+        "texto": "El plato llegó frío y tardaron demasiado en cambiarlo. No recibimos una explicación clara por parte del equipo.",
+        "origen": "Google simulado",
+        "fecha": "2026-05-13"
+    },
+    {
+        "id": 6,
+        "autor": "Cliente 6",
+        "puntuacion": 5,
+        "texto": "Nos atendieron muy bien, explicaron los alérgenos con claridad y la presentación de los platos fue excelente.",
+        "origen": "Instagram simulado",
+        "fecha": "2026-05-12"
+    }
+]

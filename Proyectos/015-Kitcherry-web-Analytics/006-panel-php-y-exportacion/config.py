@@ -26,7 +26,7 @@ INFORMES_DIR = os.path.join(BASE_DIR, "informes")
 
 USAR_URL_REAL = False
 
-BASE_URL_LOCAL = "http://localhost/DAMPieroOlivares/Primero/Proyecto%20intermodular/203-Proyectos%20de%20Kitcherry/006-redes%20sociales/"
+BASE_URL_LOCAL = "http://localhost/DAMPieroOlivares/Primero/Proyecto%20intermodular/203-Proyectos%20de%20Kitcherry/017-web-Kitcherry-actualizada"
 
 BASE_URL_REAL = "https://tudominio.com/"
 

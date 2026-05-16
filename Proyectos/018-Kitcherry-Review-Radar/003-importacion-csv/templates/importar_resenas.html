@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="form-layout">
+    <article class="form-intro">
+        <p class="eyebrow">Importación de datos</p>
+        <h1>Importar reseñas</h1>
+        <p>
+            Carga varias opiniones de clientes mediante un archivo CSV o JSON.
+            Las reseñas válidas se guardarán en el panel como pendientes de analizar.
+        </p>
+
+        <div class="format-card">
+            <h2>Campos necesarios</h2>
+            <p>El archivo debe incluir estos campos:</p>
+
+            <code>autor, puntuacion, origen, fecha, texto</code>
+
+            <a href="{{ url_for('descargar_csv_ejemplo') }}" class="btn btn-light">
+                Descargar CSV de ejemplo
+            </a>
+        </div>
+    </article>
+
+    <article class="form-card">
+        <form action="{{ url_for('importar_resenas') }}" method="POST" enctype="multipart/form-data">
+
+            <div class="field">
+                <label for="archivo">Archivo CSV o JSON</label>
+                <input type="file" id="archivo" name="archivo" accept=".csv,.json" required>
+            </div>
+
+            <div class="import-help">
+                <h3>Formato CSV esperado</h3>
+                <pre>autor,puntuacion,origen,fecha,texto
+Cliente 1,4,Google,2026-05-16,"Muy buena comida, aunque el servicio fue lento."</pre>
+
+                <h3>Formato JSON esperado</h3>
+                <pre>[
+  {
+    "autor": "Cliente 1",
+    "puntuacion": 4,
+    "origen": "Google",
+    "fecha": "2026-05-16",
+    "texto": "Muy buena comida, aunque el servicio fue lento."
+  }
+]</pre>
+            </div>
+
+            <div class="form-actions">
+                <a href="{{ url_for('index') }}" class="btn btn-light">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Importar reseñas</button>
+            </div>
+
+        </form>
+
+        {% if resultado %}
+        <section class="import-result">
+            <h2>Resumen de importación</h2>
+
+            <div class="result-grid">
+                <div>
+                    <span>Añadidas</span>
+                    <strong>{{ resultado.insertadas }}</strong>
+                </div>
+
+                <div>
+                    <span>Duplicadas</span>
+                    <strong>{{ resultado.duplicadas }}</strong>
+                </div>
+
+                <div>
+                    <span>Inválidas</span>
+                    <strong>{{ resultado.invalidas }}</strong>
+                </div>
+            </div>
+
+            {% if resultado.errores %}
+            <h3>Errores detectados</h3>
+
+            <ul class="error-list">
+                {% for error in resultado.errores %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </section>
+        {% endif %}
+    </article>
+</section>
+
+{% endblock %}

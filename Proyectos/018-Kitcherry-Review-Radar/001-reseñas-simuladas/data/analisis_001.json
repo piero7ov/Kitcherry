@@ -1,0 +1,32 @@
+{
+    "1": {
+        "id_resena": 1,
+        "fecha_analisis": "2026-05-16 01:45:35",
+        "ia_analista": {
+            "sentimiento": "positivo",
+            "puntuacion_estimada": 5,
+            "area_afectada": [
+                "alimentos",
+                "trato",
+                "ambiente"
+            ],
+            "problema_principal": "Ninguno",
+            "gravedad": "baja",
+            "resumen": "El cliente elogió la comida, trato y ambiente del restaurante, indicando que regresará.",
+            "modelo_usado": "mistral:latest",
+            "modo": "ollama"
+        },
+        "ia_redactora": {
+            "respuesta_sugerida": "Muchas gracias por tu valoración. Nos alegra saber que la experiencia fue positiva y que disfrutaste de nuestro servicio. Comentarios así nos ayudan a seguir trabajando con la misma dedicación.",
+            "acciones_internas": [
+                "Mantener los puntos fuertes mencionados por el cliente.",
+                "Compartir la reseña positiva con el equipo.",
+                "Usar este tipo de comentarios como referencia de buenas prácticas.",
+                "Aviso técnico: se usó respuesta local porque falló Ollama: No se encontró un bloque JSON en la respuesta del modelo."
+            ],
+            "tono": "profesional y cercano",
+            "modelo_usado": "fallback_local",
+            "modo": "fallback"
+        }
+    }
+}

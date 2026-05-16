@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kitcherry Review Radar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <a href="{{ url_for('index') }}" class="brand">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Kitcherry" class="brand-logo">
+
+            <div class="brand-text">
+                <span class="brand-main">
+                    <strong class="brand-kit">KIT</strong><strong class="brand-cherry">CHERRY</strong>
+                </span>
+                <span class="brand-subtitle">Review Radar</span>
+            </div>
+        </a>
+
+        <nav class="nav-actions">
+            <a href="{{ url_for('index') }}">Panel</a>
+            <a href="{{ url_for('nueva_resena') }}">Nueva reseña</a>
+            <a href="{{ url_for('importar_resenas') }}" class="nav-primary">Importar reseñas</a>
+        </nav>
+    </header>
+
+    <main class="page">
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <section class="alerts">
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </section>
+        {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+
+    </main>
+
+</body>
+
+</html>

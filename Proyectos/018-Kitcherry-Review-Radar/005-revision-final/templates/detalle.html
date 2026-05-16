@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="detail-header">
+    <div>
+        <p class="eyebrow">Detalle de la opinión</p>
+        <h1>{{ resena.autor }}</h1>
+        <p>
+            Revisa la opinión del cliente, genera un análisis y prepara una respuesta final.
+        </p>
+    </div>
+
+    <div class="detail-actions">
+        <a href="{{ url_for('index') }}" class="btn btn-light">Volver al panel</a>
+
+        <form action="{{ url_for('analizar', review_id=resena.id) }}" method="POST">
+            <button type="submit" class="btn btn-primary">
+                {% if analisis %}Volver a analizar{% else %}Analizar reseña{% endif %}
+            </button>
+        </form>
+    </div>
+</section>
+
+<section class="detail-grid">
+
+    <article class="detail-card">
+        <p class="eyebrow">Opinión del cliente</p>
+
+        <div class="review-meta">
+            <span>{{ resena.puntuacion }}/5</span>
+            <span>{{ resena.origen }}</span>
+            <span>{{ resena.fecha }}</span>
+        </div>
+
+        <p class="review-text">
+            {{ resena.texto }}
+        </p>
+    </article>
+
+    {% if analisis %}
+
+    <article class="detail-card">
+        <div class="card-title-row compact-row">
+            <div>
+                <p class="eyebrow">Resumen de la opinión</p>
+                <h2>Análisis de la reseña</h2>
+            </div>
+
+            {% if analisis.estado_revision == "revisada" %}
+            <span class="badge status-revisada">Revisada</span>
+            {% else %}
+            <span class="badge status-analizada">Analizada</span>
+            {% endif %}
+        </div>
+
+        <div class="summary-grid">
+            <div>
+                <span>Sentimiento</span>
+                <strong>{{ analisis.sentimiento }}</strong>
+            </div>
+
+            <div>
+                <span>Valoración estimada</span>
+                <strong>{{ analisis.puntuacion_estimada }}/5</strong>
+            </div>
+
+            <div>
+                <span>Gravedad</span>
+                <strong>{{ analisis.gravedad }}</strong>
+            </div>
+
+            <div>
+                <span>Tema principal</span>
+                <strong>{{ analisis.problema_principal }}</strong>
+            </div>
+        </div>
+
+        <h3>Áreas relacionadas</h3>
+
+        <div class="tags">
+            {% for area in analisis.area_afectada %}
+            <span>{{ area }}</span>
+            {% endfor %}
+        </div>
+
+        <h3>Resumen</h3>
+        <p class="soft-text">{{ analisis.resumen }}</p>
+
+        {% if analisis.fecha_revision %}
+        <p class="revision-date">
+            Revisada el {{ analisis.fecha_revision }}
+        </p>
+        {% endif %}
+    </article>
+
+    <article class="detail-card wide-card">
+        <div class="card-title-row">
+            <div>
+                <p class="eyebrow">Respuesta sugerida</p>
+                <h2>Respuesta generada</h2>
+            </div>
+
+            <button type="button" class="btn btn-light"
+                onclick="navigator.clipboard.writeText(document.getElementById('respuesta-sugerida').innerText)">
+                Copiar sugerida
+            </button>
+        </div>
+
+        <div class="suggested-response" id="respuesta-sugerida">
+            {{ analisis.respuesta_sugerida }}
+        </div>
+    </article>
+
+    <article class="detail-card wide-card">
+        <p class="eyebrow">Revisión final</p>
+        <h2>Respuesta final y nota interna</h2>
+
+        <form action="{{ url_for('guardar_revision_ruta', review_id=resena.id) }}" method="POST" class="review-form">
+
+            <div class="field">
+                <label for="respuesta_final">Respuesta final editable</label>
+                <textarea id="respuesta_final" name="respuesta_final" rows="7"
+                    required>{{ analisis.respuesta_final }}</textarea>
+            </div>
+
+            <div class="field">
+                <label for="nota_interna">Nota interna</label>
+                <textarea id="nota_interna" name="nota_interna" rows="4"
+                    placeholder="Ejemplo: Revisar este caso con sala antes del próximo servicio.">{{ analisis.nota_interna }}</textarea>
+            </div>
+
+            <div class="form-actions split-actions">
+                <button type="button" class="btn btn-light"
+                    onclick="navigator.clipboard.writeText(document.getElementById('respuesta_final').value)">
+                    Copiar respuesta final
+                </button>
+
+                <div class="right-actions">
+                    <button type="submit" name="accion" value="guardar" class="btn btn-light">
+                        Guardar cambios
+                    </button>
+
+                    <button type="submit" name="accion" value="revisar" class="btn btn-primary">
+                        Marcar como revisada
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </article>
+
+    <article class="detail-card wide-card">
+        <p class="eyebrow">Mejora interna</p>
+        <h2>Recomendaciones para el negocio</h2>
+
+        <ul class="actions-list">
+            {% for accion in analisis.acciones_internas %}
+            <li>{{ accion }}</li>
+            {% endfor %}
+        </ul>
+    </article>
+
+    {% else %}
+
+    <article class="detail-card empty-analysis">
+        <h2>Esta reseña aún no ha sido analizada</h2>
+        <p>
+            Pulsa en “Analizar reseña” para generar un resumen,
+            una respuesta sugerida y recomendaciones para el negocio.
+        </p>
+    </article>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}

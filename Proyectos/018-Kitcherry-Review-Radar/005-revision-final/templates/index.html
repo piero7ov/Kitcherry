@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-content">
+        <p class="eyebrow">Reputación digital para hostelería</p>
+        <h1>Analiza opiniones y mejora la respuesta del negocio</h1>
+        <p>
+            Review Radar ayuda a revisar reseñas de clientes, detectar problemas repetidos
+            y preparar respuestas profesionales de forma sencilla.
+        </p>
+
+        <div class="hero-actions">
+            <a href="{{ url_for('nueva_resena') }}" class="btn btn-primary">
+                Añadir reseña
+            </a>
+            <a href="{{ url_for('importar_resenas') }}" class="btn btn-light">
+                Importar CSV/JSON
+            </a>
+            <a href="{{ url_for('limpiar_analisis') }}" class="btn btn-light">
+                Limpiar análisis
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="filters-card">
+    <div class="section-header filters-header">
+        <div>
+            <p class="eyebrow">Búsqueda y filtros</p>
+            <h2>Encontrar reseñas</h2>
+        </div>
+
+        {% if filtros_activos %}
+        <a href="{{ url_for('index') }}" class="btn btn-light">
+            Limpiar filtros
+        </a>
+        {% endif %}
+    </div>
+
+    <form action="{{ url_for('index') }}" method="GET" class="filters-form">
+        <div class="filter-field filter-search">
+            <label for="buscar">Buscar</label>
+            <input type="text" id="buscar" name="buscar" value="{{ filtros.buscar }}"
+                placeholder="Autor, texto, tema, respuesta o nota...">
+        </div>
+
+        <div class="filter-field">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado">
+                <option value="">Todos</option>
+                <option value="pendiente" {% if filtros.estado=="pendiente" %}selected{% endif %}>Pendientes</option>
+                <option value="analizada" {% if filtros.estado=="analizada" %}selected{% endif %}>Analizadas</option>
+                <option value="revisada" {% if filtros.estado=="revisada" %}selected{% endif %}>Revisadas</option>
+            </select>
+        </div>
+
+        <div class="filter-field">
+            <label for="origen">Origen</label>
+            <select id="origen" name="origen">
+                <option value="">Todos</option>
+                {% for origen in origenes %}
+                <option value="{{ origen }}" {% if filtros.origen==origen %}selected{% endif %}>
+                    {{ origen }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="filter-field">
+            <label for="puntuacion">Puntuación</label>
+            <select id="puntuacion" name="puntuacion">
+                <option value="">Todas</option>
+                {% for n in range(1, 6) %}
+                <option value="{{ n }}" {% if filtros.puntuacion==n|string %}selected{% endif %}>
+                    {{ n }}/5
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="filter-actions">
+            <button type="submit" class="btn btn-primary">
+                Aplicar filtros
+            </button>
+        </div>
+    </form>
+</section>
+
+<section class="stats-grid stats-grid-final">
+    <article class="stat-card">
+        <span>Reseñas mostradas</span>
+        <strong>{{ estadisticas.total }}</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Valoración media</span>
+        <strong>{{ estadisticas.media }}/5</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Pendientes</span>
+        <strong>{{ estadisticas.pendientes }}</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Analizadas</span>
+        <strong>{{ estadisticas.analizadas }}</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Revisadas</span>
+        <strong>{{ estadisticas.revisadas }}</strong>
+    </article>
+</section>
+
+<section class="panel-grid">
+    <article class="panel-card">
+        <h2>Estado general</h2>
+
+        <div class="sentiment-grid">
+            <div class="sentiment-item positive">
+                <span>Positivas</span>
+                <strong>{{ estadisticas.positivas }}</strong>
+            </div>
+
+            <div class="sentiment-item mixed">
+                <span>Mixtas</span>
+                <strong>{{ estadisticas.mixtas }}</strong>
+            </div>
+
+            <div class="sentiment-item negative">
+                <span>Negativas</span>
+                <strong>{{ estadisticas.negativas }}</strong>
+            </div>
+        </div>
+    </article>
+
+    <article class="panel-card">
+        <h2>Temas más repetidos</h2>
+
+        {% if estadisticas.problemas %}
+        <ul class="problem-list">
+            {% for problema in estadisticas.problemas %}
+            <li>
+                <span>{{ problema.problema_principal }}</span>
+                <strong>{{ problema.total }}</strong>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="muted">
+            Todavía no hay suficientes análisis para detectar temas repetidos.
+        </p>
+        {% endif %}
+    </article>
+</section>
+
+<section class="table-card">
+    <div class="section-header">
+        <div>
+            <p class="eyebrow">Opiniones registradas</p>
+            <h2>Reseñas del negocio</h2>
+        </div>
+
+        <div class="section-actions">
+            <a href="{{ url_for('nueva_resena') }}" class="btn btn-primary">
+                Añadir reseña
+            </a>
+            <a href="{{ url_for('importar_resenas') }}" class="btn btn-light">
+                Importar
+            </a>
+        </div>
+    </div>
+
+    {% if filtros_activos %}
+    <p class="filter-note">
+        Mostrando resultados filtrados. Puedes limpiar los filtros para ver todas las reseñas.
+    </p>
+    {% endif %}
+
+    {% if resenas %}
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Puntuación</th>
+                    <th>Origen</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                    <th>Sentimiento</th>
+                    <th>Tema detectado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for resena in resenas %}
+                <tr>
+                    <td>
+                        <strong>{{ resena.autor }}</strong>
+                        <small>{{ resena.texto[:70] }}{% if resena.texto|length > 70 %}...{% endif %}</small>
+                    </td>
+
+                    <td>
+                        <span class="rating">{{ resena.puntuacion }}/5</span>
+                    </td>
+
+                    <td>{{ resena.origen }}</td>
+                    <td>{{ resena.fecha }}</td>
+
+                    <td>
+                        <span class="badge status-{{ resena.estado_visual }}">
+                            {{ resena.estado_texto }}
+                        </span>
+                    </td>
+
+                    <td>
+                        {% if resena.sentimiento %}
+                        <span class="badge badge-{{ resena.sentimiento }}">
+                            {{ resena.sentimiento }}
+                        </span>
+                        {% else %}
+                        <span class="muted">-</span>
+                        {% endif %}
+                    </td>
+
+                    <td>
+                        {% if resena.problema_principal %}
+                        {{ resena.problema_principal }}
+                        {% else %}
+                        <span class="muted">Sin analizar</span>
+                        {% endif %}
+                    </td>
+
+                    <td class="actions">
+                        <a href="{{ url_for('detalle', review_id=resena.id) }}" class="btn btn-light">
+                            Ver
+                        </a>
+
+                        {% if resena.estado_visual == "pendiente" %}
+                        <form action="{{ url_for('analizar', review_id=resena.id) }}" method="POST">
+                            <button type="submit" class="btn btn-primary">
+                                Analizar
+                            </button>
+                        </form>
+                        {% else %}
+                        <a href="{{ url_for('detalle', review_id=resena.id) }}" class="btn btn-primary">
+                            Revisar
+                        </a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <h3>No hay reseñas con esos filtros</h3>
+        <p>
+            Prueba a cambiar la búsqueda o limpiar los filtros para ver todas las opiniones registradas.
+        </p>
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Limpiar filtros</a>
+    </div>
+    {% endif %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-content">
+        <p class="eyebrow">Reputación digital para hostelería</p>
+        <h1>Analiza opiniones y mejora la respuesta del negocio</h1>
+        <p>
+            Review Radar ayuda a revisar reseñas de clientes, detectar problemas repetidos
+            y preparar respuestas profesionales de forma sencilla.
+        </p>
+
+        <div class="hero-actions">
+            <a href="{{ url_for('nueva_resena') }}" class="btn btn-primary">
+                Añadir reseña
+            </a>
+            <a href="{{ url_for('limpiar_analisis') }}" class="btn btn-light">
+                Limpiar análisis
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="stats-grid">
+    <article class="stat-card">
+        <span>Total reseñas</span>
+        <strong>{{ estadisticas.total }}</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Valoración media</span>
+        <strong>{{ estadisticas.media }}/5</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Analizadas</span>
+        <strong>{{ estadisticas.analizadas }}</strong>
+    </article>
+
+    <article class="stat-card">
+        <span>Pendientes</span>
+        <strong>{{ estadisticas.pendientes }}</strong>
+    </article>
+</section>
+
+<section class="panel-grid">
+    <article class="panel-card">
+        <h2>Estado general</h2>
+
+        <div class="sentiment-grid">
+            <div class="sentiment-item positive">
+                <span>Positivas</span>
+                <strong>{{ estadisticas.positivas }}</strong>
+            </div>
+
+            <div class="sentiment-item mixed">
+                <span>Mixtas</span>
+                <strong>{{ estadisticas.mixtas }}</strong>
+            </div>
+
+            <div class="sentiment-item negative">
+                <span>Negativas</span>
+                <strong>{{ estadisticas.negativas }}</strong>
+            </div>
+        </div>
+    </article>
+
+    <article class="panel-card">
+        <h2>Temas más repetidos</h2>
+
+        {% if estadisticas.problemas %}
+        <ul class="problem-list">
+            {% for problema in estadisticas.problemas %}
+            <li>
+                <span>{{ problema.problema_principal }}</span>
+                <strong>{{ problema.total }}</strong>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="muted">
+            Todavía no hay suficientes análisis para detectar temas repetidos.
+        </p>
+        {% endif %}
+    </article>
+</section>
+
+<section class="table-card">
+    <div class="section-header">
+        <div>
+            <p class="eyebrow">Opiniones registradas</p>
+            <h2>Reseñas del negocio</h2>
+        </div>
+
+        <a href="{{ url_for('nueva_resena') }}" class="btn btn-primary">
+            Añadir reseña
+        </a>
+    </div>
+
+    {% if resenas %}
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Puntuación</th>
+                    <th>Origen</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                    <th>Tema detectado</th>
+                    <th>Gravedad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for resena in resenas %}
+                <tr>
+                    <td>
+                        <strong>{{ resena.autor }}</strong>
+                        <small>{{ resena.texto[:70] }}{% if resena.texto|length > 70 %}...{% endif %}</small>
+                    </td>
+
+                    <td>
+                        <span class="rating">{{ resena.puntuacion }}/5</span>
+                    </td>
+
+                    <td>{{ resena.origen }}</td>
+                    <td>{{ resena.fecha }}</td>
+
+                    <td>
+                        {% if resena.sentimiento %}
+                        <span class="badge badge-{{ resena.sentimiento }}">
+                            {{ resena.sentimiento }}
+                        </span>
+                        {% else %}
+                        <span class="badge badge-pending">
+                            Pendiente
+                        </span>
+                        {% endif %}
+                    </td>
+
+                    <td>
+                        {% if resena.problema_principal %}
+                        {{ resena.problema_principal }}
+                        {% else %}
+                        <span class="muted">Sin analizar</span>
+                        {% endif %}
+                    </td>
+
+                    <td>
+                        {% if resena.gravedad %}
+                        <span class="gravity gravity-{{ resena.gravedad }}">
+                            {{ resena.gravedad }}
+                        </span>
+                        {% else %}
+                        <span class="muted">-</span>
+                        {% endif %}
+                    </td>
+
+                    <td class="actions">
+                        <a href="{{ url_for('detalle', review_id=resena.id) }}" class="btn btn-light">
+                            Ver
+                        </a>
+
+                        <form action="{{ url_for('analizar', review_id=resena.id) }}" method="POST">
+                            <button type="submit" class="btn btn-primary">
+                                Analizar
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <h3>No hay reseñas registradas</h3>
+        <p>Añade la primera reseña para comenzar a analizar opiniones del negocio.</p>
+        <a href="{{ url_for('nueva_resena') }}" class="btn btn-primary">Añadir reseña</a>
+    </div>
+    {% endif %}
+</section>
+
+{% endblock %}
